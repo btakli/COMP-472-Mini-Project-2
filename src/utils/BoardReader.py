@@ -1,0 +1,149 @@
+# BoardReader reads an input file and converts it into a 6x6 array for the Rush Hour Game
+import os
+import sys
+
+class BoardReader:
+    def __init__(self, file_path):
+        self.file_path = file_path
+        self.boards = []
+        self.fueldicts = [] # List of dictionaries of car: fuel 
+        self.cars_board = [] # List of dictionaries of car: [length, orientation, head_position]
+        self.x_size = 6
+        self.y_size = 6
+        self._read_boards()
+    
+
+    def _read_boards(self):
+        '''Reads the passed in file and gets a list of boards'''
+        with open(self.file_path, "r") as file:
+            for line in file:
+                if line.startswith("#") or line.isspace(): # Skip all comments or empty lines
+                    continue
+                else:
+                    #Logic for creating the board
+                    board = []
+                    
+                    #Separate the board and fuel indicators 
+                    board_and_fuel = line.split(" ", 1) #1 split max since we want the list of fuel levels
+                    board_string = board_and_fuel[0].strip()
+                    # This ensures that we don't get an index out of range error if there is blank space after the board string even if no fuel string.
+                    if len(board_and_fuel) > 1:
+                        fuel_string = board_and_fuel[1].strip()
+                    else:
+                        fuel_string = ""
+                
+                    # turn string into x by y array
+                    for i in range(self.y_size):
+                        start_index = i * self.x_size # With x = 6, gives values 0, 6, 12, 18, 24, 30
+                        end_index = start_index + self.x_size # With x = 6, gives values 6, 12, 18, 24, 30, 36
+
+                        row_string = board_string[start_index:end_index] # Gets the string for a row of the board (x long)
+
+                        row = []
+                        for char in row_string:
+                            row.append(char)
+                        
+                        board.append(row)
+                    
+                    self.boards.append(board)
+
+                    # Get the cars on the board, then generate a dictionary of cars and their length, orientation and head position. Put this into the cars_board list
+                    carlist = self._get_cars_on_board(board)
+                    self.cars_board.append(self._generate_cars_dict(carlist, board))
+
+                    carlist = self._get_cars_on_board(board)
+
+                    self.fueldicts.append(self._get_fuel_dict(fuel_string, carlist)) # Add the fuel dictionary to the list of fuel dictionaries
+
+
+                    
+
+
+    def _get_cars_on_board(self, board) -> list:
+        '''Returns a list of cars on the board at the given index'''
+        cars = []
+        for row in board:
+            for car in row:
+                if car != "." and car not in cars:
+                    cars.append(car)
+        return cars
+    
+    def _generate_cars_dict(self, carlist: list, board: list) -> dict:
+        '''Generates a dictionary of cars and their length, orientation and head position
+
+        carlist: List of cars on the board
+
+        board: Board we want to examine
+        '''
+        car_dict = {}
+        for car in carlist:
+            car_length = 0
+            car_orientation = ""
+            car_head_position = [] # [x, y] position of the head of the car (the first occurance of the car in the board)
+            for row in board:
+                if row.count(car) > 1: # If we see the car more than once in a row, it is horizontal!
+                    car_length = row.count(car)
+                    car_orientation = "H"
+                    car_head_position = [row.index(car), board.index(row)]
+                    break
+                elif row.count(car) == 1 and car_orientation == "" : # If we see the car once in a row, it is vertical! Because we assume minimum size is 2
+                    car_orientation = "V"
+                for char in row:
+                    if char == car:
+                        car_length += 1
+                        if car_head_position == []: # We only want to set the head position once, at the first occurance of the car
+                            car_head_position = [row.index(char), board.index(row)]
+
+            car_dict[car] = [car_length, car_orientation, car_head_position]
+
+        return car_dict
+
+    def _get_fuel_dict(self, fuel_string: str, carlist: str) -> dict:
+        '''Gets the fuel levels from the fuel string for each car, returns a dictionary of car: fuel. If car is not in fuelstring, assume it has 100 fuel
+            
+            fuel_string: String of fuel levels for each car
+            carlist: List of cars on the board'''
+        fuel_levels = {}
+        if fuel_string != "": # If there is a fuel string, get the fuel levels
+            fuel_list = fuel_string.split(" ")
+            for fuel in fuel_list:
+                car = fuel[0]
+                fuel_level = fuel[1:]
+                if len(fuel_level) == 0: # If we have just a char with no number, assume 100 fuel
+                    fuel_level = 100
+
+                fuel_levels[car] = int(fuel_level)
+
+        # Check if any cars are missing from the fuel string, if so, assume they have 100 fuel
+        for car in carlist:
+            if car not in fuel_levels.keys():
+                fuel_levels[car] = 100
+        
+        return fuel_levels
+    
+    def print_board(self, board_index) -> None:
+        '''Prints the board at the given index'''
+        print("Board: " + str(board_index))
+        board = self.boards[board_index]
+        for row in board:
+            print(row)
+        print()
+    
+    def print_fuel_dict(self, board_index) -> None:
+        '''Prints the fuel dictionary for the board at the given index'''
+        print("Fuel Dictionary: " + str(board_index))
+        fuel_dict = self.fueldicts[board_index]
+        for car, fuel in fuel_dict.items():
+            print(car + ": " + str(fuel))
+        print()
+
+    def print_cars_dict(self, board_index) -> None:
+        '''Prints the cars dictionary (car: [length, orientation, [X,Y]]) for the board at the given index'''
+        print("Cars Dictionary: " + str(board_index))
+        print("Format: Car: [Length, Orientation, [X, Y]]")
+        cars_dict = self.cars_board[board_index]
+        for car in cars_dict:
+            print(car + ": " + str(cars_dict[car]))
+        print()
+
+                        

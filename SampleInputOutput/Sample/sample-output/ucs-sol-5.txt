@@ -1,0 +1,20 @@
+--------------------------------------------------------------------------------
+
+Initial board configuration: IJBBCCIJDDL.IJAAL.EEK.L...KFF..GGHH. F0 G6
+
+! F0 G6
+IJBBCC
+IJDDL.
+IJAAL.
+EEK.L.
+..KFF.
+.GGHH.
+
+Car fuel available: I:100, J:100, B:100, C:100, D:100, L:100, A:100, E:100, K:100, F:0, G:6, H:100
+
+Sorry, could not solve the puzzle as specified.
+Error: no solution found
+
+Runtime: 0.16 seconds
+--------------------------------------------------------------------------------
+

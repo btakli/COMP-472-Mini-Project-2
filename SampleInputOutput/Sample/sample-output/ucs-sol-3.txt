@@ -1,0 +1,47 @@
+--------------------------------------------------------------------------------
+
+Initial board configuration: JBBCCCJDD..MJAAL.MFFKL.N..KGGN.HH...
+
+!
+JBBCCC
+JDD..M
+JAAL.M
+FFKL.N
+..KGGN
+.HH...
+
+Car fuel available: J:100, B:100, C:100, D:100, M:100, A:100, L:100, F:100, K:100, N:100, G:100, H:100
+
+Runtime: 3.30 seconds
+Search path length: 5742 states
+Solution path length: 17 moves
+Solution path: L up 1; N down 1; H right 2; K down 1; F right 4; J down 3; B left 1; D left 1; A left 1; K up 4; G left 2; L down 2; A right 3; K down 1; C left 1; M up 1; A right 1
+
+L    up 1       99 JBBCCCJDDL.MJAAL.MFFK..N..KGGN.HH... L99
+N  down 1       99 JBBCCCJDDL.MJAAL.MFFK.....KGGN.HH..N L99 N99
+H right 2       98 JBBCCCJDDL.MJAAL.MFFK.....KGGN...HHN L99 N99 H98
+K  down 1       99 JBBCCCJDDL.MJAAL.MFF......KGGN..KHHN L99 K99 N99 H98
+F right 4       96 JBBCCCJDDL.MJAAL.M....FF..KGGN..KHHN L99 F96 K99 N99 H98
+J  down 3       97 .BBCCC.DDL.M.AAL.MJ...FFJ.KGGNJ.KHHN J97 L99 F96 K99 N99 H98
+B  left 1       99 BB.CCC.DDL.M.AAL.MJ...FFJ.KGGNJ.KHHN J97 B99 L99 F96 K99 N99 H98
+D  left 1       99 BB.CCCDD.L.M.AAL.MJ...FFJ.KGGNJ.KHHN J97 B99 D99 L99 F96 K99 N99 H98
+A  left 1       99 BB.CCCDD.L.MAA.L.MJ...FFJ.KGGNJ.KHHN J97 B99 D99 A99 L99 F96 K99 N99 H98
+K    up 4       95 BBKCCCDDKL.MAA.L.MJ...FFJ..GGNJ..HHN J97 B99 D99 A99 L99 F96 K95 N99 H98
+G  left 2       98 BBKCCCDDKL.MAA.L.MJ...FFJGG..NJ..HHN J97 B99 D99 A99 L99 F96 K95 N99 G98 H98
+L  down 2       97 BBKCCCDDK..MAA...MJ..LFFJGGL.NJ..HHN J97 B99 D99 A99 L97 F96 K95 N99 G98 H98
+A right 3       96 BBKCCCDDK..M...AAMJ..LFFJGGL.NJ..HHN J97 B99 D99 A96 L97 F96 K95 N99 G98 H98
+K  down 1       94 BB.CCCDDK..M..KAAMJ..LFFJGGL.NJ..HHN J97 B99 D99 A96 L97 F96 K94 N99 G98 H98
+C  left 1       99 BBCCC.DDK..M..KAAMJ..LFFJGGL.NJ..HHN J97 B99 C99 D99 A96 L97 F96 K94 N99 G98 H98
+M    up 1       99 BBCCCMDDK..M..KAA.J..LFFJGGL.NJ..HHN J97 B99 C99 D99 M99 A96 L97 F96 K94 N99 G98 H98
+A right 1       95 BBCCCMDDK..M..K.AAJ..LFFJGGL.NJ..HHN J97 B99 C99 D99 M99 A95 L97 F96 K94 N99 G98 H98
+
+! J97 B99 C99 D99 M99 A95 L97 F96 K94 N99 G98 H98
+BBCCCM
+DDK..M
+..K.AA
+J..LFF
+JGGL.N
+J..HHN
+
+--------------------------------------------------------------------------------
+

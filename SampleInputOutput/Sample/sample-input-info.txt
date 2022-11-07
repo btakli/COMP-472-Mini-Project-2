@@ -1,0 +1,12 @@
+# solution in 2 moves with 18 states explored in 0.06 seconds
+2 18 0.06 BBIJ....IJCC..IAAMGDDK.MGH.KL.GHFFL.
+# solution in 10 moves with 1472 states explored in 0.88 seconds
+10 1472 0.88 ..I...BBI.K.GHAAKLGHDDKLG..JEEFF.J..
+# solution in 17 moves with 5473 states explored in 3.23 seconds
+17 5473 3.23 JBBCCCJDD..MJAAL.MFFKL.N..KGGN.HH...
+# Error: no solution found after 0.12 seconds
+-1 -1 0.12 BBB..MCCDD.MAAKL.MJ.KLEEJ.GG..JHHHII B4 J0
+# Error: no solution found after 0.16 seconds
+-1 -1 0.16 IJBBCCIJDDL.IJAAL.EEK.L...KFF..GGHH. F0 G6
+# solution in 32 moves with 793 states explored in 0.33 seconds
+32 793 0.33 BB.G.HE..G.HEAAG.I..FCCIDDF..I..F...
