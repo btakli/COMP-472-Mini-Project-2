@@ -1,7 +1,4 @@
 # BoardReader reads an input file and converts it into a 6x6 array for the Rush Hour Game
-import os
-import sys
-
 class BoardReader:
     def __init__(self, file_path):
         self.file_path = file_path
