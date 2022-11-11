@@ -26,7 +26,7 @@ class BoardManipulator:
             # Car needs to be horizontal to move right
             if car_orientation == 'H':
                 # Head of the car is on the right side, so check if tail of car is touching the wall or another car REMEMBER BOARD IS board[y][x]!!!
-                if car_position[1] + car_length < len(self.board[0]) and self.board[car_position[1]][car_position[0] + car_length] == '.':
+                if car_position[0] + car_length < len(self.board[0]) and self.board[car_position[1]][car_position[0] + car_length] == '.':
                     return True
                 else:
                     return False
@@ -36,7 +36,7 @@ class BoardManipulator:
             # Car needs to be horizontal to move left
             if car_orientation == 'H':
                 # Tail of the car is on the left side, so check if head of car is touching the wall or another car
-                if car_position[1] > 0 and self.board[car_position[0]][car_position[0] - 1] == '.':
+                if car_position[0] > 0 and self.board[car_position[0]][car_position[0] - 1] == '.':
                     return True
                 else:
                     return False
@@ -72,7 +72,7 @@ class BoardManipulator:
         car_letter: letter of the car to move  (E.g. 'A')
         direction: direction to move the car (E.g. 'right'). Moves 1 space at a time
 
-        Returns board after move. Returns None if the move is invalid'''
+        Returns True if move is valid, False if the move is invalid'''
 
         # get car length
         car_length = self.cars_dict[car_letter][0]
@@ -118,7 +118,7 @@ class BoardManipulator:
                 self.fuel_dict[car_letter] -= 1
 
         else:
-            print('Invalid move!')
+            print(f"Invalid move! Car {car_letter} cannot move {direction}")
             return None
     
     def print_board(self) -> None:
