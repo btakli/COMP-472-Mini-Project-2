@@ -1,4 +1,5 @@
 from utils.BoardReader import BoardReader
+from utils.BoardManipulator import BoardManipulator
 from pathlib import Path
 from os import path
 
@@ -7,7 +8,25 @@ input_file = Path(path.abspath(__file__)).parent.parent / "SampleInputOutput/Sam
 
 board_reader = BoardReader(input_file)
 
-for i in range(len(board_reader.boards)):
-    board_reader.print_board(i)
-    board_reader.print_fuel_dict(i)
-    board_reader.print_cars_dict(i)
+boardslist = board_reader.boards
+fuellist = board_reader.fueldicts
+carslist = board_reader.cars_board
+
+board_reader.print_board(0)
+board_reader.print_cars_dict(0)
+board_reader.print_fuel_dict(0)
+
+board_manipulator = BoardManipulator(boardslist[0], fuellist[0], carslist[0])
+board_manipulator.move_car("M", "down")
+board_manipulator.print_board()
+board_manipulator.print_fuel_dict()
+board_manipulator.print_cars_dict()
+
+board_reader.print_board(0)
+board_reader.print_cars_dict(0)
+board_reader.print_fuel_dict(0)
+
+# for i in range(len(board_reader.boards)):
+#     board_reader.print_board(i)
+#     board_reader.print_fuel_dict(i)
+#     board_reader.print_cars_dict(i)

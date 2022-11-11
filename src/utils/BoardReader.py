@@ -86,7 +86,7 @@ class BoardReader:
                 if row.count(car) > 1:
                     car_length = row.count(car)
                     car_orientation = "H"
-                    car_head_position = [row.index(car), board.index(row)]
+                    car_head_position = (row.index(car), board.index(row))
                     break
                 # If we see the car once in a row, it is vertical! Because we assume minimum size is 2
                 elif row.count(car) == 1 and car_orientation == "":
@@ -95,8 +95,8 @@ class BoardReader:
                     if char == car:
                         car_length += 1
                         if car_head_position == []:  # We only want to set the head position once, at the first occurance of the car
-                            car_head_position = [
-                                row.index(char), board.index(row)]
+                            car_head_position = (
+                                row.index(char), board.index(row))
 
             car_dict[car] = [car_length, car_orientation, car_head_position]
 
