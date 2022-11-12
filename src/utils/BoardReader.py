@@ -48,12 +48,10 @@ class BoardReader:
 
                     self.boards.append(board)
 
-                    # Get the cars on the board, then generate a dictionary of cars and their length, orientation and head position. Put this into the cars_board list
+                    # Get the cars on the board, then generate a dictionary of cars and their length, orientation, head position and fuel level. Put this into the cars_board list
                     carlist = self._get_cars_on_board(board)
                     self.cars_board.append(
-                        self._generate_cars_dict(carlist, board))
-
-                    carlist = self._get_cars_on_board(board)
+                        self._generate_cars_dict(carlist, board, fuel_string))
 
                     # Add the fuel dictionary to the list of fuel dictionaries
                     self.fueldicts.append(
@@ -68,14 +66,17 @@ class BoardReader:
                     cars.append(car)
         return cars
 
-    def _generate_cars_dict(self, carlist: list, board: list) -> dict:
+    def _generate_cars_dict(self, carlist: list, board: list, fuel_string: str) -> dict:
         '''Generates a dictionary of cars and their length, orientation and head position
 
         carlist: List of cars on the board
 
         board: Board we want to examine
+
+        fuel_string: String of fuel levels for each car
         '''
         car_dict = {}
+        fuel_dict = self._get_fuel_dict(fuel_string, carlist)
         for car in carlist:
             car_length = 0
             car_orientation = ""
@@ -98,7 +99,7 @@ class BoardReader:
                             car_head_position = (
                                 row.index(char), board.index(row))
 
-            car_dict[car] = [car_length, car_orientation, car_head_position]
+            car_dict[car] = [car_length, car_orientation, car_head_position, fuel_dict[car]]
 
         return car_dict
 
@@ -142,7 +143,7 @@ class BoardReader:
         print()
 
     def print_cars_dict(self, board_index) -> None:
-        '''Prints the cars dictionary (car: [length, orientation, [X,Y]]) for the board at the given index'''
+        '''Prints the cars dictionary (car: [length, orientation, [X,Y], fuel_level]) for the board at the given index'''
         print("Cars Dictionary: " + str(board_index))
         print("Format: Car: [Length, Orientation, [X, Y]]")
         cars_dict = self.cars_board[board_index]

@@ -1,9 +1,8 @@
 class BoardManipulator:
     '''Class to manipulate the board'''
 
-    def __init__(self, board: list, fuel_dict: dict, cars_dict: dict):
+    def __init__(self, board: list, cars_dict: dict):
         self.board = [row[:] for row in board] # Need to copy the board so that the original board is not modified
-        self.fuel_dict = fuel_dict.copy() # Need to copy the fuel dictionary so that the original fuel dictionary is not modified. Since it's simple we can use copy
         self.cars_dict = {key: value[:] for key, value in cars_dict.items()} # More complex, need to copy the dictionary manually
         
 
@@ -91,7 +90,7 @@ class BoardManipulator:
                 # update car position
                 self.cars_dict[car_letter][2] = (car_position[0] + 1, car_position[1])
                 # update fuel
-                self.fuel_dict[car_letter] -= 1
+                self.cars_dict[car_letter][3] -= 1
             elif direction == 'left':
                 # move car left
                 self.board[car_position[1]][car_position[0] - 1] = car_letter
@@ -99,7 +98,7 @@ class BoardManipulator:
                 # update car position
                 self.cars_dict[car_letter][2] = (car_position[0] - 1, car_position[1])
                 # update fuel
-                self.fuel_dict[car_letter] -= 1
+                self.cars_dict[car_letter][3] -= 1
             elif direction == 'up':
                 # move car up
                 self.board[car_position[1] - 1][car_position[0]] = car_letter
@@ -107,7 +106,7 @@ class BoardManipulator:
                 # update car position
                 self.cars_dict[car_letter][2] = (car_position[0], car_position[1] - 1)
                 # update fuel
-                self.fuel_dict[car_letter] -= 1
+                self.cars_dict[car_letter][3] -= 1
             elif direction == 'down':
                 # move car down
                 self.board[car_position[1] + car_length][car_position[0]] = car_letter
@@ -115,7 +114,7 @@ class BoardManipulator:
                 # update car position
                 self.cars_dict[car_letter][2] = (car_position[0], car_position[1] + 1)
                 # update fuel
-                self.fuel_dict[car_letter] -= 1
+                self.cars_dict[car_letter][3] -= 1
 
         else:
             print('Invalid move!')
@@ -127,14 +126,8 @@ class BoardManipulator:
             print(row)
         print()
 
-    def print_fuel_dict(self) -> None:
-        '''Prints the fuel dictionary'''
-        for car, fuel in self.fuel_dict.items():
-            print(car + ": " + str(fuel))
-        print()
-
     def print_cars_dict(self) -> None:
-        '''Prints the cars dictionary (car: [length, orientation, [X,Y]]) for the board'''
+        '''Prints the cars dictionary (car: [length, orientation, [X,Y], fuel]) for the board'''
         print("Format: Car: [Length, Orientation, [X, Y]]")
         for car in self.cars_dict:
             print(car + ": " + str(self.cars_dict[car]))
