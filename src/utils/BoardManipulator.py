@@ -1,6 +1,6 @@
 from utils.Board import Car
 class BoardManipulator:
-    '''Class to manipulate the board'''
+    '''Class to manipulate the board. NOTE: This class does not modify the original board, it creates a copy of the board and modifies that instead'''
 
     def __init__(self, board: list, cars_dict: dict, exit: tuple):
         self.board = [row[:] for row in board] # Need to copy the board so that the original board is not modified
