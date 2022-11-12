@@ -14,11 +14,14 @@ carslist = board_reader.cars_board
 board_reader.print_board(0)
 board_reader.print_cars_dict(0)
 
-board_manipulator = BoardManipulator(boardslist[0], carslist[0])
+board_manipulator = BoardManipulator(boardslist[0], carslist[0], board_reader.exit)
 board_manipulator.move_car("M", "down")
 board_manipulator.move_car("A", "right")
 board_manipulator.move_car("B", "right")
 board_manipulator.move_car("C", "right")
+
+board_manipulator.remove_from_valet_if_exists()
+
 board_manipulator.print_board()
 board_manipulator.print_cars_dict()
 

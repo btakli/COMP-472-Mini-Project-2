@@ -1,12 +1,17 @@
 # BoardReader reads an input file and converts it into a 6x6 array for the Rush Hour Game
+from utils.Board import Car
+
+
 class BoardReader:
     def __init__(self, file_path):
         self.file_path = file_path
         self.boards = []
         self.fueldicts = []  # List of dictionaries of car: fuel
-        self.cars_board = []  # List of dictionaries of car: [length, orientation, head_position]
+        # List of dictionaries of car: Car obj which contains [length, orientation, head_position, fuel_level]. head_position is a tuple of (x, y) and None if no longer on the board
+        self.cars_board = []
         self.x_size = 6
         self.y_size = 6
+        self.exit = (5, 2)  # Exit position (X,Y)
         self._read_boards()
 
     def _read_boards(self):
@@ -99,7 +104,8 @@ class BoardReader:
                             car_head_position = (
                                 row.index(char), board.index(row))
 
-            car_dict[car] = [car_length, car_orientation, car_head_position, fuel_dict[car]]
+            car_dict[car] = Car(car, car_length, car_orientation,
+                             car_head_position, fuel_dict[car])
 
         return car_dict
 

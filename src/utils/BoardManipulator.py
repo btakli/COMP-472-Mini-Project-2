@@ -1,9 +1,11 @@
+from utils.Board import Car
 class BoardManipulator:
     '''Class to manipulate the board'''
 
-    def __init__(self, board: list, cars_dict: dict):
+    def __init__(self, board: list, cars_dict: dict, exit: tuple):
         self.board = [row[:] for row in board] # Need to copy the board so that the original board is not modified
-        self.cars_dict = {key: value[:] for key, value in cars_dict.items()} # More complex, need to copy the dictionary manually
+        self.cars_dict = {key: Car(value.char, value.length, value.orientation, value.position, value.fuel) for key, value in cars_dict.items()} # More complex, need to copy the dictionary manually
+        self.exit = exit # Exit position (X,Y)
         
 
     def can_move_car(self, car_letter, direction) -> bool:
@@ -14,11 +16,11 @@ class BoardManipulator:
 
         Returns True if car can move, False otherwise'''
         # get car length
-        car_length = self.cars_dict[car_letter][0]
+        car_length = self.cars_dict[car_letter].length
         # get car orientation
-        car_orientation = self.cars_dict[car_letter][1]
+        car_orientation = self.cars_dict[car_letter].orientation
         # get car position
-        car_position = self.cars_dict[car_letter][2]
+        car_position = self.cars_dict[car_letter].position
 
         # check if car can move in the specified direction
         if direction == 'right':
@@ -74,11 +76,11 @@ class BoardManipulator:
         Returns True if move is valid, False if the move is invalid'''
 
         # get car length
-        car_length = self.cars_dict[car_letter][0]
+        car_length = self.cars_dict[car_letter].length
         # get car orientation
-        car_orientation = self.cars_dict[car_letter][1]
+        car_orientation = self.cars_dict[car_letter].orientation
         # get car position
-        car_position = self.cars_dict[car_letter][2]
+        car_position = self.cars_dict[car_letter].position
 
         # check if car can move in the specified direction
         if self.can_move_car(car_letter, direction):
@@ -88,38 +90,62 @@ class BoardManipulator:
                 self.board[car_position[1]][car_position[0] + car_length] = car_letter
                 self.board[car_position[1]][car_position[0]] = '.'
                 # update car position
-                self.cars_dict[car_letter][2] = (car_position[0] + 1, car_position[1])
+                self.cars_dict[car_letter].position = (car_position[0] + 1, car_position[1])
                 # update fuel
-                self.cars_dict[car_letter][3] -= 1
+                self.cars_dict[car_letter].fuel -= 1
             elif direction == 'left':
                 # move car left
                 self.board[car_position[1]][car_position[0] - 1] = car_letter
                 self.board[car_position[1]][car_position[0] + car_length - 1] = '.'
                 # update car position
-                self.cars_dict[car_letter][2] = (car_position[0] - 1, car_position[1])
+                self.cars_dict[car_letter].position = (car_position[0] - 1, car_position[1])
                 # update fuel
-                self.cars_dict[car_letter][3] -= 1
+                self.cars_dict[car_letter].fuel -= 1
             elif direction == 'up':
                 # move car up
                 self.board[car_position[1] - 1][car_position[0]] = car_letter
                 self.board[car_position[1] + car_length - 1][car_position[0]] = '.'
                 # update car position
-                self.cars_dict[car_letter][2] = (car_position[0], car_position[1] - 1)
+                self.cars_dict[car_letter].position = (car_position[0], car_position[1] - 1)
                 # update fuel
-                self.cars_dict[car_letter][3] -= 1
+                self.cars_dict[car_letter].fuel -= 1
             elif direction == 'down':
                 # move car down
                 self.board[car_position[1] + car_length][car_position[0]] = car_letter
                 self.board[car_position[1]][car_position[0]] = '.'
                 # update car position
-                self.cars_dict[car_letter][2] = (car_position[0], car_position[1] + 1)
+                self.cars_dict[car_letter].position = (car_position[0], car_position[1] + 1)
                 # update fuel
-                self.cars_dict[car_letter][3] -= 1
+                self.cars_dict[car_letter].fuel -= 1
 
         else:
             print(f"Invalid move! Car {car_letter} cannot move {direction}")
             return None
     
+    def remove_from_valet_if_exists(self) -> None:
+        '''If a car is in the valet parking spot and in a position to leave, if so remove it from the board
+        
+        A car can only leave the board if it is horizontal and with its tail in position 3f aka (2, 5)'''
+        # check if car is in valet parking spot (3f)
+        y_exit = self.exit[1]
+        x_exit = self.exit[0]
+        if self.board[y_exit][x_exit] != '.':
+            car = self.board[y_exit][x_exit]
+            car_length = self.cars_dict[car].length
+            car_orientation = self.cars_dict[car].orientation
+            car_position = self.cars_dict[car].position
+
+            # check if car is horizontal, if so remove it from the board
+            if car_orientation == 'H':
+                for i in range(car_length):
+                    self.board[car_position[1]][car_position[0] + i] = '.'
+                # Set position to None since the car is outside the board
+                self.cars_dict[car].position = None
+                
+                print(f"Car {car} has left the board! It's position is now None!")
+
+
+
     def print_board(self) -> None:
         '''Prints the board'''
         for row in self.board:
