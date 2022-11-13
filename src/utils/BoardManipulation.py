@@ -25,6 +25,10 @@ class BoardManipulator:
         # If position is None, the car is outside the board and cannot move
         if car_position == None:
             return False
+
+        # If fuel level is 0, the car cannot move
+        if self.cars_dict[car_letter].fuel == 0:
+            return False
         # check if car can move in the specified direction
         if direction == 'right':
             # Car needs to be horizontal to move right
@@ -222,5 +226,3 @@ class SubStateGenerator:
             for car in substate[1]:
                 print(car + ": " + str(substate[1][car]))
         print()
-
-
