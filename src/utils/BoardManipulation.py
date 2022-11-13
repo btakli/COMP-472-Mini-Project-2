@@ -8,7 +8,7 @@ class BoardManipulator:
         self.exit = exit # Exit position (X,Y)
         
 
-    def can_move_car(self, car_letter, direction) -> bool:
+    def can_move_car(self, car_letter: str, direction: str) -> bool:
         '''Checks if the car can move in the specified direction
 
         car: letter of the car to move  (E.g. 'A')
@@ -22,6 +22,9 @@ class BoardManipulator:
         # get car position
         car_position = self.cars_dict[car_letter].position
 
+        # If position is None, the car is outside the board and cannot move
+        if car_position == None:
+            return False
         # check if car can move in the specified direction
         if direction == 'right':
             # Car needs to be horizontal to move right
@@ -37,7 +40,7 @@ class BoardManipulator:
             # Car needs to be horizontal to move left
             if car_orientation == 'H':
                 # Tail of the car is on the left side, so check if head of car is touching the wall or another car
-                if car_position[0] > 0 and self.board[car_position[0]][car_position[0] - 1] == '.':
+                if car_position[0] > 0 and self.board[car_position[1]][car_position[0] - 1] == '.':
                     return True
                 else:
                     return False
@@ -67,7 +70,7 @@ class BoardManipulator:
             print('Invalid direction! Must be "right", "left", "up" or "down"')
             return False
 
-    def move_car(self, car_letter: str, direction: str) -> list:
+    def move_car(self, car_letter: str, direction: str) -> None:
         '''Moves the car in the specified direction
 
         car_letter: letter of the car to move  (E.g. 'A')
@@ -77,8 +80,6 @@ class BoardManipulator:
 
         # get car length
         car_length = self.cars_dict[car_letter].length
-        # get car orientation
-        car_orientation = self.cars_dict[car_letter].orientation
         # get car position
         car_position = self.cars_dict[car_letter].position
 
@@ -117,6 +118,8 @@ class BoardManipulator:
                 self.cars_dict[car_letter].position = (car_position[0], car_position[1] + 1)
                 # update fuel
                 self.cars_dict[car_letter].fuel -= 1
+            
+            self.remove_from_valet_if_exists() # Remove car from valet spot if need be
 
         else:
             print(f"Invalid move! Car {car_letter} cannot move {direction}")
@@ -143,7 +146,8 @@ class BoardManipulator:
                 self.cars_dict[car].position = None
                 
                 print(f"Car {car} has left the board! It's position is now None!")
-
+        else:
+            print("No car in valet parking spot to remove!")
 
 
     def print_board(self) -> None:
@@ -158,3 +162,65 @@ class BoardManipulator:
         for car in self.cars_dict:
             print(car + ": " + str(self.cars_dict[car]))
         print()
+
+class SubStateGenerator: 
+    '''Generate all possible board states from a given board state'''
+    def __init__(self, board: list, cars_dict: dict, exit: tuple):
+        self.board = board
+        self.cars_dict = cars_dict
+        self.exit = exit
+        self.substates = [] # list of all possible substates, tuple of (board, cars_dict)
+        self.board_manipulator = BoardManipulator(self.board, self.cars_dict, self.exit)
+        
+
+    def generate_substates(self) -> list:
+        '''Generate substates based on the current board state
+        
+        Returns a list of substates, each substate is a tuple of (board, cars_dict)'''
+        # loop through each car
+        for carkey in self.cars_dict:
+            # check orientation
+            if self.cars_dict[carkey].orientation == 'H':
+                # check if car can move left
+                if self.board_manipulator.can_move_car(self.cars_dict[carkey].char, 'left'):
+                    # move the car
+                    new_board_manipulator = BoardManipulator(self.board, self.cars_dict, self.exit)
+                    new_board_manipulator.move_car(self.cars_dict[carkey].char, 'left')
+                    # add the new (board, cars_dict) tuple to the list of substates
+                    self.substates.append((new_board_manipulator.board, new_board_manipulator.cars_dict))
+                # check if car can move right
+                if self.board_manipulator.can_move_car(self.cars_dict[carkey].char, 'right'):
+                    # move the car
+                    new_board_manipulator = BoardManipulator(self.board, self.cars_dict, self.exit)
+                    new_board_manipulator.move_car(self.cars_dict[carkey].char, 'right')
+                    # add the new (board, cars_dict) tuple to the list of substates
+                    self.substates.append((new_board_manipulator.board, new_board_manipulator.cars_dict))
+            elif self.cars_dict[carkey].orientation == 'V':
+                # check if car can move up
+                if self.board_manipulator.can_move_car(self.cars_dict[carkey].char, 'up'):
+                    # move the car
+                    new_board_manipulator = BoardManipulator(self.board, self.cars_dict, self.exit)
+                    new_board_manipulator.move_car(self.cars_dict[carkey].char, 'up')
+                    # add the new (board, cars_dict) tuple to the list of substates
+                    self.substates.append((new_board_manipulator.board, new_board_manipulator.cars_dict))
+                # check if car can move down
+                if self.board_manipulator.can_move_car(self.cars_dict[carkey].char, 'down'):
+                    # move the car
+                    new_board_manipulator = BoardManipulator(self.board, self.cars_dict, self.exit)
+                    new_board_manipulator.move_car(self.cars_dict[carkey].char, 'down')
+                    # add the new (board, cars_dict) tuple to the list of substates
+                    self.substates.append((new_board_manipulator.board, new_board_manipulator.cars_dict))
+        
+        return self.substates
+    
+    def print_substates(self) -> None:
+        '''Prints all substates'''
+        for substate in self.substates:
+            print("Board:")
+            for row in substate[0]:
+                print(row)
+            for car in substate[1]:
+                print(car + ": " + str(substate[1][car]))
+        print()
+
+
