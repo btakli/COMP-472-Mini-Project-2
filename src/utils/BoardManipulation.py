@@ -26,7 +26,7 @@ class BoardManipulator:
         if car_position == None:
             return False
         # If A is at the exit, it cannot move
-        if car_letter == 'A' and self.board[self.exit[1]][self.exit[0]] == 'A':
+        if car_letter == 'A' and self.cars_dict['A'].tailposition == self.exit:
             return False
 
         # If fuel level is 0, the car cannot move

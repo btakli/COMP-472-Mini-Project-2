@@ -16,9 +16,9 @@ def main():
     boardslist = board_reader.boards
     carslist = board_reader.cars_board
 
-    board_reader.print_board(1)
-    board_reader.print_cars_dict(1)
-
+    board_reader.print_board(0)
+    board_reader.print_cars_dict(0)
+    print(carslist[0]['L'].tailposition)
 
     search = UniformCostSearch(boardslist[0], carslist[0], board_reader.exit)
     win_node = search.search()

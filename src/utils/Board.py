@@ -21,6 +21,7 @@ class Car:
         self.orientation = orientation
         self.position = position
         self.fuel = fuel
+        self.tailposition = self._calculate_tailposition()
     
     def __getitem__(self, key):
         if key == 0:
@@ -31,6 +32,8 @@ class Car:
             return self.position
         elif key == 3:
             return self.fuel
+        elif key == 4:
+            return self.tailposition
     
     def __setitem__(self, key, value):
         if key == 0:
@@ -41,7 +44,16 @@ class Car:
             self.position = value
         elif key == 3:
             self.fuel = value
+        elif key == 4:
+            self.tailposition = value
+    
+    def _calculate_tailposition(self):
+        '''Calculates the tail position of the car'''
+        if self.orientation == 'H':
+            return (self.position[0] + self.length - 1, self.position[1])
+        elif self.orientation == 'V':
+            return (self.position[0], self.position[1] + self.length - 1)
         
 
     def __str__(self):
-        return f"Car {self.char}: Length={self.length}, Orientation={self.orientation}, Position={self.position}, Fuel={self.fuel}"
+        return f"Car {self.char}: Length={self.length}, Orientation={self.orientation}, Position={self.position}, Fuel={self.fuel}, TailPosition={self.tailposition}"
