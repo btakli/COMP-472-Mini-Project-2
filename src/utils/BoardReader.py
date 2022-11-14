@@ -11,6 +11,7 @@ class BoardReader:
         self.cars_board = []
         self.x_size = 6
         self.y_size = 6
+        self.board_dimensions = (self.x_size, self.y_size)
         self.exit = (5, 2)  # Exit position (X,Y)
         self._read_boards()
 

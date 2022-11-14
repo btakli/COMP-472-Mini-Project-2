@@ -21,7 +21,7 @@ class Car:
         self.orientation = orientation
         self.position = position
         self.fuel = fuel
-        self.tailposition = self._calculate_tailposition()
+        self.tail_position = self._calculate_tailposition()
     
     def __getitem__(self, key):
         if key == 0:
@@ -33,7 +33,7 @@ class Car:
         elif key == 3:
             return self.fuel
         elif key == 4:
-            return self.tailposition
+            return self.tail_position
     
     def __setitem__(self, key, value):
         if key == 0:
@@ -42,10 +42,12 @@ class Car:
             self.orientation = value
         elif key == 2:
             self.position = value
+            self.tail_position = self._calculate_tailposition()
         elif key == 3:
             self.fuel = value
         elif key == 4:
-            self.tailposition = value
+            self.tail_position = value
+            self.position = self._calculate_position()
     
     def _calculate_tailposition(self):
         '''Calculates the tail position of the car'''
@@ -53,7 +55,18 @@ class Car:
             return (self.position[0] + self.length - 1, self.position[1])
         elif self.orientation == 'V':
             return (self.position[0], self.position[1] + self.length - 1)
-        
+    
+    def _calculate_position(self):
+        '''Calculates the position of the car'''
+        if self.orientation == 'H':
+            return (self.tail_position[0] - self.length + 1, self.tail_position[1])
+        elif self.orientation == 'V':
+            return (self.tail_position[0], self.tail_position[1] - self.length + 1)
+    
+    def set_position(self, position: tuple):
+        '''Sets the position of the car, fixes the tail position'''
+        self.position = position
+        self.tail_position = self._calculate_tailposition()
 
     def __str__(self):
-        return f"Car {self.char}: Length={self.length}, Orientation={self.orientation}, Position={self.position}, Fuel={self.fuel}, TailPosition={self.tailposition}"
+        return f"Car {self.char}: Length={self.length}, Orientation={self.orientation}, Position={self.position}, Fuel={self.fuel}, TailPosition={self.tail_position}"

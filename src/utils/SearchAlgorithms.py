@@ -10,6 +10,7 @@ class UniformCostSearch:
     ''' Uniform Cost Search Algorithm '''
     def __init__(self, board: list, cars_dict: dict, exit: tuple):
         self.board = board
+        self.board_dimensions = (len(board[0]), len(board)) # (x,y)
         self.cars_dict = cars_dict
         self.exit = exit
         self.StateTree = StateTree(board, cars_dict, exit)
@@ -28,30 +29,31 @@ class UniformCostSearch:
         # PQ is a tuple of (cost, state)
         open_list.put((self.StateTree.root.cost, self.StateTree.root))
 
+        # While the open list is not empty
         while open_list.qsize() > 0:
             self.search_path_length += 1
             current_tuple = open_list.get()
             current_node = current_tuple[1]
-            closed_list.append(current_node)
+            closed_list.append(current_node) # Add current node to closed list
 
-            if current_node.check_win(self.exit):
+            if current_node.check_win(self.exit): # Check if current node is the goal, we're done
                 self.goal = current_node
                 self._calculate_solution_path()
                 end_time = time.perf_counter_ns()
                 self.search_time = (end_time - start_time) * 10**-9 # convert to seconds
                 return current_node
 
-            substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
+            substate_generator = SubStateGenerator(self.board_dimensions, current_node.cars_dict, self.exit)
             substate_generator.generate_substates()
 
             for substate in substate_generator.substates: 
                 in_closed_list = False
                 for node in closed_list:
-                    if substate[0] == node.board:
+                    if self._check_if_cars_dict_equal(substate, node.cars_dict):
                         in_closed_list = True
                         break
                 if not in_closed_list:
-                    child = StateTree.TreeNode(substate[0], substate[1], current_node)
+                    child = StateTree.TreeNode(self.board_dimensions, substate, current_node)
                     current_node.children.append(child)
                     open_list.put((child.cost, child))
 
@@ -66,13 +68,21 @@ class UniformCostSearch:
         while current_node.parent is not None:
             temp_solution_path.insert(0, (current_node.car_moved, current_node.direction_moved,1))
             current_node = current_node.parent
-
-
         
         #TODO combine consecutive moves of the same car in the same direction and increment distance
 
         for i in range(len(temp_solution_path)):
             self.solution_path.append((temp_solution_path[i][0], temp_solution_path[i][1], temp_solution_path[i][2]))
+
+    def _check_if_cars_dict_equal(self, cars_dict1: dict, cars_dict2: dict) -> bool:
+        '''Checks if two cars dictionaries are equal'''
+        for car in cars_dict1:
+            if cars_dict1[car].position != cars_dict2[car].position:
+                return False
+        return True
+
+        
+        
 
             
         
