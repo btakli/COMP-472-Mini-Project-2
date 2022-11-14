@@ -25,6 +25,10 @@ class BoardManipulator:
         # If position is None, the car is outside the board and cannot move
         if car_position == None:
             return False
+        # If A is at the exit, it cannot move
+        if car_letter == 'A' and self.board[self.exit[1]][self.exit[0]] == 'A':
+            print("BREXIT")
+            return False
 
         # If fuel level is 0, the car cannot move
         if self.cars_dict[car_letter].fuel == 0:
@@ -123,21 +127,27 @@ class BoardManipulator:
                 self.cars_dict[car_letter].position = (car_position[0], car_position[1] + 1)
                 # update fuel
                 self.cars_dict[car_letter].fuel -= 1
-            
-            self.remove_from_valet_if_exists() # Remove car from valet spot if need be
+
+                self.remove_from_valet_if_exists() # Remove car from valet spot if need be
 
         else:
             print(f"Invalid move! Car {car_letter} cannot move {direction}")
             return None
     
-    def remove_from_valet_if_exists(self) -> None:
+    def remove_from_valet_if_exists(self, remove_A = False, print_debug = False) -> None:
         '''If a car is in the valet parking spot and in a position to leave, if so remove it from the board
         
-        A car can only leave the board if it is horizontal and with its tail in position 3f aka (2, 5)'''
+        A car can only leave the board if it is horizontal and with its tail in position 3f aka (2, 5)
+        By default do NOT remove A, since output wants us to keep it.
+        By default do NOT print debug messages since it bloats output.'''
         # check if car is in valet parking spot (3f)
         y_exit = self.exit[1]
         x_exit = self.exit[0]
         if self.board[y_exit][x_exit] != '.':
+            if not remove_A: # If we aren't removing A
+                if self.board[y_exit][x_exit] == 'A':
+                    return None
+
             car = self.board[y_exit][x_exit]
             car_length = self.cars_dict[car].length
             car_orientation = self.cars_dict[car].orientation
@@ -149,10 +159,12 @@ class BoardManipulator:
                     self.board[car_position[1]][car_position[0] + i] = '.'
                 # Set position to None since the car is outside the board
                 self.cars_dict[car].position = None
-                
-                print(f"Car {car} has left the board! It's position is now None!")
+                if print_debug:
+                    print(f"Car {car} has left the board! It's position is now None!")
         else:
-            print("No car in valet parking spot to remove!")
+            if print_debug:
+                print("No car in valet parking spot to remove!")
+            return None
 
 
     def print_board(self) -> None:
@@ -171,17 +183,21 @@ class BoardManipulator:
 class SubStateGenerator: 
     '''Generate all possible board states from a given board state'''
     def __init__(self, board: list, cars_dict: dict, exit: tuple):
+        '''Constructor without use of StateTree.TreeNode class, sets '''
         self.board = board
         self.cars_dict = cars_dict
         self.exit = exit
         self.substates = [] # list of all possible substates, tuple of (board, cars_dict)
         self.board_manipulator = BoardManipulator(self.board, self.cars_dict, self.exit)
-        
+
 
     def generate_substates(self) -> list:
         '''Generate substates based on the current board state
         
-        Returns a list of substates, each substate is a tuple of (board, cars_dict)'''
+        Returns a list of substates, each substate is a tuple of (board, cars_dict). If ambulance is gone, returns []'''
+        # check if ambulance is gone
+        if self.cars_dict['A'].position == None:
+            return []
         # loop through each car
         for carkey in self.cars_dict:
             # check orientation
@@ -215,7 +231,7 @@ class SubStateGenerator:
                     new_board_manipulator.move_car(self.cars_dict[carkey].char, 'down')
                     # add the new (board, cars_dict) tuple to the list of substates
                     self.substates.append((new_board_manipulator.board, new_board_manipulator.cars_dict))
-        
+
         return self.substates
     
     def print_substates(self) -> None:
@@ -227,3 +243,112 @@ class SubStateGenerator:
             for car in substate[1]:
                 print(car + ": " + str(substate[1][car]))
         print()
+
+class StateTree:
+    '''A tree of all possible states for a board'''
+
+    class TreeNode:
+        '''A node in the state tree'''
+        def __init__(self, board: list, cars_dict: dict, parent: 'StateTree.TreeNode'):
+            self.board = [row[:] for row in board]
+            self.cars_dict = {key: Car(value.char, value.length, value.orientation, value.position, value.fuel) for key, value in cars_dict.items()}
+            self.parent = parent
+            self.children = []
+
+            self.car_moved = None
+            self._compute_car_moved()
+
+            self.direction_moved = None
+            self._compute_direction_moved()
+
+            self.cost = 0
+            self._compute_cost()
+            
+        
+        def _compute_cost(self) -> None:
+            '''Computes the cost of the node'''
+            if self.parent is None:
+                self.cost = 0
+            else:
+                if self.car_moved == self.parent.car_moved: # If piece moved is the same as the parent, cost is same as parent
+                    self.cost = self.parent.cost
+                else:
+                    self.cost = self.parent.cost + 1
+        
+        def _compute_car_moved(self) -> None:
+            '''Computes the piece that was moved to get to this node'''
+            if self.parent is None:
+                self.car_moved = None
+            else:
+                # loop through each car in the parent's cars_dict
+                for car in self.parent.cars_dict:
+                    # check if the car's position is different
+                    if self.parent.cars_dict[car].position != self.cars_dict[car].position:
+                        self.car_moved = car
+                        break
+        
+        def _compute_direction_moved(self) -> None:
+            '''Computes the direction that the piece was moved to get to this node'''
+            if self.parent is None:
+                self.direction_moved = None
+            else:
+                # if piece position is now None, it was removed and moved right off the board
+                if self.cars_dict[self.car_moved].position == None:
+                    self.direction_moved = 'right'
+                # check if the piece moved is horizontal or vertical
+                elif self.parent.cars_dict[self.car_moved].orientation == 'H':
+                    # check if the piece moved left or right
+                    if self.cars_dict[self.car_moved].position[0] < self.parent.cars_dict[self.car_moved].position[0]:
+                        self.direction_moved = 'left'
+                    else:
+                        self.direction_moved = 'right' # else since by virtue of being piece_moved it must have moved
+                else:
+                    # check if the piece moved up or down
+                    if self.cars_dict[self.car_moved].position[1] < self.parent.cars_dict[self.car_moved].position[1]:
+                        self.direction_moved = 'up'
+                    else:
+                        self.direction_moved = 'down'
+            
+    
+        #equals method defined as two boards being the same if they have the same cars in the same positions
+        def __eq__(self, other):
+            for row in range(len(self.board)):
+                for col in range(len(self.board[0])):
+                    if self.board[row][col] != other.board[row][col]:
+                        return False
+            return True
+
+        def __lt__(self, other):
+            return self.cost <= other.cost
+        
+        def check_win(self, exit: tuple) -> bool:
+            '''Checks if the board is in a winning state'''
+            # check if ambulance is gone (it left the board through the exit) or is at the exit (since we do not want to remove it from the board for our output)
+            if self.cars_dict['A'].position == None or (self.board[exit[1]][exit[0]] == 'A'):
+                return True
+            else:
+                return False
+
+        def __str__(self) -> str:
+            '''returns the node in one line, using the format of the example files'''
+            output = ""
+            for row in self.board:
+                for char in row:
+                    output += char
+            
+            for car in self.cars_dict:
+                fuel = self.cars_dict[car].fuel
+                if fuel < 100:
+                    output += " " + car + "" + str(fuel)
+            return output
+
+
+    def __init__(self, board: list, cars_dict: dict, exit: tuple):
+        self.board = board
+        self.cars_dict = cars_dict
+        self.exit = exit
+        self.root = StateTree.TreeNode(self.board, self.cars_dict, None)
+
+    def add_node(self, board: list, cars_dict: dict, parent: 'StateTree.TreeNode') -> None:
+        '''Add a node to the tree'''
+        self.root.children.append(StateTree.TreeNode(board, cars_dict, parent))

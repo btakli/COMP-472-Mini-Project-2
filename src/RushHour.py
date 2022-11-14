@@ -1,17 +1,9 @@
 from os import path
 from pathlib import Path
 
-from utils.BoardManipulation import SubStateGenerator
+from utils.BoardManipulation import SubStateGenerator, StateTree
 from utils.BoardReader import BoardReader
-
-
-def win_check(cars_dict: dict) -> bool:
-    '''Checks if the ambulance has reached the exit'''
-    ambulance = cars_dict["A"]
-    if ambulance.position == None:  # Check if the ambulance has reached the exit, meaning it is no longer on the board due to the valet parking
-        return True
-    else:
-        return False
+from utils.SearchAlgorithms import UniformCostSearch, GBFS, A
 
 
 def main():
@@ -24,14 +16,17 @@ def main():
     boardslist = board_reader.boards
     carslist = board_reader.cars_board
 
-    board_reader.print_board(0)
-    board_reader.print_cars_dict(0)
+    board_reader.print_board(1)
+    board_reader.print_cars_dict(1)
 
-    substate_generator = SubStateGenerator(
-        boardslist[0], carslist[0], board_reader.exit)
-    substate_generator.generate_substates()
-    substate_generator.print_substates()
+    search = UniformCostSearch(boardslist[1], carslist[1], board_reader.exit)
+    win_node = search.search()
 
+    print(search.goal.cost)
+    print(win_node)
+    print(search.get_exec_time())
+    print(search.search_path_length)
+    print(search.solution_path)
 
 # main
 if __name__ == "__main__":

@@ -8,6 +8,14 @@ class Board:
 
 class Car:
     def __init__(self, char: str, length: int, orientation: str, position: tuple, fuel: int):
+        '''Car object. Contains all the information about a car
+        
+        Args:
+            char: The character that represents the car
+            length: The length of the car
+            orientation: The orientation of the car (H or V for horizontal or vertical)
+            position: The position of the car (X,Y)
+            fuel: The amount of fuel the car has'''
         self.char = char
         self.length = length
         self.orientation = orientation
