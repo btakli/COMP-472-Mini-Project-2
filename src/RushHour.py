@@ -19,7 +19,8 @@ def main():
     board_reader.print_board(1)
     board_reader.print_cars_dict(1)
 
-    search = UniformCostSearch(boardslist[1], carslist[1], board_reader.exit)
+
+    search = UniformCostSearch(boardslist[0], carslist[0], board_reader.exit)
     win_node = search.search()
 
     print(search.goal.cost)

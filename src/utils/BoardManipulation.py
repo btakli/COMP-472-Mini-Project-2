@@ -27,7 +27,6 @@ class BoardManipulator:
             return False
         # If A is at the exit, it cannot move
         if car_letter == 'A' and self.board[self.exit[1]][self.exit[0]] == 'A':
-            print("BREXIT")
             return False
 
         # If fuel level is 0, the car cannot move
@@ -259,6 +258,7 @@ class StateTree:
             self._compute_car_moved()
 
             self.direction_moved = None
+            self.distance_moved = None
             self._compute_direction_moved()
 
             self.cost = 0
@@ -288,7 +288,7 @@ class StateTree:
                         break
         
         def _compute_direction_moved(self) -> None:
-            '''Computes the direction that the piece was moved to get to this node'''
+            '''Computes the direction AND DISTANCE that the piece was moved to get to this node'''
             if self.parent is None:
                 self.direction_moved = None
             else:
@@ -300,14 +300,18 @@ class StateTree:
                     # check if the piece moved left or right
                     if self.cars_dict[self.car_moved].position[0] < self.parent.cars_dict[self.car_moved].position[0]:
                         self.direction_moved = 'left'
+                        self.distance_moved = self.parent.cars_dict[self.car_moved].position[0] - self.cars_dict[self.car_moved].position[0]
                     else:
                         self.direction_moved = 'right' # else since by virtue of being piece_moved it must have moved
+                        self.distance_moved = self.cars_dict[self.car_moved].position[0] - self.parent.cars_dict[self.car_moved].position[0]
                 else:
                     # check if the piece moved up or down
                     if self.cars_dict[self.car_moved].position[1] < self.parent.cars_dict[self.car_moved].position[1]:
                         self.direction_moved = 'up'
+                        self.distance_moved = self.parent.cars_dict[self.car_moved].position[1] - self.cars_dict[self.car_moved].position[1]
                     else:
                         self.direction_moved = 'down'
+                        self.distance_moved = self.cars_dict[self.car_moved].position[1] - self.parent.cars_dict[self.car_moved].position[1]
             
     
         #equals method defined as two boards being the same if they have the same cars in the same positions

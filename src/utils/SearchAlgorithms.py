@@ -45,12 +45,12 @@ class UniformCostSearch:
             substate_generator.generate_substates()
 
             for substate in substate_generator.substates: 
-                not_in_closed_list = True
+                in_closed_list = False
                 for node in closed_list:
                     if substate[0] == node.board:
-                        not_in_closed_list = False
+                        in_closed_list = True
                         break
-                if not_in_closed_list:
+                if not in_closed_list:
                     child = StateTree.TreeNode(substate[0], substate[1], current_node)
                     current_node.children.append(child)
                     open_list.put((child.cost, child))
