@@ -99,7 +99,7 @@ class BoardManipulator:
                 self.board[car_position[1]][car_position[0] + car_length] = car_letter
                 self.board[car_position[1]][car_position[0]] = '.'
                 # update car position
-                self.cars_dict[car_letter].position = (car_position[0] + 1, car_position[1])
+                self.cars_dict[car_letter].set_position((car_position[0] + 1, car_position[1]))
                 # update fuel
                 self.cars_dict[car_letter].fuel -= 1
             elif direction == 'left':
@@ -107,7 +107,7 @@ class BoardManipulator:
                 self.board[car_position[1]][car_position[0] - 1] = car_letter
                 self.board[car_position[1]][car_position[0] + car_length - 1] = '.'
                 # update car position
-                self.cars_dict[car_letter].position = (car_position[0] - 1, car_position[1])
+                self.cars_dict[car_letter].set_position((car_position[0] - 1, car_position[1]))
                 # update fuel
                 self.cars_dict[car_letter].fuel -= 1
             elif direction == 'up':
@@ -115,7 +115,7 @@ class BoardManipulator:
                 self.board[car_position[1] - 1][car_position[0]] = car_letter
                 self.board[car_position[1] + car_length - 1][car_position[0]] = '.'
                 # update car position
-                self.cars_dict[car_letter].position = (car_position[0], car_position[1] - 1)
+                self.cars_dict[car_letter].set_position((car_position[0], car_position[1] - 1))
                 # update fuel
                 self.cars_dict[car_letter].fuel -= 1
             elif direction == 'down':
@@ -123,7 +123,7 @@ class BoardManipulator:
                 self.board[car_position[1] + car_length][car_position[0]] = car_letter
                 self.board[car_position[1]][car_position[0]] = '.'
                 # update car position
-                self.cars_dict[car_letter].position = (car_position[0], car_position[1] + 1)
+                self.cars_dict[car_letter].set_position((car_position[0], car_position[1] + 1))
                 # update fuel
                 self.cars_dict[car_letter].fuel -= 1
 
@@ -158,6 +158,7 @@ class BoardManipulator:
                     self.board[car_position[1]][car_position[0] + i] = '.'
                 # Set position to None since the car is outside the board
                 self.cars_dict[car].position = None
+                self.cars_dict[car].tail_position = None
                 if print_debug:
                     print(f"Car {car} has left the board! It's position is now None!")
         else:
@@ -243,116 +244,167 @@ class SubStateGenerator:
                 print(car + ": " + str(substate[1][car]))
         print()
 
-class StateTree:
-    '''A tree of all possible states for a board'''
-
-    class TreeNode:
-        '''A node in the state tree'''
-        def __init__(self, board: list, cars_dict: dict, parent: 'StateTree.TreeNode'):
-            self.board = [row[:] for row in board]
-            self.cars_dict = {key: Car(value.char, value.length, value.orientation, value.position, value.fuel) for key, value in cars_dict.items()}
-            self.parent = parent
-            self.children = []
-
-            self.car_moved = None
-            self._compute_car_moved()
-
-            self.direction_moved = None
-            self.distance_moved = None
-            self._compute_direction_moved()
-
-            self.cost = 0
-            self._compute_cost()
-            
+class TreeNode:
+    '''A node in the state tree'''
+    def __init__(self, board: list, cars_dict: dict, parent: 'TreeNode', exit: tuple, heuristic = 0, lambda_val = 2, compute_g_n = True):
+        '''Constructor for TreeNode class
         
-        def _compute_cost(self) -> None:
-            '''Computes the cost of the node'''
-            if self.parent is None:
-                self.cost = 0
-            else:
-                if self.car_moved == self.parent.car_moved: # If piece moved is the same as the parent, cost is same as parent
-                    self.cost = self.parent.cost
-                else:
-                    self.cost = self.parent.cost + 1
-        
-        def _compute_car_moved(self) -> None:
-            '''Computes the piece that was moved to get to this node'''
-            if self.parent is None:
-                self.car_moved = None
-            else:
-                # loop through each car in the parent's cars_dict
-                for car in self.parent.cars_dict:
-                    # check if the car's position is different
-                    if self.parent.cars_dict[car].position != self.cars_dict[car].position:
-                        self.car_moved = car
-                        break
-        
-        def _compute_direction_moved(self) -> None:
-            '''Computes the direction AND DISTANCE that the piece was moved to get to this node'''
-            if self.parent is None:
-                self.direction_moved = None
-            else:
-                # if piece position is now None, it was removed and moved right off the board
-                if self.cars_dict[self.car_moved].position == None:
-                    self.direction_moved = 'right'
-                # check if the piece moved is horizontal or vertical
-                elif self.parent.cars_dict[self.car_moved].orientation == 'H':
-                    # check if the piece moved left or right
-                    if self.cars_dict[self.car_moved].position[0] < self.parent.cars_dict[self.car_moved].position[0]:
-                        self.direction_moved = 'left'
-                        self.distance_moved = self.parent.cars_dict[self.car_moved].position[0] - self.cars_dict[self.car_moved].position[0]
-                    else:
-                        self.direction_moved = 'right' # else since by virtue of being piece_moved it must have moved
-                        self.distance_moved = self.cars_dict[self.car_moved].position[0] - self.parent.cars_dict[self.car_moved].position[0]
-                else:
-                    # check if the piece moved up or down
-                    if self.cars_dict[self.car_moved].position[1] < self.parent.cars_dict[self.car_moved].position[1]:
-                        self.direction_moved = 'up'
-                        self.distance_moved = self.parent.cars_dict[self.car_moved].position[1] - self.cars_dict[self.car_moved].position[1]
-                    else:
-                        self.direction_moved = 'down'
-                        self.distance_moved = self.cars_dict[self.car_moved].position[1] - self.parent.cars_dict[self.car_moved].position[1]
-            
-    
-        #equals method defined as two boards being the same if they have the same cars in the same positions
-        def __eq__(self, other):
-            for row in range(len(self.board)):
-                for col in range(len(self.board[0])):
-                    if self.board[row][col] != other.board[row][col]:
-                        return False
-            return True
+        board: the board of the node
+        cars_dict: the cars dictionary of the node
+        parent: the parent of the node
+        exit: the exit of the board
+        heuristic: the heuristic type to use for the node. 0 for no heuristic, 1 for h1, 2 for h2
+        lambda_val: the lambda value to use for h3
+        compute_cost: whether or not to compute the cost of the node'''
 
-        def __lt__(self, other):
-            return self.cost <= other.cost
-        
-        def check_win(self, exit: tuple) -> bool:
-            '''Checks if the board is in a winning state'''
-            # check if ambulance is gone (it left the board through the exit) or is at the exit (since we do not want to remove it from the board for our output)
-            if self.cars_dict['A'].position == None or (self.board[exit[1]][exit[0]] == 'A'):
-                return True
-            else:
-                return False
-
-        def __str__(self) -> str:
-            '''returns the node in one line, using the format of the example files'''
-            output = ""
-            for row in self.board:
-                for char in row:
-                    output += char
-            
-            for car in self.cars_dict:
-                fuel = self.cars_dict[car].fuel
-                if fuel < 100:
-                    output += " " + car + "" + str(fuel)
-            return output
-
-
-    def __init__(self, board: list, cars_dict: dict, exit: tuple):
-        self.board = board
-        self.cars_dict = cars_dict
+        self.board = [row[:] for row in board]
+        self.cars_dict = {key: Car(value.char, value.length, value.orientation, value.position, value.fuel) for key, value in cars_dict.items()}
+        self.parent = parent
+        self.children = []
         self.exit = exit
-        self.root = StateTree.TreeNode(self.board, self.cars_dict, None)
 
-    def add_node(self, board: list, cars_dict: dict, parent: 'StateTree.TreeNode') -> None:
-        '''Add a node to the tree'''
-        self.root.children.append(StateTree.TreeNode(board, cars_dict, parent))
+        self.car_moved = None
+        self._compute_car_moved()
+
+        self.direction_moved = None
+        self.distance_moved = None
+        self._compute_direction_moved()
+
+        self.lambda_val = lambda_val # lambda value for h3
+
+        self.h_n = 0
+        self.cost = 0
+        self.f_n = 0
+        self.g_n = 0
+        self._compute_cost()
+        if compute_g_n:
+            self.g_n = self.cost
+        else: 
+            self.g_n = 0
+            
+        self._compute_h_n(heuristic)
+    
+    def set_heuristic(self, h_n: int):
+        self.h_n = h_n
+        self.f_n = self.g_n + self.h_n
+    
+    def _compute_cost(self) -> None:
+        '''Computes the cost of the node'''
+        if self.parent is None:
+            self.cost = 0
+        else:
+            if self.car_moved == self.parent.car_moved: # If piece moved is the same as the parent, cost is same as parent
+                self.cost = self.parent.cost
+            else:
+                self.cost = self.parent.cost + 1
+        self.f_n = self.g_n + self.h_n
+    
+    def _compute_h_n(self, heuristic: int) -> None:
+        '''Computes the heuristic of the node'''
+        if heuristic == 0:
+            self.h_n = 0
+        elif heuristic == 1:
+            self.h_n = self._h1()
+        elif heuristic == 2:
+            self.h_n = self._h2()
+        elif heuristic == 3:
+            self.h_n = self._h3(self.lambda_val)
+        self.f_n = self.g_n + self.h_n
+
+
+    def _h1(self) -> int:
+        '''h1: The # of blocking vehicles'''
+        # count the number of cars blocking the exit
+        count = 0
+        blocking_vehicles = []
+        for i in range(self.cars_dict['A'].tail_position[0] + 1, self.exit[0]+1):
+            if self.board[self.exit[1]][i] != '.':
+                if self.board[self.exit[1]][i] not in blocking_vehicles:
+                    blocking_vehicles.append(self.board[self.exit[1]][i])
+                    count += 1
+        return count
+    
+    def _h2(self) -> int:
+        '''h2: #  blocked positions'''
+        # count the number of cars blocking the exit
+        count = 0
+        for i in range(self.cars_dict['A'].tail_position[0] + 1, self.exit[0]+1):
+            if self.board[self.exit[1]][i] != '.':
+                count += 1
+        return count
+
+    def _h3(self, lambda_const) -> int:
+        '''h3: h1 times constant'''
+        return self._h1() * lambda_const
+    
+    def _compute_car_moved(self) -> None:
+        '''Computes the piece that was moved to get to this node'''
+        if self.parent is None:
+            self.car_moved = None
+        else:
+            # loop through each car in the parent's cars_dict
+            for car in self.parent.cars_dict:
+                # check if the car's position is different
+                if self.parent.cars_dict[car].position != self.cars_dict[car].position:
+                    self.car_moved = car
+                    break
+    
+    def _compute_direction_moved(self) -> None:
+        '''Computes the direction AND DISTANCE that the piece was moved to get to this node'''
+        if self.parent is None:
+            self.direction_moved = None
+        else:
+            # if piece position is now None, it was removed and moved right off the board
+            if self.cars_dict[self.car_moved].position == None:
+                self.direction_moved = 'right'
+            # check if the piece moved is horizontal or vertical
+            elif self.parent.cars_dict[self.car_moved].orientation == 'H':
+                # check if the piece moved left or right
+                if self.cars_dict[self.car_moved].position[0] < self.parent.cars_dict[self.car_moved].position[0]:
+                    self.direction_moved = 'left'
+                    self.distance_moved = self.parent.cars_dict[self.car_moved].position[0] - self.cars_dict[self.car_moved].position[0]
+                else:
+                    self.direction_moved = 'right' # else since by virtue of being piece_moved it must have moved
+                    self.distance_moved = self.cars_dict[self.car_moved].position[0] - self.parent.cars_dict[self.car_moved].position[0]
+            else:
+                # check if the piece moved up or down
+                if self.cars_dict[self.car_moved].position[1] < self.parent.cars_dict[self.car_moved].position[1]:
+                    self.direction_moved = 'up'
+                    self.distance_moved = self.parent.cars_dict[self.car_moved].position[1] - self.cars_dict[self.car_moved].position[1]
+                else:
+                    self.direction_moved = 'down'
+                    self.distance_moved = self.cars_dict[self.car_moved].position[1] - self.parent.cars_dict[self.car_moved].position[1]
+        
+
+    #equals method defined as two boards being the same if they have the same cars in the same positions
+    def __eq__(self, other):
+        for row in range(len(self.board)):
+            for col in range(len(self.board[0])):
+                if self.board[row][col] != other.board[row][col]:
+                    return False
+        return True
+
+    def __lt__(self, other):
+        return self.f_n <= other.f_n # TODO for priority queue, this is not ideal! 
+    
+    def check_win(self, exit: tuple) -> bool:
+        '''Checks if the board is in a winning state'''
+        # check if ambulance is gone (it left the board through the exit) or is at the exit (since we do not want to remove it from the board for our output)
+        if self.cars_dict['A'].position == None or (self.board[exit[1]][exit[0]] == 'A'):
+            return True
+        else:
+            return False
+
+    def __str__(self) -> str:
+        '''returns the node in one line, using the format of the example files'''
+        output = ""
+        output += str(self.f_n) + " " + str(self.g_n) + " " + str(self.h_n) + " " 
+        for row in self.board:
+            for char in row:
+                output += char
+        
+        for car in self.cars_dict:
+            fuel = self.cars_dict[car].fuel
+            if fuel < 100:
+                output += " " + car + "" + str(fuel)
+        return output
