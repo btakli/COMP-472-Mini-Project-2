@@ -1,11 +1,3 @@
-class Board:
-    def __init__(self, board, cars):
-        self.board = board
-        self.cars = cars
-
-    def __str__(self):
-        return f"Board: {self.board}"
-
 class Car:
     def __init__(self, char: str, length: int, orientation: str, position: tuple, fuel: int):
         '''Car object. Contains all the information about a car
@@ -69,4 +61,4 @@ class Car:
         self.tail_position = self._calculate_tailposition()
 
     def __str__(self):
-        return f"Car {self.char}: Length={self.length}, Orientation={self.orientation}, Position={self.position}, Fuel={self.fuel}"
+        return f"Car {self.char}: Length={self.length}, Orientation={self.orientation}, Position={self.position}, Fuel={self.fuel}, Tail_position={self.tail_position}"

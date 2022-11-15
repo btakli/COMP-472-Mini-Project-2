@@ -326,14 +326,14 @@ class TreeNode:
     
     def _h2(self) -> int:
         '''h2: #  blocked positions'''
-        # count the number of cars blocking the exit
+        # count the number of positions blocking the exit
         count = 0
         for i in range(self.cars_dict['A'].tail_position[0] + 1, self.exit[0]+1):
             if self.board[self.exit[1]][i] != '.':
                 count += 1
         return count
 
-    def _h3(self, lambda_const) -> int:
+    def _h3(self, lambda_const: float) -> float:
         '''h3: h1 times constant'''
         return self._h1() * lambda_const
     
@@ -378,11 +378,9 @@ class TreeNode:
 
     #equals method defined as two boards being the same if they have the same cars in the same positions
     def __eq__(self, other):
-        for row in range(len(self.board)):
-            for col in range(len(self.board[0])):
-                if self.board[row][col] != other.board[row][col]:
-                    return False
-        return True
+        if self.board == other.board:
+            return True
+        return False
 
     def __lt__(self, other):
         return self.f_n <= other.f_n # TODO for priority queue, this is not ideal! 
