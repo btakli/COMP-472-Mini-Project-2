@@ -1,4 +1,5 @@
 from utils.Board import Car
+from collections import OrderedDict
 class BoardManipulator:
     '''Class to manipulate the board. NOTE: This class does not modify the original board, it creates a copy of the board and modifies that instead'''
 
@@ -199,7 +200,8 @@ class SubStateGenerator:
         if self.cars_dict['A'].position == None:
             return []
         # loop through each car
-        for carkey in self.cars_dict:
+        sorted_cars = OrderedDict(sorted(self.cars_dict.items()))
+        for carkey in sorted_cars:
             # check orientation
             if self.cars_dict[carkey].orientation == 'H':
                 # check if car can move left

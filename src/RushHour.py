@@ -16,8 +16,8 @@ def main():
     boardslist = board_reader.boards
     carslist = board_reader.cars_board
 
-    board_reader.print_board(1)
-    board_reader.print_cars_dict(1)
+    board_reader.print_board(0)
+    board_reader.print_cars_dict(0)
 
     # tn = TreeNode(boardslist[0], carslist[0], None, board_reader.exit, 1, 2.0)
     # print(tn.h_n)
@@ -42,14 +42,14 @@ def main():
     print(search.search_path_length)
     print(search.solution_path)
 
-    search2 = GBFS(boardslist[0], carslist[0], board_reader.exit, 1, 1)
-    win_node2 = search2.search()
+    #search2 = GBFS(boardslist[0], carslist[0], board_reader.exit, 1, 1)
+    #win_node2 = search2.search()
 
-    print(win_node2)
-    print(search2.goal.cost)
-    print(search2.get_exec_time())
-    print(search2.search_path_length)
-    print(search2.solution_path)
+    #print(win_node2)
+    #print(search2.goal.cost)
+    #print(search2.get_exec_time())
+    #print(search2.search_path_length)
+    #print(search2.solution_path)
 
 # main
 if __name__ == "__main__":

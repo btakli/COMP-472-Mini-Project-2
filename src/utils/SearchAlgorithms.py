@@ -82,26 +82,33 @@ class SearchAlgorithm: # Base class for all search algorithms
         for i in range(len(temp_solution_path)):
             self.solution_path.append((temp_solution_path[i][0], temp_solution_path[i][1], temp_solution_path[i][2]))
 
+
+
 class UniformCostSearch(SearchAlgorithm): 
     ''' Uniform Cost Search Algorithm '''
     def __init__(self, board: list, cars_dict: dict, exit: tuple):
         super().__init__(board, cars_dict, exit)
 
+
     def search(self):
         '''Searches for the solution to the game'''
         open_list = PriorityQueue()
         closed_list = []
+        visited_boards=[]
 
         # Start timer 
         start_time = time.perf_counter_ns()
         # PQ is a tuple of (cost, state)
         open_list.put((self.root.cost, self.root))
 
-        while open_list.qsize() > 0:
-            self.search_path_length += 1
+        while open_list.qsize() > 0:           
             current_node = open_list.get()[1]
+            if current_node.board in visited_boards:
+                continue
+            
+            self.search_path_length += 1        
             closed_list.append(current_node)
-
+            visited_boards.append(current_node.board)
             if current_node.check_win(self.exit):
                 self.goal = current_node
                 self._calculate_solution_path()
@@ -113,16 +120,12 @@ class UniformCostSearch(SearchAlgorithm):
             substate_generator.generate_substates()
 
             for substate in substate_generator.substates: 
-                in_closed_list = False
-                for node in closed_list:
-                    if substate[0] == node.board:
-                        in_closed_list = True
-                        break
-                if not in_closed_list:
+                if not(substate[0] in visited_boards):
                     child = TreeNode(substate[0], substate[1], current_node, self.exit)
                     current_node.children.append(child)
                     open_list.put((child.cost, child))
 
+                    
 
      
 class GBFS(SearchAlgorithm):
