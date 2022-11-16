@@ -46,6 +46,7 @@ class SearchAlgorithm: # Base class for all search algorithms
         self.exit = exit
         self.goal = None
         self.solution_path = []
+        self.solution_path_nodes = []
         self.search_path_length = 0
         self.search_time = 0
         self.heuristic = heuristic
@@ -72,15 +73,18 @@ class SearchAlgorithm: # Base class for all search algorithms
     def _calculate_solution_path(self):
         '''Calculates the solution path as a list of moves'''
         temp_solution_path = []
+        temp_node_path = []
         current_node = self.goal
         while current_node.parent is not None:
             temp_solution_path.insert(0, (current_node.car_moved, current_node.direction_moved,1))
+            temp_node_path.insert(0, current_node)
             current_node = current_node.parent
             
         #TODO combine consecutive moves of the same car in the same direction and increment distance
 
         for i in range(len(temp_solution_path)):
             self.solution_path.append((temp_solution_path[i][0], temp_solution_path[i][1], temp_solution_path[i][2]))
+            self.solution_path_nodes.append((temp_node_path[i][0], temp_node_path[i][1], temp_node_path[i][2]))
 
 
 
