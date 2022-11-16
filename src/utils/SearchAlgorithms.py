@@ -179,12 +179,18 @@ class GBFS(SearchAlgorithm):
 
         
 
-class A:
+class A(SearchAlgorithm):
     ''' A/A* Search Algorithm '''
-    def __init__(self, board: list, cars_dict: dict, exit: tuple):
-        self.board = board
-        self.cars_dict = cars_dict
-        self.exit = exit
+
+    def __init__(self, board: list, cars_dict: dict, exit: tuple, heuristic: int, lambda_value=2.0):
+        '''Initializes the A/A* Search Algorithm
+
+        board: list of lists representing the board
+        cars_dict: dictionary of cars
+        exit: tuple representing the exit
+        heuristic: int representing the heuristic to use (0 = no heuristic, 1 = h1, 2 = h2...)
+        lambda_value: float for the lambda value for h3'''
+        super().__init__(board, cars_dict, exit, heuristic, lambda_value)
 
     def search(self):
         '''Searches for the solution to the game'''

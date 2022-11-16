@@ -33,23 +33,32 @@ def main():
     
     # exit(0)
 
-    search = UniformCostSearch(boardslist[0], carslist[0], board_reader.exit)
-    win_node = search.search()
+    # search = UniformCostSearch(boardslist[0], carslist[0], board_reader.exit)
+    # win_node = search.search()
 
-    print(win_node)
-    print(search.goal.cost)
-    print(search.get_exec_time())
-    print(search.search_path_length)
-    print(search.solution_path)
+    # print(win_node)
+    # print(search.goal.cost)
+    # print(search.get_exec_time())
+    # print(search.search_path_length)
+    # print(search.solution_path)
 
-    #search2 = GBFS(boardslist[0], carslist[0], board_reader.exit, 1, 1)
-    #win_node2 = search2.search()
+    # search2 = GBFS(boardslist[0], carslist[0], board_reader.exit, 1, 1)
+    # win_node2 = search2.search()
 
-    #print(win_node2)
-    #print(search2.goal.cost)
-    #print(search2.get_exec_time())
-    #print(search2.search_path_length)
-    #print(search2.solution_path)
+    # print(win_node2)
+    # print(search2.goal.cost)
+    # print(search2.get_exec_time())
+    # print(search2.search_path_length)
+    # print(search2.solution_path)
+
+    search3 = A(boardslist[0], carslist[0], board_reader.exit, 1, 1)
+    win_node3 = search3.search()
+
+    print(win_node3)
+    print(search3.goal.cost)
+    print(search3.get_exec_time())
+    print(search3.search_path_length)
+    print(search3.solution_path)
 
 # main
 if __name__ == "__main__":
