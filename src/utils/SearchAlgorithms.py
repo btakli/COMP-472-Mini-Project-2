@@ -148,7 +148,7 @@ class GBFS(SearchAlgorithm):
         # Start timer
         start_time = time.perf_counter_ns()
 
-        # PQ is a tuple of (h(n), state)
+        # PQ is a tuple of (f(n), state)
         open_list.put((self.root.h_n, self.root))
 
         while open_list.qsize() > 0:
@@ -166,7 +166,7 @@ class GBFS(SearchAlgorithm):
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
             substate_generator.generate_substates()
 
-            for substate in substate_generator.substates: 
+            for substate in substate_generator.substates:
                 in_closed_list = False
                 for node in closed_list:
                     if substate[0] == node.board:
@@ -188,7 +188,41 @@ class A:
 
     def search(self):
         '''Searches for the solution to the game'''
-        pass
+        open_list = NodePriorityQueue()
+        closed_list = []
+
+        # Start timer
+        start_time = time.perf_counter_ns()
+
+        # PQ is a tuple of (h(n), state)
+        open_list.put((self.root.f_n, self.root))
+
+        while open_list.qsize() > 0:
+            self.search_path_length += 1
+            current_node = open_list.get()
+            closed_list.append(current_node)
+
+            if current_node.check_win(self.exit):
+                self.goal = current_node
+                self._calculate_solution_path()
+                end_time = time.perf_counter_ns()
+                self.search_time = (end_time - start_time) * 10 ** -9
+                return current_node
+
+            substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
+            substate_generator.generate_substates()
+
+            for substate in substate_generator.substates:
+                in_closed_list = False
+                for node in closed_list:
+                    if substate[0] == node.board:
+                        in_closed_list = True
+                        break
+                if not in_closed_list:
+                    child = TreeNode(substate[0], substate[1], current_node, self.exit, self.heuristic,
+                                     self.lambda_value, False)
+                    current_node.children.append(child)
+                    open_list.put((child.f_n, child))
 
 
                     
