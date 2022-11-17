@@ -118,8 +118,8 @@ class UniformCostSearch(SearchAlgorithm):
                 self.goal = current_node
                 self._calculate_solution_path()
                 end_time = time.perf_counter_ns()
-                self.result = True
                 self.search_time = (end_time - start_time) * 10**-9 # convert to seconds
+                self.result = True
                 return current_node
 
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
@@ -167,6 +167,7 @@ class GBFS(SearchAlgorithm):
                 self._calculate_solution_path()
                 end_time = time.perf_counter_ns()
                 self.search_time = (end_time - start_time) * 10**-9
+                self.result = True
                 return current_node
 
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
@@ -219,6 +220,7 @@ class A(SearchAlgorithm):
                 self._calculate_solution_path()
                 end_time = time.perf_counter_ns()
                 self.search_time = (end_time - start_time) * 10 ** -9
+                self.result = True
                 return current_node
 
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)

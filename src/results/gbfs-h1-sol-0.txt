@@ -1,1 +1,23 @@
-no solution
+Initial Board Configuration: 0 0 0 BBIJ....IJCC..IAA.GDDK.MGH.KLMGHFFL. M99
+
+['B', 'B', 'I', 'J', '.', '.']
+['.', '.', 'I', 'J', 'C', 'C']
+['.', '.', 'I', 'A', 'A', 'M']
+['G', 'D', 'D', 'K', '.', 'M']
+['G', 'H', '.', 'K', 'L', '.']
+['G', 'H', 'F', 'F', 'L', '.']
+
+Car fuel Available: B:100, I:100, J:100, C:100, A:100, M:100, G:100, D:100, K:100, H:100, L:100, F:100, 
+
+Runtime: 0.0031 seconds
+Search Path Length: 20 states
+Solution Path Length: 18 moves
+Solution Path: [('M', 'down', 1), ('M', 'down', 1), ('L', 'up', 1), ('M', 'up', 1), ('G', 'up', 1), ('M', 'down', 1), ('L', 'down', 1), ('M', 'up', 1), ('G', 'up', 1), ('M', 'down', 1), ('L', 'up', 1), ('M', 'up', 1), ('F', 'right', 1), ('M', 'down', 1), ('G', 'down', 1), ('M', 'up', 1), ('G', 'down', 1), ('M', 'down', 1), ('A', 'right', 1)]
+
+
+['B', 'B', '.', 'G', '.', 'H']
+['E', '.', '.', 'G', '.', 'H']
+['E', 'A', 'A', 'G', '.', 'I']
+['.', '.', 'F', 'C', 'C', 'I']
+['D', 'D', 'F', '.', '.', 'I']
+['.', '.', 'F', '.', '.', '.']
