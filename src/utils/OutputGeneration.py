@@ -57,6 +57,7 @@ class OutputGeneration:
                 f.write("\n")
                 output = ""
                 node_number = 0
+                # TODO - Figure out why this part (2.3.1.6 in pdf) isn't outputting
                 for node in self.search.solution_path_nodes:
                     # Movement done by node
                     output += (str(sln_path[node_number][0])+" "+str(sln_path[node_number][1])+" "+str(sln_path[node_number][2]))
