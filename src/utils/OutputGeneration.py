@@ -40,8 +40,18 @@ class OutputGeneration:
             if not self.search.result:
                 f.write("no solution")
             else:
-                f.write("Initial Board Configuration: " + str(self.search.solution_path_nodes[0])+"\n")
+                # 2.3.1.1 - Initial Config
+                output = "Initial Board Configuration: "
+                for row in self.search.root.board:
+                    for char in row:
+                        output += char
+                for car in self.search.root.cars_dict:
+                    fuel = self.search.root.cars_dict[car].fuel
+                    if fuel < 100:
+                        output += " " + car + "" + str(fuel)
+                f.write(output + "\n")
                 f.write("\n")
+                # 2.3.1.1 - Initial Board Printing
                 for row in self.board_reader.boards[0]:
                     f.write(str(row) + "\n")
                 f.write("\n")
@@ -50,21 +60,32 @@ class OutputGeneration:
                 for car, fuel in fuel_dict.items():
                     f.write(car + ":" + str(fuel) + ", ")
                 f.write("\n" + "\n")
+                # 2.3.1.2
                 f.write("Runtime: " + str(self.search.get_exec_time())+"\n")
+                # 2.3.1.3
                 f.write("Search Path Length: " + str(self.search.get_search_path_length())+" states"+"\n")
+                # 2.3.1.4
                 f.write("Solution Path Length: " + str(self.search.goal.cost)+" moves"+"\n")
-                f.write("Solution Path: " + str(sln_path) + "\n")
-                f.write("\n")
-                output = ""
+                # 2.3.1.5
+                output = "Solution Path: "
                 node_number = 0
-                # TODO - Figure out why this part (2.3.1.6 in pdf) isn't outputting
+                for node in sln_path:
+
+                    # Movement done by node
+                    output += (str(node[0])+" "+str(node[1])+" "+str(node[2]) + "; ")
+                    node_number += 1
+                f.write(output + "\n")
+                f.write("\n")
+                # 2.3.1.6
+                node_number = 0
                 for node in self.search.solution_path_nodes:
+                    output = ""
                     # Movement done by node
                     output += (str(sln_path[node_number][0])+" "+str(sln_path[node_number][1])+" "+str(sln_path[node_number][2]))
                     # Fuel Remaining in Car moved
                     fuel = node.cars_dict[sln_path[node_number][0]].fuel
                     if fuel < 100:
-                        output += " " + str(fuel)
+                        output += " " + str(fuel) + " "
                     # Resulting Board String
                     for row in node.board:
                         for char in row:
@@ -75,10 +96,11 @@ class OutputGeneration:
                         if fuel < 100:
                             output += " " + car + "" + str(fuel)
                     # Increment node number
+                    f.write(output + "\n")
                     node_number += 1
-
                 f.write("\n")
-                for row in self.board_reader.boards[len(self.board_reader.boards)-1]:
+                # 2.3.1.7
+                for row in self.search.solution_path_nodes[len(self.search.solution_path_nodes)-1].board:
                     f.write(str(row) + "\n")
 
             f.close()

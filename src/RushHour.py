@@ -32,7 +32,6 @@ def main():
     # for substate in sg2.substates:
     #     print(TreeNode(substate[0], substate[1], None, board_reader.exit, 1, 2.0).h_n)
 
-    
     # exit(0)
 
     search = UniformCostSearch(boardslist[board_index], carslist[board_index], board_reader.exit)
@@ -44,6 +43,11 @@ def main():
     print(search.search_path_length)
     print(search.solution_path)
 
+    # Output Files Generation
+    output_generator = OutputGeneration(search, board_reader, board_index)
+    output_generator.search_files()
+    output_generator.solution_files()
+
     # search2 = GBFS(boardslist[board_index], carslist[board_index], board_reader.exit, 1, 1)
     # win_node2 = search2.search()
 
@@ -52,6 +56,11 @@ def main():
     # print(search2.get_exec_time())
     # print(search2.search_path_length)
     # print(search2.solution_path)
+
+    # # Output Files Generation
+    # output_generator2 = OutputGeneration(search2, board_reader, board_index)
+    # output_generator2.search_files()
+    # output_generator2.solution_files()
 
     # search3 = A(boardslist[board_index], carslist[board_index], board_reader.exit, 1, 1)
     # win_node3 = search3.search()
@@ -62,10 +71,10 @@ def main():
     # print(search3.solution_path)
     # print(win_node3)
 
-    # Output Files Generation
-    output_generator = OutputGeneration(search, board_reader, board_index)
-    output_generator.search_files()
-    output_generator.solution_files()
+    # # Output Files Generation
+    # output_generator3 = OutputGeneration(search3, board_reader, board_index)
+    # output_generator3.search_files()
+    # output_generator3.solution_files()
 
 # main
 if __name__ == "__main__":
