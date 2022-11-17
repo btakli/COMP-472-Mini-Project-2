@@ -50,6 +50,7 @@ class SearchAlgorithm: # Base class for all search algorithms
         self.search_path_length = 0
         self.search_time = 0
         self.heuristic = heuristic
+        self.result = False
 
         if lambda_value < 1:
             raise ValueError("Lambda value must be greater than 1")
@@ -84,7 +85,7 @@ class SearchAlgorithm: # Base class for all search algorithms
 
         for i in range(len(temp_solution_path)):
             self.solution_path.append((temp_solution_path[i][0], temp_solution_path[i][1], temp_solution_path[i][2]))
-            self.solution_path_nodes.append((temp_node_path[i][0], temp_node_path[i][1], temp_node_path[i][2]))
+            self.solution_path_nodes.append(temp_node_path[i])
 
 
 
@@ -117,6 +118,7 @@ class UniformCostSearch(SearchAlgorithm):
                 self.goal = current_node
                 self._calculate_solution_path()
                 end_time = time.perf_counter_ns()
+                self.result = True
                 self.search_time = (end_time - start_time) * 10**-9 # convert to seconds
                 return current_node
 

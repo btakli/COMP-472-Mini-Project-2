@@ -3,6 +3,7 @@ from pathlib import Path
 
 from utils.BoardManipulation import SubStateGenerator, TreeNode
 from utils.BoardReader import BoardReader
+from utils.OutputGeneration import OutputGeneration
 from utils.SearchAlgorithms import UniformCostSearch, GBFS, A
 
 
@@ -12,16 +13,17 @@ def main():
         "SampleInputOutput/Sample/sample-input.txt"
 
     board_reader = BoardReader(input_file)
+    board_index = 0
 
     boardslist = board_reader.boards
     carslist = board_reader.cars_board
 
-    board_reader.print_board(0)
-    board_reader.print_cars_dict(0)
+    board_reader.print_board(board_index)
+    board_reader.print_cars_dict(board_index)
 
-    # tn = TreeNode(boardslist[0], carslist[0], None, board_reader.exit, 1, 2.0)
+    # tn = TreeNode(boardslist[board_index], carslist[board_index], None, board_reader.exit, 1, 2.0)
     # print(tn.h_n)
-    # sg = SubStateGenerator(boardslist[0], carslist[0], board_reader.exit)
+    # sg = SubStateGenerator(boardslist[board_index], carslist[board_index], board_reader.exit)
     # sg.generate_substates()
 
     # sg2 = SubStateGenerator(sg.substates[0][0], sg.substates[0][1], board_reader.exit)
@@ -33,16 +35,16 @@ def main():
     
     # exit(0)
 
-    # search = UniformCostSearch(boardslist[0], carslist[0], board_reader.exit)
-    # win_node = search.search()
+    search = UniformCostSearch(boardslist[board_index], carslist[board_index], board_reader.exit)
+    win_node = search.search()
 
-    # print(win_node)
-    # print(search.goal.cost)
-    # print(search.get_exec_time())
-    # print(search.search_path_length)
-    # print(search.solution_path)
+    print(win_node)
+    print(search.goal.cost)
+    print(search.get_exec_time())
+    print(search.search_path_length)
+    print(search.solution_path)
 
-    # search2 = GBFS(boardslist[0], carslist[0], board_reader.exit, 1, 1)
+    # search2 = GBFS(boardslist[board_index], carslist[board_index], board_reader.exit, 1, 1)
     # win_node2 = search2.search()
 
     # print(win_node2)
@@ -51,14 +53,19 @@ def main():
     # print(search2.search_path_length)
     # print(search2.solution_path)
 
-    search3 = A(boardslist[0], carslist[0], board_reader.exit, 1, 1)
-    win_node3 = search3.search()
+    # search3 = A(boardslist[board_index], carslist[board_index], board_reader.exit, 1, 1)
+    # win_node3 = search3.search()
 
-    print(win_node3)
-    print(search3.goal.cost)
-    print(search3.get_exec_time())
-    print(search3.search_path_length)
-    print(search3.solution_path)
+    # print(search3.goal.cost)
+    # print(search3.get_exec_time())
+    # print(search3.search_path_length)
+    # print(search3.solution_path)
+    # print(win_node3)
+
+    # Output Files Generation
+    output_generator = OutputGeneration(search, board_reader, board_index)
+    output_generator.search_files()
+    output_generator.solution_files()
 
 # main
 if __name__ == "__main__":
