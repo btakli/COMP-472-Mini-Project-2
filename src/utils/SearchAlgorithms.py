@@ -46,9 +46,11 @@ class SearchAlgorithm: # Base class for all search algorithms
         self.exit = exit
         self.goal = None
         self.solution_path = []
+        self.solution_path_nodes = []
         self.search_path_length = 0
         self.search_time = 0
         self.heuristic = heuristic
+        self.result = False
 
         if lambda_value < 1:
             raise ValueError("Lambda value must be greater than 1")
@@ -72,15 +74,18 @@ class SearchAlgorithm: # Base class for all search algorithms
     def _calculate_solution_path(self):
         '''Calculates the solution path as a list of moves'''
         temp_solution_path = []
+        temp_node_path = []
         current_node = self.goal
         while current_node.parent is not None:
             temp_solution_path.insert(0, (current_node.car_moved, current_node.direction_moved,1))
+            temp_node_path.insert(0, current_node)
             current_node = current_node.parent
             
         #TODO combine consecutive moves of the same car in the same direction and increment distance
 
         for i in range(len(temp_solution_path)):
             self.solution_path.append((temp_solution_path[i][0], temp_solution_path[i][1], temp_solution_path[i][2]))
+            self.solution_path_nodes.append(temp_node_path[i])
 
 
 
@@ -114,6 +119,7 @@ class UniformCostSearch(SearchAlgorithm):
                 self._calculate_solution_path()
                 end_time = time.perf_counter_ns()
                 self.search_time = (end_time - start_time) * 10**-9 # convert to seconds
+                self.result = True
                 return current_node
 
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
@@ -148,7 +154,7 @@ class GBFS(SearchAlgorithm):
         # Start timer
         start_time = time.perf_counter_ns()
 
-        # PQ is a tuple of (h(n), state)
+        # PQ is a tuple of (f(n), state)
         open_list.put((self.root.h_n, self.root))
 
         while open_list.qsize() > 0:
@@ -161,12 +167,13 @@ class GBFS(SearchAlgorithm):
                 self._calculate_solution_path()
                 end_time = time.perf_counter_ns()
                 self.search_time = (end_time - start_time) * 10**-9
+                self.result = True
                 return current_node
 
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
             substate_generator.generate_substates()
 
-            for substate in substate_generator.substates: 
+            for substate in substate_generator.substates:
                 in_closed_list = False
                 for node in closed_list:
                     if substate[0] == node.board:
@@ -179,16 +186,57 @@ class GBFS(SearchAlgorithm):
 
         
 
-class A:
+class A(SearchAlgorithm):
     ''' A/A* Search Algorithm '''
-    def __init__(self, board: list, cars_dict: dict, exit: tuple):
-        self.board = board
-        self.cars_dict = cars_dict
-        self.exit = exit
+
+    def __init__(self, board: list, cars_dict: dict, exit: tuple, heuristic: int, lambda_value=2.0):
+        '''Initializes the A/A* Search Algorithm
+
+        board: list of lists representing the board
+        cars_dict: dictionary of cars
+        exit: tuple representing the exit
+        heuristic: int representing the heuristic to use (0 = no heuristic, 1 = h1, 2 = h2...)
+        lambda_value: float for the lambda value for h3'''
+        super().__init__(board, cars_dict, exit, heuristic, lambda_value)
 
     def search(self):
         '''Searches for the solution to the game'''
-        pass
+        open_list = NodePriorityQueue()
+        closed_list = []
+
+        # Start timer
+        start_time = time.perf_counter_ns()
+
+        # PQ is a tuple of (h(n), state)
+        open_list.put((self.root.f_n, self.root))
+
+        while open_list.qsize() > 0:
+            self.search_path_length += 1
+            current_node = open_list.get()
+            closed_list.append(current_node)
+
+            if current_node.check_win(self.exit):
+                self.goal = current_node
+                self._calculate_solution_path()
+                end_time = time.perf_counter_ns()
+                self.search_time = (end_time - start_time) * 10 ** -9
+                self.result = True
+                return current_node
+
+            substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
+            substate_generator.generate_substates()
+
+            for substate in substate_generator.substates:
+                in_closed_list = False
+                for node in closed_list:
+                    if substate[0] == node.board:
+                        in_closed_list = True
+                        break
+                if not in_closed_list:
+                    child = TreeNode(substate[0], substate[1], current_node, self.exit, self.heuristic,
+                                     self.lambda_value, False)
+                    current_node.children.append(child)
+                    open_list.put((child.f_n, child))
 
 
                     

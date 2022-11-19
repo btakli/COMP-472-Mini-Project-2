@@ -1,0 +1,42 @@
+Initial Board Configuration: BBIJ....IJCC..IAAMGDDK.MGH.KL.GHFFL.
+
+['B', 'B', 'I', 'J', '.', '.']
+['.', '.', 'I', 'J', 'C', 'C']
+['.', '.', 'I', 'A', 'A', 'M']
+['G', 'D', 'D', 'K', '.', 'M']
+['G', 'H', '.', 'K', 'L', '.']
+['G', 'H', 'F', 'F', 'L', '.']
+
+Car fuel Available: B:100, I:100, J:100, C:100, A:100, M:100, G:100, D:100, K:100, H:100, L:100, F:100, 
+
+Runtime: 0.0030 seconds
+Search Path Length: 20 states
+Solution Path Length: 18 moves
+Solution Path: M down 1; M down 1; L up 1; M up 1; G up 1; M down 1; L down 1; M up 1; G up 1; M down 1; L up 1; M up 1; F right 1; M down 1; G down 1; M up 1; G down 1; M down 1; A right 1; 
+
+M down 1 99 BBIJ....IJCC..IAA.GDDK.MGH.KLMGHFFL. M99
+M down 1 98 BBIJ....IJCC..IAA.GDDK..GH.KLMGHFFLM M98
+L up 1 99 BBIJ....IJCC..IAA.GDDKL.GH.KLMGHFF.M M98 L99
+M up 1 97 BBIJ....IJCC..IAA.GDDKLMGH.KLMGHFF.. M97 L99
+G up 1 99 BBIJ....IJCCG.IAA.GDDKLMGH.KLM.HFF.. M97 G99 L99
+M down 1 96 BBIJ....IJCCG.IAA.GDDKL.GH.KLM.HFF.M M96 G99 L99
+L down 1 98 BBIJ....IJCCG.IAA.GDDK..GH.KLM.HFFLM M96 G99 L98
+M up 1 95 BBIJ....IJCCG.IAA.GDDK.MGH.KLM.HFFL. M95 G99 L98
+G up 1 98 BBIJ..G.IJCCG.IAA.GDDK.M.H.KLM.HFFL. M95 G98 L98
+M down 1 94 BBIJ..G.IJCCG.IAA.GDDK...H.KLM.HFFLM M94 G98 L98
+L up 1 97 BBIJ..G.IJCCG.IAA.GDDKL..H.KLM.HFF.M M94 G98 L97
+M up 1 93 BBIJ..G.IJCCG.IAA.GDDKLM.H.KLM.HFF.. M93 G98 L97
+F right 1 99 BBIJ..G.IJCCG.IAA.GDDKLM.H.KLM.H.FF. M93 G98 L97 F99
+M down 1 92 BBIJ..G.IJCCG.IAA.GDDKL..H.KLM.H.FFM M92 G98 L97 F99
+G down 1 97 BBIJ....IJCCG.IAA.GDDKL.GH.KLM.H.FFM M92 G97 L97 F99
+M up 1 91 BBIJ....IJCCG.IAA.GDDKLMGH.KLM.H.FF. M91 G97 L97 F99
+G down 1 96 BBIJ....IJCC..IAA.GDDKLMGH.KLMGH.FF. M91 G96 L97 F99
+M down 1 90 BBIJ....IJCC..IAA.GDDKL.GH.KLMGH.FFM M90 G96 L97 F99
+A right 1 99 BBIJ....IJCC..I.AAGDDKL.GH.KLMGH.FFM A99 M90 G96 L97 F99
+
+['B', 'B', 'I', 'J', '.', '.']
+['.', '.', 'I', 'J', 'C', 'C']
+['.', '.', 'I', '.', 'A', 'A']
+['G', 'D', 'D', 'K', 'L', '.']
+['G', 'H', '.', 'K', 'L', 'M']
+['G', 'H', '.', 'F', 'F', 'M']

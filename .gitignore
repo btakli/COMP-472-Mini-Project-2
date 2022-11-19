@@ -8,6 +8,8 @@ __pycache__/
 
 # MacOS files
 *.DS_Store
+#JetBrains
+.idea
 
 # Distribution / packaging
 .Python
