@@ -13,7 +13,7 @@ def main():
         "SampleInputOutput/Sample/sample-input.txt"
 
     board_reader = BoardReader(input_file)
-    board_index = 0
+    board_index = 5
 
     boardslist = board_reader.boards
     carslist = board_reader.cars_board

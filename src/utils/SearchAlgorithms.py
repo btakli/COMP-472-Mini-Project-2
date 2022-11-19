@@ -77,17 +77,43 @@ class SearchAlgorithm: # Base class for all search algorithms
         temp_node_path = []
         current_node = self.goal
         while current_node.parent is not None:
-            temp_solution_path.insert(0, (current_node.car_moved, current_node.direction_moved,1))
+            temp_solution_path.insert(0, (current_node.car_moved, current_node.direction_moved,current_node.distance_moved))
             temp_node_path.insert(0, current_node)
             current_node = current_node.parent
-            
-        #TODO combine consecutive moves of the same car in the same direction and increment distance
 
-        for i in range(len(temp_solution_path)):
-            self.solution_path.append((temp_solution_path[i][0], temp_solution_path[i][1], temp_solution_path[i][2]))
-            self.solution_path_nodes.append(temp_node_path[i])
+        print(f"temp_solution_path: {temp_solution_path}")
+        print(f"temp_node_path:")
+        for node in temp_node_path:
+            for row in node.board:
+                print(row)
+            print()
+
+        self.solution_path, self.solution_path_nodes = self._combine_moves(temp_solution_path, temp_node_path)
 
 
+    def _combine_moves(self,temp_solution_path: list, temp_node_path: list) -> tuple[list,list]:
+        '''Combines consecutive moves of the same car in the same direction and increments the distance.
+        
+        Returns (solution_path, node_path) tuple after the combination'''
+        i = 0
+        while i < len(temp_solution_path)-1:
+            if temp_solution_path[i] == None:
+                i += 1
+                continue
+            if temp_solution_path[i][0] == temp_solution_path[i+1][0] and temp_solution_path[i][1] == temp_solution_path[i+1][1]:
+                temp_solution_path[i] = (temp_solution_path[i][0], temp_solution_path[i][1], temp_solution_path[i][2]+temp_solution_path[i+1][2])
+                temp_solution_path[i+1] = None
+
+                temp_node_path[i+1].distance_moved += temp_node_path[i].distance_moved # increment distance of the next node since it is at the state we want
+                temp_node_path[i] = None
+
+                i += 1
+            else:
+                i += 1
+        # remove None values
+        solution_path = [move for move in temp_solution_path if move is not None]
+        node_path = [node for node in temp_node_path if node is not None]
+        return solution_path, node_path
 
 class UniformCostSearch(SearchAlgorithm): 
     ''' Uniform Cost Search Algorithm '''
