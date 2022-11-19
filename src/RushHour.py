@@ -13,7 +13,7 @@ def main():
         "SampleInputOutput/Sample/sample-input.txt"
 
     board_reader = BoardReader(input_file)
-    board_index = 5
+    board_index = 0
 
     boardslist = board_reader.boards
     carslist = board_reader.cars_board
@@ -24,30 +24,34 @@ def main():
     search = UniformCostSearch(boardslist[board_index], carslist[board_index], board_reader.exit)
     win_node = search.search()
 
-    print(win_node)
-    print(search.goal.cost)
-    print(search.get_exec_time())
-    print(search.search_path_length)
-    print(search.solution_path)
+    if not(win_node==None):
+        print(win_node)
+        print(search.goal.cost)
+        print(search.get_exec_time())
+        print(search.search_path_length)
+        print(search.solution_path)
 
-    # Output Files Generation
-    output_generator = OutputGeneration(search, board_reader, board_index)
-    output_generator.search_files()
-    output_generator.solution_files()
 
-    # search2 = GBFS(boardslist[board_index], carslist[board_index], board_reader.exit, 1, 1)
-    # win_node2 = search2.search()
+    else:
+        # Output Files Generation
+        output_generator = OutputGeneration(search, board_reader, board_index)
+        output_generator.search_files()
+        output_generator.solution_files()
+        print("No solution")
 
-    # print(win_node2)
-    # print(search2.goal.cost)
-    # print(search2.get_exec_time())
-    # print(search2.search_path_length)
-    # print(search2.solution_path)
+    #search2 = GBFS(boardslist[board_index], carslist[board_index], board_reader.exit, 1, 1)
+    #win_node2 = search2.search()
+
+    #print(win_node2)
+    #print(search2.goal.cost)
+    #print(search2.get_exec_time())
+    #print(search2.search_path_length)
+    #print(search2.solution_path)
 
     # # Output Files Generation
-    # output_generator2 = OutputGeneration(search2, board_reader, board_index)
-    # output_generator2.search_files()
-    # output_generator2.solution_files()
+    #output_generator2 = OutputGeneration(search2, board_reader, board_index)
+    #output_generator2.search_files()
+    #output_generator2.solution_files()
 
     # search3 = A(boardslist[board_index], carslist[board_index], board_reader.exit, 1, 1)
     # win_node3 = search3.search()
