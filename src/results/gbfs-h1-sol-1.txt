@@ -34,6 +34,7 @@ G down 1 96 BBIJ....IJCC..IAA.GDDKLMGH.KLMGH.FF. M91 G96 L97 F99
 M down 1 90 BBIJ....IJCC..IAA.GDDKL.GH.KLMGH.FFM M90 G96 L97 F99
 A right 1 99 BBIJ....IJCC..I.AAGDDKL.GH.KLMGH.FFM A99 M90 G96 L97 F99
 
+! A99 M90 G96 L97 F99
 ['B', 'B', 'I', 'J', '.', '.']
 ['.', '.', 'I', 'J', 'C', 'C']
 ['.', '.', 'I', '.', 'A', 'A']

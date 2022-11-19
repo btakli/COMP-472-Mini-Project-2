@@ -16,14 +16,14 @@ class OutputGeneration:
         self.board_reader = board_reader
         self.board_index = board_index
         if issubclass(search.__class__, UniformCostSearch):
-            self.search_file_title = "ucs-search-"+str(board_index)+".txt"
-            self.solution_file_title = "ucs-sol-"+str(board_index)+".txt"
+            self.search_file_title = "ucs-search-"+str(board_index+1)+".txt"
+            self.solution_file_title = "ucs-sol-"+str(board_index+1)+".txt"
         elif issubclass(search.__class__, GBFS):
-            self.search_file_title = "gbfs-h"+str(search.heuristic)+"-search-"+str(board_index)+".txt"
-            self.solution_file_title = "gbfs-h"+str(search.heuristic)+"-sol-"+str(board_index)+".txt"
+            self.search_file_title = "gbfs-h"+str(search.heuristic)+"-search-"+str(board_index+1)+".txt"
+            self.solution_file_title = "gbfs-h"+str(search.heuristic)+"-sol-"+str(board_index+1)+".txt"
         elif issubclass(search.__class__, A):
-            self.search_file_title = "a-h"+str(search.heuristic)+"-search-"+str(board_index)+".txt"
-            self.solution_file_title = "a-h"+str(search.heuristic)+"-sol-"+str(board_index)+".txt"
+            self.search_file_title = "a-h"+str(search.heuristic)+"-search-"+str(board_index+1)+".txt"
+            self.solution_file_title = "a-h"+str(search.heuristic)+"-sol-"+str(board_index+1)+".txt"
         else:
             # ERROR
             pass
@@ -100,6 +100,12 @@ class OutputGeneration:
                     node_number += 1
                 f.write("\n")
                 # 2.3.1.7
+                output = "!"
+                for car in node.cars_dict:
+                    fuel = node.cars_dict[car].fuel
+                    if fuel < 100:
+                        output += " " + car + "" + str(fuel)
+                f.write(output + "\n")
                 for row in self.search.solution_path_nodes[len(self.search.solution_path_nodes)-1].board:
                     f.write(str(row) + "\n")
 
@@ -108,6 +114,15 @@ class OutputGeneration:
     def search_files(self):
         if not os.path.isfile(f"{self.results_folder}/{self.search_file_title}"):
             f = open(f"{self.results_folder}/{self.search_file_title}", "w")
+            output = str(self.search.root.f_n) + " " + str(self.search.root.g_n) + " " + str(self.search.root.h_n) + " "
+            for row in self.search.root.board:
+                for char in row:
+                    output += char
+            for car in self.search.root.cars_dict:
+                fuel = self.search.root.cars_dict[car].fuel
+                if fuel < 100:
+                    output += " " + car + "" + str(fuel)
+            f.write(output + "\n")
             for node in self.search.solution_path_nodes:
                 f.write(str(node) + "\n")
             f.close()
