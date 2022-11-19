@@ -13,26 +13,13 @@ def main():
         "SampleInputOutput/Sample/sample-input.txt"
 
     board_reader = BoardReader(input_file)
-    board_index = 0
+    board_index = 5
 
     boardslist = board_reader.boards
     carslist = board_reader.cars_board
 
     board_reader.print_board(board_index)
     board_reader.print_cars_dict(board_index)
-
-    # tn = TreeNode(boardslist[board_index], carslist[board_index], None, board_reader.exit, 1, 2.0)
-    # print(tn.h_n)
-    # sg = SubStateGenerator(boardslist[board_index], carslist[board_index], board_reader.exit)
-    # sg.generate_substates()
-
-    # sg2 = SubStateGenerator(sg.substates[0][0], sg.substates[0][1], board_reader.exit)
-    # sg2.generate_substates()
-    # sg2.print_substates()
-    # for substate in sg2.substates:
-    #     print(TreeNode(substate[0], substate[1], None, board_reader.exit, 1, 2.0).h_n)
-
-    # exit(0)
 
     search = UniformCostSearch(boardslist[board_index], carslist[board_index], board_reader.exit)
     win_node = search.search()
@@ -79,18 +66,3 @@ def main():
 # main
 if __name__ == "__main__":
     main()
-
-
-# board_manipulator = BoardManipulator(boardslist[0], carslist[0], board_reader.exit)
-# board_manipulator.move_car("M", "down")
-# board_manipulator.move_car("A", "right")
-# board_manipulator.move_car("B", "right")
-# board_manipulator.move_car("C", "right")
-
-# board_manipulator.remove_from_valet_if_exists()
-
-# board_manipulator.print_board()
-# board_manipulator.print_cars_dict()
-
-# board_reader.print_board(0)
-# board_reader.print_cars_dict(0)

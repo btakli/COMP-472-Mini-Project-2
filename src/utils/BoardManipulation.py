@@ -211,6 +211,13 @@ class SubStateGenerator:
                     new_board_manipulator.move_car(self.cars_dict[carkey].char, 'left')
                     # add the new (board, cars_dict) tuple to the list of substates
                     self.substates.append((new_board_manipulator.board, new_board_manipulator.cars_dict))
+
+                    # Check if car can keep moving left
+                    while new_board_manipulator.can_move_car(new_board_manipulator.cars_dict[carkey].char, 'left'):
+                        new_board_manipulator = BoardManipulator(new_board_manipulator.board, new_board_manipulator.cars_dict, self.exit)
+                        new_board_manipulator.move_car(new_board_manipulator.cars_dict[carkey].char, 'left')
+                        self.substates.append((new_board_manipulator.board, new_board_manipulator.cars_dict))
+
                 # check if car can move right
                 if self.board_manipulator.can_move_car(self.cars_dict[carkey].char, 'right'):
                     # move the car
@@ -218,6 +225,13 @@ class SubStateGenerator:
                     new_board_manipulator.move_car(self.cars_dict[carkey].char, 'right')
                     # add the new (board, cars_dict) tuple to the list of substates
                     self.substates.append((new_board_manipulator.board, new_board_manipulator.cars_dict))
+
+                    # Check if car can keep moving right
+                    while new_board_manipulator.can_move_car(new_board_manipulator.cars_dict[carkey].char, 'right'):
+                        new_board_manipulator = BoardManipulator(new_board_manipulator.board, new_board_manipulator.cars_dict, self.exit)
+                        new_board_manipulator.move_car(new_board_manipulator.cars_dict[carkey].char, 'right')
+                        self.substates.append((new_board_manipulator.board, new_board_manipulator.cars_dict)) 
+
             elif self.cars_dict[carkey].orientation == 'V':
                 # check if car can move up
                 if self.board_manipulator.can_move_car(self.cars_dict[carkey].char, 'up'):
@@ -226,6 +240,12 @@ class SubStateGenerator:
                     new_board_manipulator.move_car(self.cars_dict[carkey].char, 'up')
                     # add the new (board, cars_dict) tuple to the list of substates
                     self.substates.append((new_board_manipulator.board, new_board_manipulator.cars_dict))
+
+                    # Check if car can keep moving up
+                    while new_board_manipulator.can_move_car(new_board_manipulator.cars_dict[carkey].char, 'up'):
+                        new_board_manipulator = BoardManipulator(new_board_manipulator.board, new_board_manipulator.cars_dict, self.exit)
+                        new_board_manipulator.move_car(new_board_manipulator.cars_dict[carkey].char, 'up')
+                        self.substates.append((new_board_manipulator.board, new_board_manipulator.cars_dict))
                 # check if car can move down
                 if self.board_manipulator.can_move_car(self.cars_dict[carkey].char, 'down'):
                     # move the car
@@ -233,6 +253,12 @@ class SubStateGenerator:
                     new_board_manipulator.move_car(self.cars_dict[carkey].char, 'down')
                     # add the new (board, cars_dict) tuple to the list of substates
                     self.substates.append((new_board_manipulator.board, new_board_manipulator.cars_dict))
+
+                    # Check if car can keep moving down
+                    while new_board_manipulator.can_move_car(new_board_manipulator.cars_dict[carkey].char, 'down'):
+                        new_board_manipulator = BoardManipulator(new_board_manipulator.board, new_board_manipulator.cars_dict, self.exit)
+                        new_board_manipulator.move_car(new_board_manipulator.cars_dict[carkey].char, 'down')
+                        self.substates.append((new_board_manipulator.board, new_board_manipulator.cars_dict))
 
         return self.substates
     
