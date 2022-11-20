@@ -13,60 +13,40 @@ def main():
         "SampleInputOutput/Sample/sample-input.txt"
 
     board_reader = BoardReader(input_file)
-    board_index = 0
 
     boardslist = board_reader.boards
     carslist = board_reader.cars_board
 
-    board_reader.print_board(board_index)
-    board_reader.print_cars_dict(board_index)
+    # for each board in the input file
+    for i in range(len(boardslist)):
+        board_reader.print_board(i)
+        board_reader.print_cars_dict(i)
+        ucs = UniformCostSearch(boardslist[i], carslist[i], board_reader.exit)
+        win_node = ucs.search()
+        if win_node is not None:
+            print(win_node)
+            print(ucs.goal.cost)
+            print(ucs.get_exec_time())
+            print(ucs.search_path_length)
+            print(ucs.solution_path)
+        # Output Files Generation for UC Search
+        output_generator = OutputGeneration(ucs, board_reader, i, True)
+        output_generator.search_files()
+        output_generator.solution_files()
+        
+        # Search Algorithms using Heuristics
+        for heuristic in range(1, 4): #TODO change to 5 since we need to add a 4th heuristic
+            gbfs = GBFS(boardslist[i], carslist[i], board_reader.exit, heuristic)
+            win_node = gbfs.search()
+            output_generator = OutputGeneration(gbfs, board_reader, i, True)
+            output_generator.search_files()
+            output_generator.solution_files()
 
-    search = UniformCostSearch(boardslist[board_index], carslist[board_index], board_reader.exit)
-    win_node = search.search()
-
-    #print(win_node)
-    #if not(win_node==None):
-    #    print(win_node)
-    #    print(search.goal.cost)
-    #    print(search.get_exec_time())
-    #    print(search.search_path_length)
-    #    print(search.solution_path)
-
-
-    #else:
-        # Output Files Generation
-    #    output_generator = OutputGeneration(search, board_reader, board_index)
-    #    output_generator.search_files()
-    #    output_generator.solution_files()
-    #    print("No solution")
-
-    #search2 = GBFS(boardslist[board_index], carslist[board_index], board_reader.exit, 1, 1)
-    #win_node2 = search2.search()
-
-    #print(win_node2)
-    #print(search2.goal.cost)
-    #print(search2.get_exec_time())
-    #print(search2.search_path_length)
-    #print(search2.solution_path)
-
-    # # Output Files Generation
-    #output_generator2 = OutputGeneration(search2, board_reader, board_index)
-    #output_generator2.search_files()
-    #output_generator2.solution_files()
-
-    search3 = A(boardslist[board_index], carslist[board_index], board_reader.exit, 1, 1)
-    win_node3 = search3.search()
-
-    print(search3.goal.cost)
-    print(search3.get_exec_time())
-    print(search3.search_path_length)
-    print(search3.solution_path)
-    print(win_node3)
-
-    # # Output Files Generation
-    output_generator3 = OutputGeneration(search3, board_reader, board_index)
-    output_generator3.search_files()
-    output_generator3.solution_files()
+            a = A(boardslist[i], carslist[i], board_reader.exit, heuristic)
+            win_node = a.search()
+            output_generator = OutputGeneration(a, board_reader, i, True)
+            output_generator.search_files()
+            output_generator.solution_files()
 
 # main
 if __name__ == "__main__":

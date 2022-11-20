@@ -46,6 +46,7 @@ class SearchAlgorithm: # Base class for all search algorithms
         self.goal = None
         self.solution_path = []
         self.solution_path_nodes = []
+        self.search_path = []
         self.search_path_length = 0
         self.search_time = 0
         self.heuristic = heuristic
@@ -79,13 +80,6 @@ class SearchAlgorithm: # Base class for all search algorithms
             temp_solution_path.insert(0, (current_node.car_moved, current_node.direction_moved,current_node.distance_moved))
             temp_node_path.insert(0, current_node)
             current_node = current_node.parent
-
-        print(f"temp_solution_path: {temp_solution_path}")
-        print(f"temp_node_path:")
-        for node in temp_node_path:
-            for row in node.board:
-                print(row)
-            print()
 
         self.solution_path, self.solution_path_nodes = self._combine_moves(temp_solution_path, temp_node_path)
 
@@ -123,7 +117,7 @@ class UniformCostSearch(SearchAlgorithm):
     def search(self):
         '''Searches for the solution to the game'''
         open_list = PriorityQueue()
-        closed_list = []
+        closed_list = [] # list of nodes
         visited_boards=[]
 
         # Start timer 
@@ -146,6 +140,7 @@ class UniformCostSearch(SearchAlgorithm):
                 end_time = time.perf_counter_ns()
                 self.search_time = (end_time - start_time) * 10**-9 # convert to seconds
                 self.result = True
+                self.search_path = closed_list
                 return current_node
 
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
@@ -157,6 +152,9 @@ class UniformCostSearch(SearchAlgorithm):
                     current_node.children.append(child)
                     open_list.insert((child.cost, child))
 
+        self.search_path = closed_list
+        end_time = time.perf_counter_ns()
+        self.search_time = (end_time - start_time) * 10 ** -9
         return None
 
                     
@@ -177,7 +175,7 @@ class GBFS(SearchAlgorithm):
     def search(self):
         '''Searches for the solution to the game'''
         open_list = PriorityQueue()
-        closed_list = []
+        closed_list = [] # list of nodes
         visited_boards=[]
 
         # Start timer
@@ -201,6 +199,7 @@ class GBFS(SearchAlgorithm):
                 end_time = time.perf_counter_ns()
                 self.search_time = (end_time - start_time) * 10**-9
                 self.result = True
+                self.search_path = closed_list
                 return current_node
 
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
@@ -211,6 +210,10 @@ class GBFS(SearchAlgorithm):
                     child = TreeNode(substate[0], substate[1], current_node, self.exit, self.heuristic, self.lambda_value, False)
                     current_node.children.append(child)
                     open_list.insert((child.h_n, child))
+
+        self.search_path = closed_list
+        end_time = time.perf_counter_ns()
+        self.search_time = (end_time - start_time) * 10 ** -9
         return None
             
 
@@ -234,8 +237,8 @@ class A(SearchAlgorithm):
     def search(self):
         '''Searches for the solution to the game'''
         open_list = PriorityQueue()
-        closed_list = []
-        visited_boards=[]
+        closed_list = [] # list of nodes
+        visited_boards = []
 
         # Start timer
         start_time = time.perf_counter_ns()
@@ -258,6 +261,7 @@ class A(SearchAlgorithm):
                 end_time = time.perf_counter_ns()
                 self.search_time = (end_time - start_time) * 10 ** -9
                 self.result = True
+                self.search_path = closed_list
                 return current_node
 
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
@@ -265,12 +269,13 @@ class A(SearchAlgorithm):
 
             for substate in substate_generator.substates: 
                 if not(substate[0] in visited_boards):                   
-                    child = TreeNode(substate[0], substate[1], current_node, self.exit, self.heuristic,
-                                     self.lambda_value, False)
+                    child = TreeNode(substate[0], substate[1], current_node, self.exit, self.heuristic, self.lambda_value, True)
                     current_node.children.append(child)
                     open_list.insert((child.f_n, child))
 
+        self.search_path = closed_list
+        end_time = time.perf_counter_ns()
+        self.search_time = (end_time - start_time) * 10 ** -9
         return None
-
 
                     
