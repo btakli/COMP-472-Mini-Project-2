@@ -233,7 +233,7 @@ class A(SearchAlgorithm):
         start_time = time.perf_counter_ns()
 
         # PQ is a tuple of (h(n), state)
-        open_list.put((self.root.f_n, self.root))
+        open_list.insert((self.root.f_n, self.root))
 
         while open_list.qsize() > 0:
             self.search_path_length += 1
@@ -261,7 +261,7 @@ class A(SearchAlgorithm):
                     child = TreeNode(substate[0], substate[1], current_node, self.exit, self.heuristic,
                                      self.lambda_value, True)
                     current_node.children.append(child)
-                    open_list.put((child.f_n, child))
+                    open_list.insert((child.f_n, child))
 
 
                     
