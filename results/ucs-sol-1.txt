@@ -1,4 +1,4 @@
-Initial Board Configuration: ..I...BBI.K.GHAAKLGHDDKLG..JEEFF.J..
+Initial Board Configuration: BBIJ....IJCC..IAAMGDDK.MGH.KL.GHFFL.
 
 ['B', 'B', 'I', 'J', '.', '.']
 ['.', '.', 'I', 'J', 'C', 'C']
@@ -7,27 +7,20 @@ Initial Board Configuration: ..I...BBI.K.GHAAKLGHDDKLG..JEEFF.J..
 ['G', 'H', '.', 'K', 'L', '.']
 ['G', 'H', 'F', 'F', 'L', '.']
 
-Car fuel Available: I:100, B:100, K:100, G:100, H:100, A:100, L:100, D:100, J:100, E:100, F:100, 
+Car fuel Available: B:100, I:100, J:100, C:100, A:100, M:100, G:100, D:100, K:100, H:100, L:100, F:100, 
 
-Runtime: 2.2910 seconds
-Search Path Length: 2306 states
-Solution Path Length: 10 moves
-Solution Path: H down 1; A left 1; K up 1; L up 2; D right 2; J up 4; D left 2; E left 2; K down 3; A right 3; 
+Runtime: 0.0034 seconds
+Search Path Length: 17 states
+Solution Path Length: 2 moves
+Solution Path: M down 1; A right 1; 
 
-H down 1 99 ..I...BBI.K.G.AAKLGHDDKLGH.JEEFF.J.. H99
-A left 1 99 ..I...BBI.K.GAA.KLGHDDKLGH.JEEFF.J.. H99 A99
-K up 1 99 ..I.K.BBI.K.GAA.KLGHDD.LGH.JEEFF.J.. K99 H99 A99
-L up 2 98 ..I.KLBBI.KLGAA.K.GHDD..GH.JEEFF.J.. K99 H99 A99 L98
-D right 2 98 ..I.KLBBI.KLGAA.K.GH..DDGH.JEEFF.J.. K99 H99 A99 L98 D98
-J up 4 96 ..IJKLBBIJKLGAA.K.GH..DDGH..EEFF.... K99 H99 A99 L98 D98 J96
-D left 2 96 ..IJKLBBIJKLGAA.K.GHDD..GH..EEFF.... K99 H99 A99 L98 D96 J96
-E left 2 98 ..IJKLBBIJKLGAA.K.GHDD..GHEE..FF.... K99 H99 A99 L98 D96 J96 E98
-K down 3 96 ..IJ.LBBIJ.LGAA...GHDDK.GHEEK.FF..K. K96 H99 A99 L98 D96 J96 E98
-A right 3 96 ..IJ.LBBIJ.LG...AAGHDDK.GHEEK.FF..K. K96 H99 A96 L98 D96 J96 E98
+M down 1 99 BBIJ....IJCC..IAA.GDDK.MGH.KLMGHFFL. M99
+A right 1 99 BBIJ....IJCC..I.AAGDDK.MGH.KLMGHFFL. A99 M99
 
-['.', '.', 'I', 'J', '.', 'L']
-['B', 'B', 'I', 'J', '.', 'L']
-['G', '.', '.', '.', 'A', 'A']
-['G', 'H', 'D', 'D', 'K', '.']
-['G', 'H', 'E', 'E', 'K', '.']
-['F', 'F', '.', '.', 'K', '.']
+! A99 M99
+['B', 'B', 'I', 'J', '.', '.']
+['.', '.', 'I', 'J', 'C', 'C']
+['.', '.', 'I', '.', 'A', 'A']
+['G', 'D', 'D', 'K', '.', 'M']
+['G', 'H', '.', 'K', 'L', 'M']
+['G', 'H', 'F', 'F', 'L', '.']

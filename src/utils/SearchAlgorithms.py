@@ -80,13 +80,6 @@ class SearchAlgorithm: # Base class for all search algorithms
             temp_node_path.insert(0, current_node)
             current_node = current_node.parent
 
-        print(f"temp_solution_path: {temp_solution_path}")
-        print(f"temp_node_path:")
-        for node in temp_node_path:
-            for row in node.board:
-                print(row)
-            print()
-
         self.solution_path, self.solution_path_nodes = self._combine_moves(temp_solution_path, temp_node_path)
 
 
@@ -233,7 +226,7 @@ class A(SearchAlgorithm):
 
     def search(self):
         '''Searches for the solution to the game'''
-        open_list = NodePriorityQueue()
+        open_list = PriorityQueue()
         closed_list = []
 
         # Start timer

@@ -2,19 +2,21 @@
 import os
 from pathlib import Path
 
-from utils.SearchAlgorithms import UniformCostSearch, GBFS, A
+from utils.SearchAlgorithms import UniformCostSearch, GBFS, A, SearchAlgorithm
 from utils.BoardReader import BoardReader
 
 class OutputGeneration:
 
-    def __init__(self, search, board_reader, board_index):
+    def __init__(self, search: SearchAlgorithm, board_reader: BoardReader, board_index: int, overwrite_results=False):
         '''Initializes the OutputGeneration Class
         search: search algorithm used and to be outputted
-        board: board_reader used
-        number: Board Number'''
+        board_reader: board_reader used
+        board_index: Board Number
+        overwrite_results: If True, will overwrite existing results files'''
         self.search = search
         self.board_reader = board_reader
         self.board_index = board_index
+        self.overwrite_results = overwrite_results
         if issubclass(search.__class__, UniformCostSearch):
             self.search_file_title = "ucs-search-"+str(board_index+1)+".txt"
             self.solution_file_title = "ucs-sol-"+str(board_index+1)+".txt"
@@ -34,7 +36,7 @@ class OutputGeneration:
         self.results_folder = os.path.abspath("results")
 
     def solution_files(self):
-        if not os.path.isfile(f"{self.results_folder}/{self.solution_file_title}"):
+        if (not os.path.isfile(f"{self.results_folder}/{self.solution_file_title}")) or self.overwrite_results: # if file doesn't exist or overwrite_results is True
             f = open(f"{self.results_folder}/{self.solution_file_title}", "w")
             sln_path = self.search.get_solution_path()
             if not self.search.result:
@@ -112,7 +114,7 @@ class OutputGeneration:
             f.close()
 
     def search_files(self):
-        if not os.path.isfile(f"{self.results_folder}/{self.search_file_title}"):
+        if not os.path.isfile(f"{self.results_folder}/{self.search_file_title}") or self.overwrite_results: # if file doesn't exist or overwrite_results is True
             f = open(f"{self.results_folder}/{self.search_file_title}", "w")
             output = str(self.search.root.f_n) + " " + str(self.search.root.g_n) + " " + str(self.search.root.h_n) + " "
             for row in self.search.root.board:
