@@ -1,0 +1,43 @@
+Puzzle Number,Algorithm,Heuristic,Length of the Solution,Length of the Search Path,Execution Time (in seconds)
+1,UCS,N/A,2,17,0.0026 seconds
+1,GBFS,h1,2,4,0.0004 seconds
+1,GBFS,h2,2,4,0.0004 seconds
+1,GBFS,h3,2,4,0.0004 seconds
+1,A/A*,h1,2,8,0.0008 seconds
+1,A/A*,h2,2,8,0.0008 seconds
+1,A/A*,h3,2,5,0.0004 seconds
+2,UCS,N/A,10,2012,3.5035 seconds
+2,GBFS,h1,10,259,0.0555 seconds
+2,GBFS,h2,10,259,0.0290 seconds
+2,GBFS,h3,10,259,0.0292 seconds
+2,A/A*,h1,10,1566,0.3712 seconds
+2,A/A*,h2,10,1566,0.3520 seconds
+2,A/A*,h3,10,647,0.0670 seconds
+3,UCS,N/A,17,5219,10.6213 seconds
+3,GBFS,h1,26,11118,4.1113 seconds
+3,GBFS,h2,26,11118,4.1434 seconds
+3,GBFS,h3,26,11118,4.2987 seconds
+3,A/A*,h1,17,19825,9.5351 seconds
+3,A/A*,h2,17,19825,9.4932 seconds
+3,A/A*,h3,17,13201,5.3864 seconds
+4,UCS,N/A,No Solution,156,0.0249 seconds
+4,GBFS,h1,No Solution,520,0.0262 seconds
+4,GBFS,h2,No Solution,520,0.0253 seconds
+4,GBFS,h3,No Solution,520,0.0255 seconds
+4,A/A*,h1,No Solution,520,0.5791 seconds
+4,A/A*,h2,No Solution,520,0.0250 seconds
+4,A/A*,h3,No Solution,520,0.0260 seconds
+5,UCS,N/A,No Solution,353,0.0755 seconds
+5,GBFS,h1,No Solution,1118,0.0652 seconds
+5,GBFS,h2,No Solution,1118,0.0740 seconds
+5,GBFS,h3,No Solution,1118,0.0766 seconds
+5,A/A*,h1,No Solution,1118,0.0655 seconds
+5,A/A*,h2,No Solution,1118,0.0795 seconds
+5,A/A*,h3,No Solution,1118,0.0653 seconds
+6,UCS,N/A,32,843,0.2621 seconds
+6,GBFS,h1,36,1733,0.1424 seconds
+6,GBFS,h2,36,1733,0.1283 seconds
+6,GBFS,h3,36,1733,0.1472 seconds
+6,A/A*,h1,32,1953,0.1683 seconds
+6,A/A*,h2,32,1953,0.1609 seconds
+6,A/A*,h3,32,1675,0.1374 seconds
