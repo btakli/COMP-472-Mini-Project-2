@@ -152,6 +152,9 @@ class UniformCostSearch(SearchAlgorithm):
                     current_node.children.append(child)
                     open_list.insert((child.cost, child))
 
+        self.search_path = closed_list
+        end_time = time.perf_counter_ns()
+        self.search_time = (end_time - start_time) * 10 ** -9
         return None
 
                     
@@ -207,6 +210,10 @@ class GBFS(SearchAlgorithm):
                     child = TreeNode(substate[0], substate[1], current_node, self.exit, self.heuristic, self.lambda_value, False)
                     current_node.children.append(child)
                     open_list.insert((child.h_n, child))
+
+        self.search_path = closed_list
+        end_time = time.perf_counter_ns()
+        self.search_time = (end_time - start_time) * 10 ** -9
         return None
             
 
@@ -267,5 +274,9 @@ class A(SearchAlgorithm):
                     current_node.children.append(child)
                     open_list.insert((child.f_n, child))
 
+        self.search_path = closed_list
+        end_time = time.perf_counter_ns()
+        self.search_time = (end_time - start_time) * 10 ** -9
+        return None
 
                     

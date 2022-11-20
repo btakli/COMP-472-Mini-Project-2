@@ -9,7 +9,7 @@ Initial Board Configuration: ..I...BBI.K.GHAAKLGHDDKLG..JEEFF.J..
 
 Car fuel Available: I:100, B:100, K:100, G:100, H:100, A:100, L:100, D:100, J:100, E:100, F:100, 
 
-Runtime: 0.0934 seconds
+Runtime: 0.1008 seconds
 Search Path Length: 259 states
 Solution Path Length: 10 moves
 Solution Path: L up 2; H down 1; A left 1; K up 1; D right 2; J up 4; D left 2; E left 2; K down 3; A right 3; 
