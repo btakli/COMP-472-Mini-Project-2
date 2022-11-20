@@ -1,1 +1,13 @@
-no solution
+Initial Board Configuration: IJBBCCIJDDL.IJAAL.EEK.L...KFF..GGHH. F0 G6
+
+['B', 'B', 'I', 'J', '.', '.']
+['.', '.', 'I', 'J', 'C', 'C']
+['.', '.', 'I', 'A', 'A', 'M']
+['G', 'D', 'D', 'K', '.', 'M']
+['G', 'H', '.', 'K', 'L', '.']
+['G', 'H', 'F', 'F', 'L', '.']
+
+Car fuel Available: F:0, G:6, I:100, J:100, B:100, C:100, D:100, L:100, A:100, E:100, K:100, H:100, 
+
+No Solution Found for This Board, Sorry!
+Runtime: 0.0781 seconds

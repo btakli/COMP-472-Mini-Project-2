@@ -117,7 +117,7 @@ class UniformCostSearch(SearchAlgorithm):
     def search(self):
         '''Searches for the solution to the game'''
         open_list = PriorityQueue()
-        closed_list = []
+        closed_list = [] # list of nodes
         visited_boards=[]
 
         # Start timer 
@@ -175,7 +175,7 @@ class GBFS(SearchAlgorithm):
     def search(self):
         '''Searches for the solution to the game'''
         open_list = PriorityQueue()
-        closed_list = []
+        closed_list = [] # list of nodes
         visited_boards=[]
 
         # Start timer
@@ -237,7 +237,8 @@ class A(SearchAlgorithm):
     def search(self):
         '''Searches for the solution to the game'''
         open_list = PriorityQueue()
-        closed_list = []
+        closed_list = [] # list of nodes
+        visited_boards = []
 
         # Start timer
         start_time = time.perf_counter_ns()
@@ -245,9 +246,13 @@ class A(SearchAlgorithm):
         # PQ is a tuple of (h(n), state)
         open_list.insert((self.root.f_n, self.root))
 
-        while open_list.qsize() > 0:
+        while not(open_list.isEmpty()):
             self.search_path_length += 1
-            current_node = open_list.get()
+            current_node = open_list.pop()[1]
+
+            if current_node.board in visited_boards:
+                continue
+            visited_boards.append(current_node.board)
             closed_list.append(current_node)
 
             if current_node.check_win(self.exit):
@@ -262,15 +267,9 @@ class A(SearchAlgorithm):
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
             substate_generator.generate_substates()
 
-            for substate in substate_generator.substates:
-                in_closed_list = False
-                for node in closed_list:
-                    if substate[0] == node.board:
-                        in_closed_list = True
-                        break
-                if not in_closed_list:
-                    child = TreeNode(substate[0], substate[1], current_node, self.exit, self.heuristic,
-                                     self.lambda_value, True)
+            for substate in substate_generator.substates: 
+                if not(substate[0] in visited_boards):                   
+                    child = TreeNode(substate[0], substate[1], current_node, self.exit, self.heuristic, self.lambda_value, True)
                     current_node.children.append(child)
                     open_list.insert((child.f_n, child))
 

@@ -42,11 +42,11 @@ def main():
             output_generator.search_files()
             output_generator.solution_files()
 
-            # a = A(boardslist[i], carslist[i], board_reader.exit, heuristic)
-            # win_node = a.search()
-            # output_generator = OutputGeneration(a, board_reader, i, True)
-            # output_generator.search_files()
-            # output_generator.solution_files()
+            a = A(boardslist[i], carslist[i], board_reader.exit, heuristic)
+            win_node = a.search()
+            output_generator = OutputGeneration(a, board_reader, i, True)
+            output_generator.search_files()
+            output_generator.solution_files()
 
 # main
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ Initial Board Configuration: BB.G.HE..G.HEAAG.I..FCCIDDF..I..F...
 
 Car fuel Available: B:100, G:100, H:100, E:100, A:100, I:100, F:100, C:100, D:100, 
 
-Runtime: 0.1427 seconds
+Runtime: 0.1450 seconds
 Search Path Length: 1733 states
 Solution Path Length: 36 moves
 Solution Path: I down 1; B right 1; E up 1; A left 1; F up 2; D right 3; F down 2; A right 1; E down 4; A left 1; B left 1; F up 3; C left 3; F down 3; G down 1; H down 1; B right 4; G up 1; F up 3; C right 3; F down 3; A right 1; E up 4; A left 1; F up 3; C left 3; F down 3; G down 1; B left 1; H up 1; F up 2; D left 2; G down 2; D left 1; F down 2; A right 4; 
