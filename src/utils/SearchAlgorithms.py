@@ -6,37 +6,36 @@ from queue import PriorityQueue
 from utils.Board import Car
 from utils.BoardManipulation import TreeNode, SubStateGenerator
 
-class NodePriorityQueue: 
-    def __init__(self):
-        self.dict = {}
-        self.size = 0
-    
-    def put(self, node_tuple):
-        key = node_tuple[0]
-        node = node_tuple[1]
-        if key in self.dict:
-            self.dict[key].appendleft(node)
-        else:
-            self.dict[key] = deque([node])
-        self.size += 1
-    
-    def get(self):
-        if len(self.dict) == 0:
-            return None
-        min_key = min(self.dict)
-        min_node_list = self.dict[min_key]
-        min_node = min_node_list.popleft()
-        if len(min_node_list) == 0:
-            del self.dict[min_key]
-        self.size -= 1
-        return min_node
 
-    
-    def __len__(self):
-        return self.size
-    
-    def qsize(self):
-        return self.size
+class PriorityQueue(object):
+    def __init__(self):
+        self.queue = []
+ 
+    def __str__(self):
+        return ' '.join([str(i) for i in self.queue])
+ 
+    # for checking if the queue is empty
+    def isEmpty(self):
+        return len(self.queue) == 0
+ 
+    # for inserting an element in the queue
+    def insert(self, data):
+        self.queue.append(data)
+ 
+    # for popping an element based on Priority
+    def pop(self):
+        try:
+            min_val = 0
+            for i in range(len(self.queue)):
+                if self.queue[i][0] < self.queue[min_val][0]:
+                    min_val = i
+            item = self.queue[min_val]
+            del self.queue[min_val]
+            return item
+        except IndexError:
+            print()
+            exit()
+
 
 class SearchAlgorithm: # Base class for all search algorithms
     def __init__(self, board: list, cars_dict: dict, exit: tuple, heuristic=0, lambda_value=2.0):
@@ -47,6 +46,7 @@ class SearchAlgorithm: # Base class for all search algorithms
         self.goal = None
         self.solution_path = []
         self.solution_path_nodes = []
+        self.search_path = []
         self.search_path_length = 0
         self.search_time = 0
         self.heuristic = heuristic
@@ -81,17 +81,10 @@ class SearchAlgorithm: # Base class for all search algorithms
             temp_node_path.insert(0, current_node)
             current_node = current_node.parent
 
-        print(f"temp_solution_path: {temp_solution_path}")
-        print(f"temp_node_path:")
-        for node in temp_node_path:
-            for row in node.board:
-                print(row)
-            print()
-
         self.solution_path, self.solution_path_nodes = self._combine_moves(temp_solution_path, temp_node_path)
 
 
-    def _combine_moves(self,temp_solution_path: list, temp_node_path: list) -> tuple[list,list]:
+    def _combine_moves(self,temp_solution_path: list, temp_node_path: list):
         '''Combines consecutive moves of the same car in the same direction and increments the distance.
         
         Returns (solution_path, node_path) tuple after the combination'''
@@ -124,16 +117,17 @@ class UniformCostSearch(SearchAlgorithm):
     def search(self):
         '''Searches for the solution to the game'''
         open_list = PriorityQueue()
-        closed_list = []
+        closed_list = [] # list of nodes
         visited_boards=[]
 
         # Start timer 
         start_time = time.perf_counter_ns()
         # PQ is a tuple of (cost, state)
-        open_list.put((self.root.cost, self.root))
+        open_list.insert((self.root.cost, self.root))
 
-        while open_list.qsize() > 0:           
-            current_node = open_list.get()[1]
+        while not(open_list.isEmpty()):           
+            current_node = open_list.pop()[1]
+            
             if current_node.board in visited_boards:
                 continue
             
@@ -146,6 +140,7 @@ class UniformCostSearch(SearchAlgorithm):
                 end_time = time.perf_counter_ns()
                 self.search_time = (end_time - start_time) * 10**-9 # convert to seconds
                 self.result = True
+                self.search_path = closed_list
                 return current_node
 
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
@@ -155,7 +150,12 @@ class UniformCostSearch(SearchAlgorithm):
                 if not(substate[0] in visited_boards):
                     child = TreeNode(substate[0], substate[1], current_node, self.exit)
                     current_node.children.append(child)
-                    open_list.put((child.cost, child))
+                    open_list.insert((child.cost, child))
+
+        self.search_path = closed_list
+        end_time = time.perf_counter_ns()
+        self.search_time = (end_time - start_time) * 10 ** -9
+        return None
 
                     
 
@@ -174,18 +174,23 @@ class GBFS(SearchAlgorithm):
 
     def search(self):
         '''Searches for the solution to the game'''
-        open_list = NodePriorityQueue()
-        closed_list = []
+        open_list = PriorityQueue()
+        closed_list = [] # list of nodes
+        visited_boards=[]
 
         # Start timer
         start_time = time.perf_counter_ns()
 
         # PQ is a tuple of (f(n), state)
-        open_list.put((self.root.h_n, self.root))
+        open_list.insert((self.root.h_n, self.root))
 
-        while open_list.qsize() > 0:
+        while not(open_list.isEmpty()):
             self.search_path_length += 1
-            current_node = open_list.get()
+            current_node = open_list.pop()[1]
+
+            if current_node.board in visited_boards:
+                continue
+            visited_boards.append(current_node.board)
             closed_list.append(current_node)
 
             if current_node.check_win(self.exit):
@@ -194,21 +199,25 @@ class GBFS(SearchAlgorithm):
                 end_time = time.perf_counter_ns()
                 self.search_time = (end_time - start_time) * 10**-9
                 self.result = True
+                self.search_path = closed_list
                 return current_node
 
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
             substate_generator.generate_substates()
 
-            for substate in substate_generator.substates:
-                in_closed_list = False
-                for node in closed_list:
-                    if substate[0] == node.board:
-                        in_closed_list = True
-                        break
-                if not in_closed_list:
+            for substate in substate_generator.substates: 
+                if not(substate[0] in visited_boards):                   
                     child = TreeNode(substate[0], substate[1], current_node, self.exit, self.heuristic, self.lambda_value, False)
                     current_node.children.append(child)
-                    open_list.put((child.h_n, child))
+                    open_list.insert((child.h_n, child))
+
+        self.search_path = closed_list
+        end_time = time.perf_counter_ns()
+        self.search_time = (end_time - start_time) * 10 ** -9
+        return None
+            
+
+
 
         
 
@@ -227,18 +236,23 @@ class A(SearchAlgorithm):
 
     def search(self):
         '''Searches for the solution to the game'''
-        open_list = NodePriorityQueue()
-        closed_list = []
+        open_list = PriorityQueue()
+        closed_list = [] # list of nodes
+        visited_boards = []
 
         # Start timer
         start_time = time.perf_counter_ns()
 
         # PQ is a tuple of (h(n), state)
-        open_list.put((self.root.f_n, self.root))
+        open_list.insert((self.root.f_n, self.root))
 
-        while open_list.qsize() > 0:
+        while not(open_list.isEmpty()):
             self.search_path_length += 1
-            current_node = open_list.get()
+            current_node = open_list.pop()[1]
+
+            if current_node.board in visited_boards:
+                continue
+            visited_boards.append(current_node.board)
             closed_list.append(current_node)
 
             if current_node.check_win(self.exit):
@@ -247,22 +261,21 @@ class A(SearchAlgorithm):
                 end_time = time.perf_counter_ns()
                 self.search_time = (end_time - start_time) * 10 ** -9
                 self.result = True
+                self.search_path = closed_list
                 return current_node
 
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
             substate_generator.generate_substates()
 
-            for substate in substate_generator.substates:
-                in_closed_list = False
-                for node in closed_list:
-                    if substate[0] == node.board:
-                        in_closed_list = True
-                        break
-                if not in_closed_list:
-                    child = TreeNode(substate[0], substate[1], current_node, self.exit, self.heuristic,
-                                     self.lambda_value, False)
+            for substate in substate_generator.substates: 
+                if not(substate[0] in visited_boards):                   
+                    child = TreeNode(substate[0], substate[1], current_node, self.exit, self.heuristic, self.lambda_value, True)
                     current_node.children.append(child)
-                    open_list.put((child.f_n, child))
+                    open_list.insert((child.f_n, child))
 
+        self.search_path = closed_list
+        end_time = time.perf_counter_ns()
+        self.search_time = (end_time - start_time) * 10 ** -9
+        return None
 
                     
