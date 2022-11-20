@@ -404,11 +404,7 @@ class TreeNode:
                     self.distance_moved = self.cars_dict[self.car_moved].position[1] - self.parent.cars_dict[self.car_moved].position[1]
         
 
-    #equals method defined as two boards being the same if they have the same cars in the same positions
-    def __eq__(self, other):
-        if self.board == other.board:
-            return True
-        return False
+ 
 
     def __lt__(self, other):
         return self.f_n <= other.f_n # TODO for priority queue, this is not ideal! 

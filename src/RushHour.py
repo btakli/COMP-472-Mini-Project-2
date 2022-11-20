@@ -24,20 +24,21 @@ def main():
     search = UniformCostSearch(boardslist[board_index], carslist[board_index], board_reader.exit)
     win_node = search.search()
 
-    if not(win_node==None):
-        print(win_node)
-        print(search.goal.cost)
-        print(search.get_exec_time())
-        print(search.search_path_length)
-        print(search.solution_path)
+    #print(win_node)
+    #if not(win_node==None):
+    #    print(win_node)
+    #    print(search.goal.cost)
+    #    print(search.get_exec_time())
+    #    print(search.search_path_length)
+    #    print(search.solution_path)
 
 
-    else:
+    #else:
         # Output Files Generation
-        output_generator = OutputGeneration(search, board_reader, board_index)
-        output_generator.search_files()
-        output_generator.solution_files()
-        print("No solution")
+    #    output_generator = OutputGeneration(search, board_reader, board_index)
+    #    output_generator.search_files()
+    #    output_generator.solution_files()
+    #    print("No solution")
 
     #search2 = GBFS(boardslist[board_index], carslist[board_index], board_reader.exit, 1, 1)
     #win_node2 = search2.search()
@@ -53,19 +54,19 @@ def main():
     #output_generator2.search_files()
     #output_generator2.solution_files()
 
-    # search3 = A(boardslist[board_index], carslist[board_index], board_reader.exit, 1, 1)
-    # win_node3 = search3.search()
+    search3 = A(boardslist[board_index], carslist[board_index], board_reader.exit, 1, 1)
+    win_node3 = search3.search()
 
-    # print(search3.goal.cost)
-    # print(search3.get_exec_time())
-    # print(search3.search_path_length)
-    # print(search3.solution_path)
-    # print(win_node3)
+    print(search3.goal.cost)
+    print(search3.get_exec_time())
+    print(search3.search_path_length)
+    print(search3.solution_path)
+    print(win_node3)
 
     # # Output Files Generation
-    # output_generator3 = OutputGeneration(search3, board_reader, board_index)
-    # output_generator3.search_files()
-    # output_generator3.solution_files()
+    output_generator3 = OutputGeneration(search3, board_reader, board_index)
+    output_generator3.search_files()
+    output_generator3.solution_files()
 
 # main
 if __name__ == "__main__":
