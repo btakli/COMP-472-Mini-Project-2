@@ -16,41 +16,6 @@ def main():
 
     boardslist = board_reader.boards
     carslist = board_reader.cars_board
-    # board_index = 0
-
-    # board_reader.print_board(board_index)
-    # board_reader.print_cars_dict(board_index)
-
-    # search = UniformCostSearch(boardslist[board_index], carslist[board_index], board_reader.exit)
-    # win_node = search.search()
-
-    # if not(win_node is None):
-    #     print(win_node)
-    #     print(search.goal.cost)
-    #     print(search.get_exec_time())
-    #     print(search.search_path_length)
-    #     print(search.solution_path)
-
-
-    # else:
-    #     # Output Files Generation
-    #     output_generator = OutputGeneration(search, board_reader, board_index)
-    #     output_generator.search_files()
-    #     output_generator.solution_files()
-    #     print("No solution")
-
-    # print("GBFS")
-    # search2 = GBFS(boardslist[board_index], carslist[board_index], board_reader.exit, 1, 2)
-    # win_node2 = search2.search()
-
-    # print(win_node2)
-    # print(search2.goal.cost)
-    # print(search2.get_exec_time())
-    # print(search2.search_path_length)
-    # print(search2.solution_path_nodes)
-    # print(search2.solution_path)
-
-    # exit(0)
 
     # for each board in the input file
     for i in range(len(boardslist)):
