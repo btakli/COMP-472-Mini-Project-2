@@ -259,7 +259,7 @@ class A(SearchAlgorithm):
                         break
                 if not in_closed_list:
                     child = TreeNode(substate[0], substate[1], current_node, self.exit, self.heuristic,
-                                     self.lambda_value, False)
+                                     self.lambda_value, True)
                     current_node.children.append(child)
                     open_list.put((child.f_n, child))
 
