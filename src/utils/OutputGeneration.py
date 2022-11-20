@@ -125,6 +125,6 @@ class OutputGeneration:
                 if fuel < 100:
                     output += " " + car + "" + str(fuel)
             f.write(output + "\n")
-            for node in self.search.solution_path_nodes:
+            for node in self.search.search_path: # search_path is a list of nodes, it is the closed list
                 f.write(str(node) + "\n")
             f.close()

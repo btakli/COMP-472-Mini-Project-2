@@ -46,6 +46,7 @@ class SearchAlgorithm: # Base class for all search algorithms
         self.goal = None
         self.solution_path = []
         self.solution_path_nodes = []
+        self.search_path = []
         self.search_path_length = 0
         self.search_time = 0
         self.heuristic = heuristic
@@ -139,6 +140,7 @@ class UniformCostSearch(SearchAlgorithm):
                 end_time = time.perf_counter_ns()
                 self.search_time = (end_time - start_time) * 10**-9 # convert to seconds
                 self.result = True
+                self.search_path = closed_list
                 return current_node
 
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
@@ -194,6 +196,7 @@ class GBFS(SearchAlgorithm):
                 end_time = time.perf_counter_ns()
                 self.search_time = (end_time - start_time) * 10**-9
                 self.result = True
+                self.search_path = closed_list
                 return current_node
 
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
@@ -246,6 +249,7 @@ class A(SearchAlgorithm):
                 end_time = time.perf_counter_ns()
                 self.search_time = (end_time - start_time) * 10 ** -9
                 self.result = True
+                self.search_path = closed_list
                 return current_node
 
             substate_generator = SubStateGenerator(current_node.board, current_node.cars_dict, self.exit)
