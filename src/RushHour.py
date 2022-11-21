@@ -22,7 +22,7 @@ def main():
 
 
 
-    heuristics_list = [1,2,3] #TODO Add 4 later
+    heuristics_list = [1,2,3] # TODO Add 4 later
 
     # for each board in the input file
     for i in range(len(boardslist)):

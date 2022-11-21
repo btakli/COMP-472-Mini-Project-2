@@ -185,11 +185,11 @@ class GBFS(SearchAlgorithm):
         open_list.insert((self.root.h_n, self.root))
 
         while not(open_list.isEmpty()):
-            self.search_path_length += 1
             current_node = open_list.pop()[1]
 
             if current_node.board in visited_boards:
                 continue
+            self.search_path_length += 1
             visited_boards.append(current_node.board)
             closed_list.append(current_node)
 
@@ -247,11 +247,11 @@ class A(SearchAlgorithm):
         open_list.insert((self.root.f_n, self.root))
 
         while not(open_list.isEmpty()):
-            self.search_path_length += 1
             current_node = open_list.pop()[1]
 
             if current_node.board in visited_boards:
                 continue
+            self.search_path_length += 1
             visited_boards.append(current_node.board)
             closed_list.append(current_node)
 
