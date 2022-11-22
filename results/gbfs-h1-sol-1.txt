@@ -14,8 +14,8 @@ Search Path Length: 4 states
 Solution Path Length: 2 moves
 Solution Path: M down 1; A right 1; 
 
-M down 1 99 BBIJ....IJCC..IAA.GDDK.MGH.KLMGHFFL. M99
-A right 1 99 BBIJ....IJCC..I.AAGDDK.MGH.KLMGHFFL. A99 M99
+M down 1             99 BBIJ....IJCC..IAA.GDDK.MGH.KLMGHFFL. M99
+A right 1            99 BBIJ....IJCC..I.AAGDDK.MGH.KLMGHFFL. A99 M99
 
 ! A99 M99
 ['B', 'B', 'I', 'J', '.', '.']
