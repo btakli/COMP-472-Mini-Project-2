@@ -1,5 +1,6 @@
-import csv 
+import csv
 import os
+
 
 class AnalysisOutput:
     """Class to create the output of the analysis. A CSV file is created in the end."""

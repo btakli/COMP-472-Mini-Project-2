@@ -1,10 +1,7 @@
 # Search Algorithms for the game
 import time
-from collections import deque
-from queue import PriorityQueue
 
-from utils.Board import Car
-from utils.BoardManipulation import TreeNode, SubStateGenerator
+from utils.BoardManipulation import SubStateGenerator, TreeNode
 
 
 class PriorityQueue(object):

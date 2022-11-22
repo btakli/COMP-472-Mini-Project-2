@@ -1,5 +1,8 @@
-from utils.Board import Car
 from collections import OrderedDict
+
+from utils.Board import Car
+
+
 class BoardManipulator:
     '''Class to manipulate the board. NOTE: This class does not modify the original board, it creates a copy of the board and modifies that instead'''
 

@@ -1,9 +1,9 @@
 # Output Generation for the Game's results
 import os
-from pathlib import Path
 
-from utils.SearchAlgorithms import UniformCostSearch, GBFS, A, SearchAlgorithm
 from utils.BoardReader import BoardReader
+from utils.SearchAlgorithms import GBFS, A, SearchAlgorithm, UniformCostSearch
+
 
 class OutputGeneration:
 
