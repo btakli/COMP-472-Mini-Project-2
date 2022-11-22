@@ -10,4 +10,4 @@ Initial Board Configuration: BBB..MCCDD.MAAKL.MJ.KLEEJ.GG..JHHHII B4 J0
 Car fuel Available: J:0, B:4, M:100, C:100, D:100, A:100, K:100, L:100, E:100, G:100, H:100, I:100, 
 
 No Solution Found for This Board, Sorry!
-Runtime: 0.0252 seconds
+Runtime: 0.0251 seconds
