@@ -88,7 +88,7 @@ class OutputGeneration:
             for node in self.search.solution_path_nodes:
                 output = ""
                 # Movement done by node
-                output += (str(sln_path[node_number][0])+" "+str(sln_path[node_number][1])+" "+str(sln_path[node_number][2]))
+                output += (str(sln_path[node_number][0])+" "+str(sln_path[node_number][1])+" "+str(sln_path[node_number][2])).ljust(20)
                 # Fuel Remaining in Car moved
                 fuel = node.cars_dict[sln_path[node_number][0]].fuel
                 if fuel < 100:
