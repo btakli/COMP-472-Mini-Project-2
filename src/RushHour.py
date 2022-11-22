@@ -23,6 +23,7 @@ def main():
 
     heuristics_list = [1,2,3] # TODO Add 4 later
 
+    print("~~~Running all search algorithms. *NOTE: Only the output for UCS is shown in the console for illustrative purposes.~~~")
     # for each board in the input file
     for i in range(len(boardslist)):
         board_reader.print_board(i)
@@ -30,11 +31,15 @@ def main():
         ucs = UniformCostSearch(boardslist[i], carslist[i], board_reader.exit)
         win_node = ucs.search()
         if win_node is not None:
-            print(win_node)
-            print(ucs.goal.cost)
-            print(ucs.get_exec_time())
-            print(ucs.search_path_length)
-            print(ucs.solution_path)
+            print(f"Win Node: {win_node}")
+            print(f"Total cost: {ucs.goal.cost}")
+            print(f"Solution (path): {ucs.solution_path}")
+        else:
+            print("No solution found.")
+
+        print(f"Execution time: {ucs.get_exec_time()}")
+        print(f"Length of the search path: {ucs.search_path_length}")
+        
         # Output Files Generation for UC Search
         output_generator = OutputGeneration(ucs, board_reader, i, True)
         output_generator.search_files()
