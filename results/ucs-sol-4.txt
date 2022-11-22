@@ -1,4 +1,4 @@
-Initial Board Configuration: IJBBCCIJDDL.IJAAL.EEK.L...KFF..GGHH. F0 G6
+Initial Board Configuration: BBB..MCCDD.MAAKL.MJ.KLEEJ.GG..JHHHII B4 J0
 
 ['B', 'B', 'I', 'J', '.', '.']
 ['.', '.', 'I', 'J', 'C', 'C']
@@ -7,7 +7,7 @@ Initial Board Configuration: IJBBCCIJDDL.IJAAL.EEK.L...KFF..GGHH. F0 G6
 ['G', 'H', '.', 'K', 'L', '.']
 ['G', 'H', 'F', 'F', 'L', '.']
 
-Car fuel Available: F:0, G:6, I:100, J:100, B:100, C:100, D:100, L:100, A:100, E:100, K:100, H:100, 
+Car fuel Available: J:0, B:4, M:100, C:100, D:100, A:100, K:100, L:100, E:100, G:100, H:100, I:100, 
 
 No Solution Found for This Board, Sorry!
-Runtime: 0.0653 seconds
+Runtime: 0.0249 seconds
