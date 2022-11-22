@@ -405,12 +405,7 @@ class TreeNode:
                 else:
                     self.direction_moved = 'down'
                     self.distance_moved = self.cars_dict[self.car_moved].position[1] - self.parent.cars_dict[self.car_moved].position[1]
-        
 
- 
-
-    def __lt__(self, other):
-        return self.f_n <= other.f_n # TODO for priority queue, this is not ideal! 
     
     def check_win(self, exit: tuple) -> bool:
         '''Checks if the board is in a winning state'''
