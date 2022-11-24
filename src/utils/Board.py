@@ -43,6 +43,9 @@ class Car:
     
     def _calculate_tailposition(self):
         '''Calculates the tail position of the car'''
+        if self.position is None:
+            return None
+
         if self.orientation == 'H':
             return (self.position[0] + self.length - 1, self.position[1])
         elif self.orientation == 'V':

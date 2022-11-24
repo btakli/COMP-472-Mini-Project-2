@@ -388,6 +388,7 @@ class TreeNode:
             # if piece position is now None, it was removed and moved right off the board
             if self.cars_dict[self.car_moved].position == None:
                 self.direction_moved = 'right'
+                self.distance_moved = 0
             # check if the piece moved is horizontal or vertical
             elif self.parent.cars_dict[self.car_moved].orientation == 'H':
                 # check if the piece moved left or right
