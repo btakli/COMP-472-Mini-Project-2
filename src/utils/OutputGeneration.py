@@ -54,7 +54,7 @@ class OutputGeneration:
             f.write(output + "\n")
             f.write("\n")
             # 2.3.1.1 - Initial Board Printing
-            for row in self.board_reader.boards[0]:
+            for row in self.board_reader.boards[self.board_index]:
                 f.write(str(row) + "\n")
             f.write("\n")
             f.write("Car fuel Available: ")
@@ -121,15 +121,6 @@ class OutputGeneration:
     def search_files(self):
         if not os.path.isfile(f"{self.results_folder}/{self.search_file_title}") or self.overwrite_results: # if file doesn't exist or overwrite_results is True
             f = open(f"{self.results_folder}/{self.search_file_title}", "w")
-            output = str(self.search.root.f_n) + " " + str(self.search.root.g_n) + " " + str(self.search.root.h_n) + " "
-            for row in self.search.root.board:
-                for char in row:
-                    output += char
-            for car in self.search.root.cars_dict:
-                fuel = self.search.root.cars_dict[car].fuel
-                if fuel < 100:
-                    output += " " + car + "" + str(fuel)
-            f.write(output + "\n")
             for node in self.search.search_path: # search_path is a list of nodes, it is the closed list
                 f.write(str(node) + "\n")
             f.close()

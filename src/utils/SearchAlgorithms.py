@@ -35,7 +35,7 @@ class PriorityQueue(object):
 
 
 class SearchAlgorithm: # Base class for all search algorithms
-    def __init__(self, board: list, cars_dict: dict, exit: tuple, heuristic=0, lambda_value=2.0):
+    def __init__(self, board: list, cars_dict: dict, exit: tuple, heuristic=0, lambda_value=2.0, weighted_avg_factor = 0.5):
         self.board = board
         self.cars_dict = cars_dict
         self.root = TreeNode(board, cars_dict, None, exit, heuristic, lambda_value)
@@ -159,14 +159,15 @@ class UniformCostSearch(SearchAlgorithm):
      
 class GBFS(SearchAlgorithm):
     ''' Greedy Best First Search Algorithm '''
-    def __init__(self, board: list, cars_dict: dict, exit: tuple, heuristic: int, lambda_value = 2.0):
+    def __init__(self, board: list, cars_dict: dict, exit: tuple, heuristic: int, lambda_value = 2.0, weighted_avg_factor = 0.5):
         '''Initializes the Greedy Best First Search Algorithm
         
         board: list of lists representing the board
         cars_dict: dictionary of cars
         exit: tuple representing the exit
         heuristic: int representing the heuristic to use (0 = no heuristic, 1 = h1, 2 = h2...)
-        lambda_value: float for the lambda value for h3'''
+        lambda_value: float for the lambda value for h3
+        weighted_avg_factor: float for the weighted average factor for h4'''
         super().__init__(board, cars_dict, exit, heuristic, lambda_value)
 
     def search(self):
@@ -221,14 +222,15 @@ class GBFS(SearchAlgorithm):
 class A(SearchAlgorithm):
     ''' A/A* Search Algorithm '''
 
-    def __init__(self, board: list, cars_dict: dict, exit: tuple, heuristic: int, lambda_value=2.0):
+    def __init__(self, board: list, cars_dict: dict, exit: tuple, heuristic: int, lambda_value=2.0, weighted_avg_factor = 0.5):
         '''Initializes the A/A* Search Algorithm
 
         board: list of lists representing the board
         cars_dict: dictionary of cars
         exit: tuple representing the exit
         heuristic: int representing the heuristic to use (0 = no heuristic, 1 = h1, 2 = h2...)
-        lambda_value: float for the lambda value for h3'''
+        lambda_value: float for the lambda value for h3
+        weighted_avg_factor: float for the weighted average factor for h4'''
         super().__init__(board, cars_dict, exit, heuristic, lambda_value)
 
     def search(self):
