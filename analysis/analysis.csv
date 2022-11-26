@@ -206,15 +206,15 @@ Puzzle Number,Algorithm,Heuristic,Length of the Solution,Length of the Search Pa
 23,A/A*,h2,13,1093,0.7140 seconds
 23,A/A*,h3,13,820,0.5545 seconds
 23,A/A*,h4,13,1093,0.7287 seconds
-24,UCS,N/A,26,5136,8.6845 seconds
-24,GBFS,h1,No Solution,3110,9.0738 seconds
-24,GBFS,h2,No Solution,3110,4.1299 seconds
-24,GBFS,h3,No Solution,3110,4.6639 seconds
-24,GBFS,h4,No Solution,3110,4.6908 seconds
-24,A/A*,h1,26,4966,8.3232 seconds
-24,A/A*,h2,26,4966,8.3501 seconds
-24,A/A*,h3,26,4148,6.5135 seconds
-24,A/A*,h4,26,4966,8.6096 seconds
+24,UCS,N/A,9,1665,1.8205 seconds
+24,GBFS,h1,9,255,0.0631 seconds
+24,GBFS,h2,9,255,0.0793 seconds
+24,GBFS,h3,9,255,0.0626 seconds
+24,GBFS,h4,9,255,0.0882 seconds
+24,A/A*,h1,9,1200,0.9773 seconds
+24,A/A*,h2,9,1200,0.9873 seconds
+24,A/A*,h3,9,424,0.2139 seconds
+24,A/A*,h4,9,1200,1.0223 seconds
 25,UCS,N/A,7,132,0.0171 seconds
 25,GBFS,h1,8,38,0.0038 seconds
 25,GBFS,h2,8,38,0.0038 seconds
