@@ -1,0 +1,12 @@
+4 0 4 .Z..BB.Z...CAA..DC.O..D..OPPP..O....
+2 0 2 .Z..BB.Z....AA..D..O..DC.OPPPC.O.... C98
+2 0 2 .Z..BB.Z....AA..D..O..D..OPPPC.O...C C97
+2 0 2 .Z..BB.Z.....AA.D..O..DC.OPPPC.O.... C98 A99
+2 0 2 .Z..BB.Z......AAD..O..DC.OPPPC.O.... C98 A98
+2 0 2 .Z.BB..Z....AA..D..O..DC.OPPPC.O.... B99 C98
+2 0 2 .ZBB...Z....AA..D..O..DC.OPPPC.O.... B98 C98
+0 0 0 .ZBBD..Z..D.AA.....O...C.OPPPC.O.... B98 C98 D98
+0 0 0 .ZBBD..Z..D..AA....O...C.OPPPC.O.... B98 C98 A99 D98
+0 0 0 .ZBBD..Z..D...AA...O...C.OPPPC.O.... B98 C98 A98 D98
+0 0 0 .ZBBD..Z..D....AA..O...C.OPPPC.O.... B98 C98 A97 D98
+0 0 0 .ZBBD..Z..D.....AA.O...C.OPPPC.O.... B98 C98 A96 D98

@@ -1,13 +1,32 @@
-Initial Board Configuration: BBB..MCCDD.MAAKL.MJ.KLEEJ.GG..JHHHII B4 J0
+Initial Board Configuration: ..O.....OZBBAAOZC....DC....DEE...... B2 E4
 
-['B', 'B', 'I', 'J', '.', '.']
-['.', '.', 'I', 'J', 'C', 'C']
-['.', '.', 'I', 'A', 'A', 'M']
-['G', 'D', 'D', 'K', '.', 'M']
-['G', 'H', '.', 'K', 'L', '.']
-['G', 'H', 'F', 'F', 'L', '.']
+['.', '.', 'O', '.', '.', '.']
+['.', '.', 'O', 'Z', 'B', 'B']
+['A', 'A', 'O', 'Z', 'C', '.']
+['.', '.', '.', 'D', 'C', '.']
+['.', '.', '.', 'D', 'E', 'E']
+['.', '.', '.', '.', '.', '.']
 
-Car fuel Available: J:0, B:4, M:100, C:100, D:100, A:100, K:100, L:100, E:100, G:100, H:100, I:100, 
+Car fuel Available: B:2, E:4, O:100, Z:100, A:100, C:100, D:100, 
 
-No Solution Found for This Board, Sorry!
-Runtime: 0.0263 seconds
+Runtime: 0.0271 seconds
+Search Path Length: 64 states
+Solution Path Length: 8 moves
+Solution Path: Z up 1; D up 1; E left 3; C down 1; D down 1; E left 1; O down 3; A right 4; 
+
+Z up 1               99 ..OZ....OZBBAAO.C....DC....DEE...... Z99 B2 E4
+D up 1               99 ..OZ....OZBBAAODC....DC.....EE...... Z99 B2 D99 E4
+E left 3             1 ..OZ....OZBBAAODC....DC..EE......... Z99 B2 D99 E1
+C down 1             99 ..OZ....OZBBAAOD.....DC..EE.C....... Z99 B2 C99 D99 E1
+D down 1             98 ..OZ....OZBBAAO......DC..EEDC....... Z99 B2 C99 D98 E1
+E left 1             0 ..OZ....OZBBAAO......DC.EE.DC....... Z99 B2 C99 D98 E0
+O down 3             97 ...Z.....ZBBAA......ODC.EEODC...O... O97 Z99 B2 C99 D98 E0
+A right 4            96 ...Z.....ZBB....AA..ODC.EEODC...O... O97 Z99 B2 A96 C99 D98 E0
+
+! O97 Z99 B2 A96 C99 D98 E0
+['.', '.', '.', 'Z', '.', '.']
+['.', '.', '.', 'Z', 'B', 'B']
+['.', '.', '.', '.', 'A', 'A']
+['.', '.', 'O', 'D', 'C', '.']
+['E', 'E', 'O', 'D', 'C', '.']
+['.', '.', 'O', '.', '.', '.']

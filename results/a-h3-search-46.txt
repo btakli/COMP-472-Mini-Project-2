@@ -1,0 +1,240 @@
+6 0 6 ..ZZ....BB.CAADE.C..DE....F.....F... F1
+5 1 4 ..ZZ.C..BB.CAADE....DE....F.....F... C99 F1
+4 2 2 ..ZZ.C..BB.CAAD.....DE....FE....F... C99 E99 F1
+4 2 2 ..ZZ.C..BB.CAAD.....D.....FE....FE.. C99 E98 F1
+5 1 4 ..ZZ....BB..AADE....DE.C..F..C..F... C98 F1
+4 2 2 ..ZZ....BB..AAD.....DE.C..FE.C..F... C98 E99 F1
+4 2 2 ..ZZ....BB..AAD.....D..C..FE.C..FE.. C98 E98 F1
+5 1 4 ..ZZ....BB..AADE....DE....F..C..F..C C97 F1
+4 2 2 ..ZZ....BB..AAD.....DE....FE.C..F..C C97 E99 F1
+4 2 2 ..ZZ....BB..AAD.....D.....FE.C..FE.C C97 E98 F1
+5 1 4 ..ZZ....BB.CAAD..C..DE....FE....F... E99 F1
+5 1 4 ..ZZ....BB.CAAD..C..D.....FE....FE.. E98 F1
+5 3 2 ..ZZ.C.BB..CAAD.....DE....FE....F... B99 C99 E99 F1
+5 3 2 ..ZZ.CBB...CAAD.....DE....FE....F... B98 C99 E99 F1
+5 3 2 ..ZZ.C...BBCAAD.....DE....FE....F... B99 C99 E99 F1
+5 3 2 .ZZ..C..BB.CAAD.....DE....FE....F... Z99 C99 E99 F1
+5 3 2 ZZ...C..BB.CAAD.....DE....FE....F... Z98 C99 E99 F1
+5 3 2 ...ZZC..BB.CAAD.....DE....FE....F... Z99 C99 E99 F1
+5 3 2 ..ZZ.C.BB..CAAD.....D.....FE....FE.. B99 C99 E98 F1
+5 3 2 ..ZZ.CBB...CAAD.....D.....FE....FE.. B98 C99 E98 F1
+5 3 2 ..ZZ.C...BBCAAD.....D.....FE....FE.. B99 C99 E98 F1
+5 3 2 .ZZ..C..BB.CAAD.....D.....FE....FE.. Z99 C99 E98 F1
+5 3 2 ZZ...C..BB.CAAD.....D.....FE....FE.. Z98 C99 E98 F1
+5 3 2 ...ZZC..BB.CAAD.....D.....FE....FE.. Z99 C99 E98 F1
+5 3 2 ..ZZ...BB...AAD.....DE.C..FE.C..F... B99 C98 E99 F1
+5 3 2 ..ZZ..BB....AAD.....DE.C..FE.C..F... B98 C98 E99 F1
+5 3 2 ..ZZ.....BB.AAD.....DE.C..FE.C..F... B99 C98 E99 F1
+5 3 2 ..ZZ......BBAAD.....DE.C..FE.C..F... B98 C98 E99 F1
+5 3 2 .ZZ.....BB..AAD.....DE.C..FE.C..F... Z99 C98 E99 F1
+5 3 2 ZZ......BB..AAD.....DE.C..FE.C..F... Z98 C98 E99 F1
+5 3 2 ...ZZ...BB..AAD.....DE.C..FE.C..F... Z99 C98 E99 F1
+5 3 2 ....ZZ..BB..AAD.....DE.C..FE.C..F... Z98 C98 E99 F1
+5 3 2 ..ZZ...BB...AAD.....D..C..FE.C..FE.. B99 C98 E98 F1
+5 3 2 ..ZZ..BB....AAD.....D..C..FE.C..FE.. B98 C98 E98 F1
+5 3 2 ..ZZ.....BB.AAD.....D..C..FE.C..FE.. B99 C98 E98 F1
+5 3 2 ..ZZ......BBAAD.....D..C..FE.C..FE.. B98 C98 E98 F1
+5 3 2 .ZZ.....BB..AAD.....D..C..FE.C..FE.. Z99 C98 E98 F1
+5 3 2 ZZ......BB..AAD.....D..C..FE.C..FE.. Z98 C98 E98 F1
+5 3 2 ...ZZ...BB..AAD.....D..C..FE.C..FE.. Z99 C98 E98 F1
+5 3 2 ....ZZ..BB..AAD.....D..C..FE.C..FE.. Z98 C98 E98 F1
+5 3 2 ..ZZ...BB...AAD.....DE....FE.C..F..C B99 C97 E99 F1
+5 3 2 ..ZZ..BB....AAD.....DE....FE.C..F..C B98 C97 E99 F1
+5 3 2 ..ZZ.....BB.AAD.....DE....FE.C..F..C B99 C97 E99 F1
+5 3 2 ..ZZ......BBAAD.....DE....FE.C..F..C B98 C97 E99 F1
+5 3 2 .ZZ.....BB..AAD.....DE....FE.C..F..C Z99 C97 E99 F1
+5 3 2 ZZ......BB..AAD.....DE....FE.C..F..C Z98 C97 E99 F1
+5 3 2 ...ZZ...BB..AAD.....DE....FE.C..F..C Z99 C97 E99 F1
+5 3 2 ....ZZ..BB..AAD.....DE....FE.C..F..C Z98 C97 E99 F1
+5 3 2 ..ZZ...BB...AAD.....D.....FE.C..FE.C B99 C97 E98 F1
+5 3 2 ..ZZ..BB....AAD.....D.....FE.C..FE.C B98 C97 E98 F1
+5 3 2 ..ZZ.....BB.AAD.....D.....FE.C..FE.C B99 C97 E98 F1
+5 3 2 ..ZZ......BBAAD.....D.....FE.C..FE.C B98 C97 E98 F1
+5 3 2 .ZZ.....BB..AAD.....D.....FE.C..FE.C Z99 C97 E98 F1
+5 3 2 ZZ......BB..AAD.....D.....FE.C..FE.C Z98 C97 E98 F1
+5 3 2 ...ZZ...BB..AAD.....D.....FE.C..FE.C Z99 C97 E98 F1
+5 3 2 ....ZZ..BB..AAD.....D.....FE.C..FE.C Z98 C97 E98 F1
+6 2 4 ..ZZ.C.BB..CAADE....DE....F.....F... B99 C99 F1
+6 2 4 ..ZZ.CBB...CAADE....DE....F.....F... B98 C99 F1
+6 2 4 ..ZZ.C...BBCAADE....DE....F.....F... B99 C99 F1
+6 2 4 .ZZ..C..BB.CAADE....DE....F.....F... Z99 C99 F1
+6 2 4 ZZ...C..BB.CAADE....DE....F.....F... Z98 C99 F1
+6 2 4 ...ZZC..BB.CAADE....DE....F.....F... Z99 C99 F1
+6 2 4 ..ZZ...BB...AADE....DE.C..F..C..F... B99 C98 F1
+6 2 4 ..ZZ..BB....AADE....DE.C..F..C..F... B98 C98 F1
+6 2 4 ..ZZ.....BB.AADE....DE.C..F..C..F... B99 C98 F1
+6 2 4 ..ZZ......BBAADE....DE.C..F..C..F... B98 C98 F1
+6 2 4 .ZZ.....BB..AADE....DE.C..F..C..F... Z99 C98 F1
+6 2 4 ZZ......BB..AADE....DE.C..F..C..F... Z98 C98 F1
+6 2 4 ...ZZ...BB..AADE....DE.C..F..C..F... Z99 C98 F1
+6 2 4 ....ZZ..BB..AADE....DE.C..F..C..F... Z98 C98 F1
+6 2 4 ..ZZ...BB...AADE....DE....F..C..F..C B99 C97 F1
+6 2 4 ..ZZ..BB....AADE....DE....F..C..F..C B98 C97 F1
+6 2 4 ..ZZ.....BB.AADE....DE....F..C..F..C B99 C97 F1
+6 2 4 ..ZZ......BBAADE....DE....F..C..F..C B98 C97 F1
+6 2 4 .ZZ.....BB..AADE....DE....F..C..F..C Z99 C97 F1
+6 2 4 ZZ......BB..AADE....DE....F..C..F..C Z98 C97 F1
+6 2 4 ...ZZ...BB..AADE....DE....F..C..F..C Z99 C97 F1
+6 2 4 ....ZZ..BB..AADE....DE....F..C..F..C Z98 C97 F1
+6 2 4 ..ZZ...BB..CAAD..C..DE....FE....F... B99 E99 F1
+6 2 4 ..ZZ..BB...CAAD..C..DE....FE....F... B98 E99 F1
+6 2 4 ..ZZ.....BBCAAD..C..DE....FE....F... B99 E99 F1
+6 2 4 ..ZZ....BB..AAD..C..DE.C..FE....F... C99 E99 F1
+6 2 4 .ZZ.....BB.CAAD..C..DE....FE....F... Z99 E99 F1
+6 2 4 ZZ......BB.CAAD..C..DE....FE....F... Z98 E99 F1
+6 2 4 ...ZZ...BB.CAAD..C..DE....FE....F... Z99 E99 F1
+6 2 4 ....ZZ..BB.CAAD..C..DE....FE....F... Z98 E99 F1
+6 2 4 ..ZZ...BB..CAAD..C..D.....FE....FE.. B99 E98 F1
+6 2 4 ..ZZ..BB...CAAD..C..D.....FE....FE.. B98 E98 F1
+6 2 4 ..ZZ.....BBCAAD..C..D.....FE....FE.. B99 E98 F1
+6 2 4 ..ZZ....BB..AAD..C..D..C..FE....FE.. C99 E98 F1
+6 2 4 .ZZ.....BB.CAAD..C..D.....FE....FE.. Z99 E98 F1
+6 2 4 ZZ......BB.CAAD..C..D.....FE....FE.. Z98 E98 F1
+6 2 4 ...ZZ...BB.CAAD..C..D.....FE....FE.. Z99 E98 F1
+6 2 4 ....ZZ..BB.CAAD..C..D.....FE....FE.. Z98 E98 F1
+6 4 2 .ZZ..C.BB..CAAD.....DE....FE....F... Z99 B99 C99 E99 F1
+6 4 2 ZZ...C.BB..CAAD.....DE....FE....F... Z98 B99 C99 E99 F1
+6 4 2 ...ZZC.BB..CAAD.....DE....FE....F... Z99 B99 C99 E99 F1
+6 4 2 ..ZZ.CBBD..CAAD......E....FE....F... B98 C99 D99 E99 F1
+6 4 2 .ZZ..CBB...CAAD.....DE....FE....F... Z99 B98 C99 E99 F1
+6 4 2 ZZ...CBB...CAAD.....DE....FE....F... Z98 B98 C99 E99 F1
+5 5 0 ZZD..CBBD..CAA.......E....FE....F... Z98 B98 C99 D98 E99 F1
+6 4 2 ...ZZCBB...CAAD.....DE....FE....F... Z99 B98 C99 E99 F1
+5 5 0 ..DZZCBBD..CAA.......E....FE....F... Z99 B98 C99 D98 E99 F1
+6 4 2 ..ZZ.C..DBBCAAD......E....FE....F... B99 C99 D99 E99 F1
+6 4 2 .ZZ..C...BBCAAD.....DE....FE....F... Z99 B99 C99 E99 F1
+6 4 2 ZZ...C...BBCAAD.....DE....FE....F... Z98 B99 C99 E99 F1
+5 5 0 ZZD..C..DBBCAA.......E....FE....F... Z98 B99 C99 D98 E99 F1
+6 4 2 ...ZZC...BBCAAD.....DE....FE....F... Z99 B99 C99 E99 F1
+5 5 0 ..DZZC..DBBCAA.......E....FE....F... Z99 B99 C99 D98 E99 F1
+6 4 2 .ZZ..C.BB..CAAD.....D.....FE....FE.. Z99 B99 C99 E98 F1
+6 4 2 ZZ...C.BB..CAAD.....D.....FE....FE.. Z98 B99 C99 E98 F1
+6 4 2 ...ZZC.BB..CAAD.....D.....FE....FE.. Z99 B99 C99 E98 F1
+6 4 2 ..ZZ.CBBD..CAAD...........FE....FE.. B98 C99 D99 E98 F1
+6 4 2 .ZZ..CBB...CAAD.....D.....FE....FE.. Z99 B98 C99 E98 F1
+6 4 2 ZZ...CBB...CAAD.....D.....FE....FE.. Z98 B98 C99 E98 F1
+5 5 0 ZZD..CBBD..CAA............FE....FE.. Z98 B98 C99 D98 E98 F1
+6 4 2 ...ZZCBB...CAAD.....D.....FE....FE.. Z99 B98 C99 E98 F1
+5 5 0 ..DZZCBBD..CAA............FE....FE.. Z99 B98 C99 D98 E98 F1
+6 4 2 ..ZZ.C..DBBCAAD...........FE....FE.. B99 C99 D99 E98 F1
+6 4 2 .ZZ..C...BBCAAD.....D.....FE....FE.. Z99 B99 C99 E98 F1
+6 4 2 ZZ...C...BBCAAD.....D.....FE....FE.. Z98 B99 C99 E98 F1
+5 5 0 ZZD..C..DBBCAA............FE....FE.. Z98 B99 C99 D98 E98 F1
+6 4 2 ...ZZC...BBCAAD.....D.....FE....FE.. Z99 B99 C99 E98 F1
+5 5 0 ..DZZC..DBBCAA............FE....FE.. Z99 B99 C99 D98 E98 F1
+6 4 2 .ZZ....BB...AAD.....DE.C..FE.C..F... Z99 B99 C98 E99 F1
+6 4 2 ZZ.....BB...AAD.....DE.C..FE.C..F... Z98 B99 C98 E99 F1
+6 4 2 ...ZZ..BB...AAD.....DE.C..FE.C..F... Z99 B99 C98 E99 F1
+6 4 2 ....ZZ.BB...AAD.....DE.C..FE.C..F... Z98 B99 C98 E99 F1
+6 4 2 ..ZZ..BBD...AAD......E.C..FE.C..F... B98 C98 D99 E99 F1
+6 4 2 .ZZ...BB....AAD.....DE.C..FE.C..F... Z99 B98 C98 E99 F1
+6 4 2 ZZ....BB....AAD.....DE.C..FE.C..F... Z98 B98 C98 E99 F1
+5 5 0 ZZD...BBD...AA.......E.C..FE.C..F... Z98 B98 C98 D98 E99 F1
+6 4 2 ...ZZ.BB....AAD.....DE.C..FE.C..F... Z99 B98 C98 E99 F1
+5 5 0 ..DZZ.BBD...AA.......E.C..FE.C..F... Z99 B98 C98 D98 E99 F1
+6 4 2 ....ZZBB....AAD.....DE.C..FE.C..F... Z98 B98 C98 E99 F1
+5 5 0 ..D.ZZBBD...AA.......E.C..FE.C..F... Z98 B98 C98 D98 E99 F1
+6 4 2 ..ZZ....DBB.AAD......E.C..FE.C..F... B99 C98 D99 E99 F1
+6 4 2 .ZZ......BB.AAD.....DE.C..FE.C..F... Z99 B99 C98 E99 F1
+6 4 2 ZZ.......BB.AAD.....DE.C..FE.C..F... Z98 B99 C98 E99 F1
+5 5 0 ZZD.....DBB.AA.......E.C..FE.C..F... Z98 B99 C98 D98 E99 F1
+6 4 2 ...ZZ....BB.AAD.....DE.C..FE.C..F... Z99 B99 C98 E99 F1
+5 5 0 ..DZZ...DBB.AA.......E.C..FE.C..F... Z99 B99 C98 D98 E99 F1
+6 4 2 ....ZZ...BB.AAD.....DE.C..FE.C..F... Z98 B99 C98 E99 F1
+5 5 0 ..D.ZZ..DBB.AA.......E.C..FE.C..F... Z98 B99 C98 D98 E99 F1
+6 4 2 ..ZZ....D.BBAAD......E.C..FE.C..F... B98 C98 D99 E99 F1
+6 4 2 .ZZ.......BBAAD.....DE.C..FE.C..F... Z99 B98 C98 E99 F1
+6 4 2 ZZ........BBAAD.....DE.C..FE.C..F... Z98 B98 C98 E99 F1
+5 5 0 ZZD.....D.BBAA.......E.C..FE.C..F... Z98 B98 C98 D98 E99 F1
+6 4 2 ...ZZ.....BBAAD.....DE.C..FE.C..F... Z99 B98 C98 E99 F1
+5 5 0 ..DZZ...D.BBAA.......E.C..FE.C..F... Z99 B98 C98 D98 E99 F1
+6 4 2 ....ZZ....BBAAD.....DE.C..FE.C..F... Z98 B98 C98 E99 F1
+5 5 0 ..D.ZZ..D.BBAA.......E.C..FE.C..F... Z98 B98 C98 D98 E99 F1
+6 4 2 .ZZ....BB...AAD.....D..C..FE.C..FE.. Z99 B99 C98 E98 F1
+6 4 2 ZZ.....BB...AAD.....D..C..FE.C..FE.. Z98 B99 C98 E98 F1
+6 4 2 ...ZZ..BB...AAD.....D..C..FE.C..FE.. Z99 B99 C98 E98 F1
+6 4 2 ....ZZ.BB...AAD.....D..C..FE.C..FE.. Z98 B99 C98 E98 F1
+6 4 2 ..ZZ..BBD...AAD........C..FE.C..FE.. B98 C98 D99 E98 F1
+6 4 2 .ZZ...BB....AAD.....D..C..FE.C..FE.. Z99 B98 C98 E98 F1
+6 4 2 ZZ....BB....AAD.....D..C..FE.C..FE.. Z98 B98 C98 E98 F1
+5 5 0 ZZD...BBD...AA.........C..FE.C..FE.. Z98 B98 C98 D98 E98 F1
+6 4 2 ...ZZ.BB....AAD.....D..C..FE.C..FE.. Z99 B98 C98 E98 F1
+5 5 0 ..DZZ.BBD...AA.........C..FE.C..FE.. Z99 B98 C98 D98 E98 F1
+6 4 2 ....ZZBB....AAD.....D..C..FE.C..FE.. Z98 B98 C98 E98 F1
+5 5 0 ..D.ZZBBD...AA.........C..FE.C..FE.. Z98 B98 C98 D98 E98 F1
+6 4 2 ..ZZ....DBB.AAD........C..FE.C..FE.. B99 C98 D99 E98 F1
+6 4 2 .ZZ......BB.AAD.....D..C..FE.C..FE.. Z99 B99 C98 E98 F1
+6 4 2 ZZ.......BB.AAD.....D..C..FE.C..FE.. Z98 B99 C98 E98 F1
+5 5 0 ZZD.....DBB.AA.........C..FE.C..FE.. Z98 B99 C98 D98 E98 F1
+6 4 2 ...ZZ....BB.AAD.....D..C..FE.C..FE.. Z99 B99 C98 E98 F1
+5 5 0 ..DZZ...DBB.AA.........C..FE.C..FE.. Z99 B99 C98 D98 E98 F1
+6 4 2 ....ZZ...BB.AAD.....D..C..FE.C..FE.. Z98 B99 C98 E98 F1
+5 5 0 ..D.ZZ..DBB.AA.........C..FE.C..FE.. Z98 B99 C98 D98 E98 F1
+6 4 2 ..ZZ....D.BBAAD........C..FE.C..FE.. B98 C98 D99 E98 F1
+6 4 2 .ZZ.......BBAAD.....D..C..FE.C..FE.. Z99 B98 C98 E98 F1
+6 4 2 ZZ........BBAAD.....D..C..FE.C..FE.. Z98 B98 C98 E98 F1
+5 5 0 ZZD.....D.BBAA.........C..FE.C..FE.. Z98 B98 C98 D98 E98 F1
+6 4 2 ...ZZ.....BBAAD.....D..C..FE.C..FE.. Z99 B98 C98 E98 F1
+5 5 0 ..DZZ...D.BBAA.........C..FE.C..FE.. Z99 B98 C98 D98 E98 F1
+6 4 2 ....ZZ....BBAAD.....D..C..FE.C..FE.. Z98 B98 C98 E98 F1
+5 5 0 ..D.ZZ..D.BBAA.........C..FE.C..FE.. Z98 B98 C98 D98 E98 F1
+6 4 2 .ZZ....BB...AAD.....DE....FE.C..F..C Z99 B99 C97 E99 F1
+6 4 2 ZZ.....BB...AAD.....DE....FE.C..F..C Z98 B99 C97 E99 F1
+6 4 2 ...ZZ..BB...AAD.....DE....FE.C..F..C Z99 B99 C97 E99 F1
+6 4 2 ....ZZ.BB...AAD.....DE....FE.C..F..C Z98 B99 C97 E99 F1
+6 4 2 ..ZZ..BBD...AAD......E....FE.C..F..C B98 C97 D99 E99 F1
+6 4 2 .ZZ...BB....AAD.....DE....FE.C..F..C Z99 B98 C97 E99 F1
+6 4 2 ZZ....BB....AAD.....DE....FE.C..F..C Z98 B98 C97 E99 F1
+5 5 0 ZZD...BBD...AA.......E....FE.C..F..C Z98 B98 C97 D98 E99 F1
+6 4 2 ...ZZ.BB....AAD.....DE....FE.C..F..C Z99 B98 C97 E99 F1
+5 5 0 ..DZZ.BBD...AA.......E....FE.C..F..C Z99 B98 C97 D98 E99 F1
+6 4 2 ....ZZBB....AAD.....DE....FE.C..F..C Z98 B98 C97 E99 F1
+5 5 0 ..D.ZZBBD...AA.......E....FE.C..F..C Z98 B98 C97 D98 E99 F1
+6 4 2 ..ZZ....DBB.AAD......E....FE.C..F..C B99 C97 D99 E99 F1
+6 4 2 .ZZ......BB.AAD.....DE....FE.C..F..C Z99 B99 C97 E99 F1
+6 4 2 ZZ.......BB.AAD.....DE....FE.C..F..C Z98 B99 C97 E99 F1
+5 5 0 ZZD.....DBB.AA.......E....FE.C..F..C Z98 B99 C97 D98 E99 F1
+6 4 2 ...ZZ....BB.AAD.....DE....FE.C..F..C Z99 B99 C97 E99 F1
+5 5 0 ..DZZ...DBB.AA.......E....FE.C..F..C Z99 B99 C97 D98 E99 F1
+6 4 2 ....ZZ...BB.AAD.....DE....FE.C..F..C Z98 B99 C97 E99 F1
+5 5 0 ..D.ZZ..DBB.AA.......E....FE.C..F..C Z98 B99 C97 D98 E99 F1
+6 4 2 ..ZZ....D.BBAAD......E....FE.C..F..C B98 C97 D99 E99 F1
+6 4 2 .ZZ.......BBAAD.....DE....FE.C..F..C Z99 B98 C97 E99 F1
+6 4 2 ZZ........BBAAD.....DE....FE.C..F..C Z98 B98 C97 E99 F1
+5 5 0 ZZD.....D.BBAA.......E....FE.C..F..C Z98 B98 C97 D98 E99 F1
+6 4 2 ...ZZ.....BBAAD.....DE....FE.C..F..C Z99 B98 C97 E99 F1
+5 5 0 ..DZZ...D.BBAA.......E....FE.C..F..C Z99 B98 C97 D98 E99 F1
+6 4 2 ....ZZ....BBAAD.....DE....FE.C..F..C Z98 B98 C97 E99 F1
+5 5 0 ..D.ZZ..D.BBAA.......E....FE.C..F..C Z98 B98 C97 D98 E99 F1
+6 4 2 .ZZ....BB...AAD.....D.....FE.C..FE.C Z99 B99 C97 E98 F1
+6 4 2 ZZ.....BB...AAD.....D.....FE.C..FE.C Z98 B99 C97 E98 F1
+6 4 2 ...ZZ..BB...AAD.....D.....FE.C..FE.C Z99 B99 C97 E98 F1
+6 4 2 ....ZZ.BB...AAD.....D.....FE.C..FE.C Z98 B99 C97 E98 F1
+6 4 2 ..ZZ..BBD...AAD...........FE.C..FE.C B98 C97 D99 E98 F1
+6 4 2 .ZZ...BB....AAD.....D.....FE.C..FE.C Z99 B98 C97 E98 F1
+6 4 2 ZZ....BB....AAD.....D.....FE.C..FE.C Z98 B98 C97 E98 F1
+5 5 0 ZZD...BBD...AA............FE.C..FE.C Z98 B98 C97 D98 E98 F1
+6 4 2 ...ZZ.BB....AAD.....D.....FE.C..FE.C Z99 B98 C97 E98 F1
+5 5 0 ..DZZ.BBD...AA............FE.C..FE.C Z99 B98 C97 D98 E98 F1
+6 4 2 ....ZZBB....AAD.....D.....FE.C..FE.C Z98 B98 C97 E98 F1
+5 5 0 ..D.ZZBBD...AA............FE.C..FE.C Z98 B98 C97 D98 E98 F1
+6 4 2 ..ZZ....DBB.AAD...........FE.C..FE.C B99 C97 D99 E98 F1
+6 4 2 .ZZ......BB.AAD.....D.....FE.C..FE.C Z99 B99 C97 E98 F1
+6 4 2 ZZ.......BB.AAD.....D.....FE.C..FE.C Z98 B99 C97 E98 F1
+5 5 0 ZZD.....DBB.AA............FE.C..FE.C Z98 B99 C97 D98 E98 F1
+6 4 2 ...ZZ....BB.AAD.....D.....FE.C..FE.C Z99 B99 C97 E98 F1
+5 5 0 ..DZZ...DBB.AA............FE.C..FE.C Z99 B99 C97 D98 E98 F1
+6 4 2 ....ZZ...BB.AAD.....D.....FE.C..FE.C Z98 B99 C97 E98 F1
+5 5 0 ..D.ZZ..DBB.AA............FE.C..FE.C Z98 B99 C97 D98 E98 F1
+6 4 2 ..ZZ....D.BBAAD...........FE.C..FE.C B98 C97 D99 E98 F1
+6 4 2 .ZZ.......BBAAD.....D.....FE.C..FE.C Z99 B98 C97 E98 F1
+6 4 2 ZZ........BBAAD.....D.....FE.C..FE.C Z98 B98 C97 E98 F1
+5 5 0 ZZD.....D.BBAA............FE.C..FE.C Z98 B98 C97 D98 E98 F1
+6 4 2 ...ZZ.....BBAAD.....D.....FE.C..FE.C Z99 B98 C97 E98 F1
+5 5 0 ..DZZ...D.BBAA............FE.C..FE.C Z99 B98 C97 D98 E98 F1
+6 4 2 ....ZZ....BBAAD.....D.....FE.C..FE.C Z98 B98 C97 E98 F1
+5 5 0 ..D.ZZ..D.BBAA............FE.C..FE.C Z98 B98 C97 D98 E98 F1
+6 6 0 ZZD..CBBD..C.AA......E....FE....F... Z98 B98 C99 A99 D98 E99 F1
+6 6 0 ZZD..CBBD..C..AA.....E....FE....F... Z98 B98 C99 A98 D98 E99 F1
+6 6 0 ZZD..CBBD..C...AA....E....FE....F... Z98 B98 C99 A97 D98 E99 F1
+6 6 0 ZZD..CBBD..C....AA...E....FE....F... Z98 B98 C99 A96 D98 E99 F1

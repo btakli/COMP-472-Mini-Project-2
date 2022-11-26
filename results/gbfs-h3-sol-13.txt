@@ -1,0 +1,41 @@
+Initial Board Configuration: OP.ZBBOPCZ.DOPCAADEE...QRRR..QFF...Q
+
+['O', 'P', '.', 'Z', 'B', 'B']
+['O', 'P', 'C', 'Z', '.', 'D']
+['O', 'P', 'C', 'A', 'A', 'D']
+['E', 'E', '.', '.', '.', 'Q']
+['R', 'R', 'R', '.', '.', 'Q']
+['F', 'F', '.', '.', '.', 'Q']
+
+Car fuel Available: O:100, P:100, Z:100, B:100, C:100, D:100, A:100, E:100, Q:100, R:100, F:100, 
+
+Runtime: 0.8488 seconds
+Search Path Length: 984 states
+Solution Path Length: 17 moves
+Solution Path: C up 1; E right 2; F right 2; R right 2; P down 3; A left 2; Z down 1; B left 1; D up 1; O down 3; A left 1; C down 1; B left 2; Z up 1; B left 1; C up 1; A right 4; 
+
+C up 1               99 OPCZBBOPCZ.DOP.AADEE...QRRR..QFF...Q C99
+E right 2            98 OPCZBBOPCZ.DOP.AAD..EE.QRRR..QFF...Q C99 E98
+F right 2            98 OPCZBBOPCZ.DOP.AAD..EE.QRRR..Q..FF.Q C99 E98 F98
+R right 2            98 OPCZBBOPCZ.DOP.AAD..EE.Q..RRRQ..FF.Q C99 E98 R98 F98
+P down 3             97 O.CZBBO.CZ.DO..AAD.PEE.Q.PRRRQ.PFF.Q P97 C99 E98 R98 F98
+A left 2             98 O.CZBBO.CZ.DOAA..D.PEE.Q.PRRRQ.PFF.Q P97 C99 A98 E98 R98 F98
+Z down 1             99 O.C.BBO.CZ.DOAAZ.D.PEE.Q.PRRRQ.PFF.Q P97 Z99 C99 A98 E98 R98 F98
+B left 1             99 O.CBB.O.CZ.DOAAZ.D.PEE.Q.PRRRQ.PFF.Q P97 Z99 B99 C99 A98 E98 R98 F98
+D up 1               99 O.CBBDO.CZ.DOAAZ...PEE.Q.PRRRQ.PFF.Q P97 Z99 B99 C99 D99 A98 E98 R98 F98
+O down 3             97 ..CBBD..CZ.D.AAZ..OPEE.QOPRRRQOPFF.Q O97 P97 Z99 B99 C99 D99 A98 E98 R98 F98
+A left 1             97 ..CBBD..CZ.DAA.Z..OPEE.QOPRRRQOPFF.Q O97 P97 Z99 B99 C99 D99 A97 E98 R98 F98
+C down 1             98 ...BBD..CZ.DAACZ..OPEE.QOPRRRQOPFF.Q O97 P97 Z99 B99 C98 D99 A97 E98 R98 F98
+B left 2             97 .BB..D..CZ.DAACZ..OPEE.QOPRRRQOPFF.Q O97 P97 Z99 B97 C98 D99 A97 E98 R98 F98
+Z up 1               98 .BBZ.D..CZ.DAAC...OPEE.QOPRRRQOPFF.Q O97 P97 Z98 B97 C98 D99 A97 E98 R98 F98
+B left 1             96 BB.Z.D..CZ.DAAC...OPEE.QOPRRRQOPFF.Q O97 P97 Z98 B96 C98 D99 A97 E98 R98 F98
+C up 1               97 BBCZ.D..CZ.DAA....OPEE.QOPRRRQOPFF.Q O97 P97 Z98 B96 C97 D99 A97 E98 R98 F98
+A right 4            93 BBCZ.D..CZ.D....AAOPEE.QOPRRRQOPFF.Q O97 P97 Z98 B96 C97 D99 A93 E98 R98 F98
+
+! O97 P97 Z98 B96 C97 D99 A93 E98 R98 F98
+['B', 'B', 'C', 'Z', '.', 'D']
+['.', '.', 'C', 'Z', '.', 'D']
+['.', '.', '.', '.', 'A', 'A']
+['O', 'P', 'E', 'E', '.', 'Q']
+['O', 'P', 'R', 'R', 'R', 'Q']
+['O', 'P', 'F', 'F', '.', 'Q']

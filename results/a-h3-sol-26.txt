@@ -1,0 +1,38 @@
+Initial Board Configuration: ZBCCDDZBEEFF.G.AAH.G..IHOOO.IJKK...J
+
+['Z', 'B', 'C', 'C', 'D', 'D']
+['Z', 'B', 'E', 'E', 'F', 'F']
+['.', 'G', '.', 'A', 'A', 'H']
+['.', 'G', '.', '.', 'I', 'H']
+['O', 'O', 'O', '.', 'I', 'J']
+['K', 'K', '.', '.', '.', 'J']
+
+Car fuel Available: Z:100, B:100, C:100, D:100, E:100, F:100, G:100, A:100, H:100, I:100, O:100, J:100, K:100, 
+
+Runtime: 0.3598 seconds
+Search Path Length: 676 states
+Solution Path Length: 14 moves
+Solution Path: A left 1; K right 2; Z down 2; I up 1; O right 2; G down 2; B down 2; C left 2; D left 2; E left 2; F left 2; H up 2; I up 2; A right 2; 
+
+A left 1             99 ZBCCDDZBEEFF.GAA.H.G..IHOOO.IJKK...J A99
+K right 2            98 ZBCCDDZBEEFF.GAA.H.G..IHOOO.IJ..KK.J A99 K98
+Z down 2             98 .BCCDD.BEEFFZGAA.HZG..IHOOO.IJ..KK.J Z98 A99 K98
+I up 1               99 .BCCDD.BEEFFZGAAIHZG..IHOOO..J..KK.J Z98 A99 I99 K98
+O right 2            98 .BCCDD.BEEFFZGAAIHZG..IH..OOOJ..KK.J Z98 A99 I99 O98 K98
+G down 2             98 .BCCDD.BEEFFZ.AAIHZ...IH.GOOOJ.GKK.J Z98 G98 A99 I99 O98 K98
+B down 2             98 ..CCDD..EEFFZBAAIHZB..IH.GOOOJ.GKK.J Z98 B98 G98 A99 I99 O98 K98
+C left 2             98 CC..DD..EEFFZBAAIHZB..IH.GOOOJ.GKK.J Z98 B98 C98 G98 A99 I99 O98 K98
+D left 2             98 CCDD....EEFFZBAAIHZB..IH.GOOOJ.GKK.J Z98 B98 C98 D98 G98 A99 I99 O98 K98
+E left 2             98 CCDD..EE..FFZBAAIHZB..IH.GOOOJ.GKK.J Z98 B98 C98 D98 E98 G98 A99 I99 O98 K98
+F left 2             98 CCDD..EEFF..ZBAAIHZB..IH.GOOOJ.GKK.J Z98 B98 C98 D98 E98 F98 G98 A99 I99 O98 K98
+H up 2               98 CCDD.HEEFF.HZBAAI.ZB..I..GOOOJ.GKK.J Z98 B98 C98 D98 E98 F98 G98 A99 H98 I99 O98 K98
+I up 2               97 CCDDIHEEFFIHZBAA..ZB.....GOOOJ.GKK.J Z98 B98 C98 D98 E98 F98 G98 A99 H98 I97 O98 K98
+A right 2            97 CCDDIHEEFFIHZB..AAZB.....GOOOJ.GKK.J Z98 B98 C98 D98 E98 F98 G98 A97 H98 I97 O98 K98
+
+! Z98 B98 C98 D98 E98 F98 G98 A97 H98 I97 O98 K98
+['C', 'C', 'D', 'D', 'I', 'H']
+['E', 'E', 'F', 'F', 'I', 'H']
+['Z', 'B', '.', '.', 'A', 'A']
+['Z', 'B', '.', '.', '.', '.']
+['.', 'G', 'O', 'O', 'O', 'J']
+['.', 'G', 'K', 'K', '.', 'J']

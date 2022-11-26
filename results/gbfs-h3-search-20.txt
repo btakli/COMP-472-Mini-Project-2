@@ -1,0 +1,39 @@
+4 0 4 ......OOOZZ...AABC....BC...DEE...D..
+2 0 2 .....COOOZZC..AAB.....B....DEE...D.. C98
+2 0 2 .....COOOZZC.AA.B.....B....DEE...D.. A99 C98
+2 0 2 .....COOOZZCAA..B.....B....DEE...D.. A98 C98
+2 0 2 .....COOOZZC..AAB....DB....DEE...... C98 D99
+2 0 2 .....COOOZZC.AA.B....DB....DEE...... A99 C98 D99
+2 0 2 .....COOOZZCAA..B....DB....DEE...... A98 C98 D99
+4 0 4 ......OOOZZ..AA.BC....BC...DEE...D.. A99
+4 0 4 ......OOOZZ.AA..BC....BC...DEE...D.. A98
+4 0 4 ......OOOZZC..AABC....B....DEE...D.. C99
+4 0 4 ......OOOZZ...AABC...DBC...DEE...... D99
+4 0 4 ......OOO.ZZ..AABC....BC...DEE...D.. Z99
+4 0 4 ......OOOZZC.AA.BC....B....DEE...D.. A99 C97
+4 0 4 .....COOOZZC.AADB....DB.....EE...... A99 C98 D98
+4 0 4 ......OOOZZCAA..BC....B....DEE...D.. A98 C97
+4 0 4 .....COOOZZCAA.DB....DB.....EE...... A98 C98 D98
+4 0 4 ......OOOZZC..AABC...DB....DEE...... C97 D99
+4 0 4 ......OOOZZC.AA.BC...DB....DEE...... A99 C97 D99
+4 0 4 ......OOOZZ..AA.BC...DBC...DEE...... A99 C96 D99
+4 0 4 ......OOOZZCAA..BC...DB....DEE...... A98 C97 D99
+4 0 4 ......OOOZZ.AA..BC...DBC...DEE...... A98 C96 D99
+4 0 4 ......OOO.ZZ.AA.BC....BC...DEE...D.. Z99 A99
+4 0 4 ......OOO.ZZAA..BC....BC...DEE...D.. Z99 A98
+4 0 4 ......OOO.ZZ..AABC...DBC...DEE...... Z99 D99
+4 0 4 .......OOOZZ..AABC....BC...DEE...D.. O99 Z99
+4 0 4 .....COOOZZC.AADB....DB....EE....... A99 C98 D98 E99
+4 0 4 .....COOOZZC.AADB....DB...EE........ A99 C98 D98 E98
+2 0 2 .....COOOZZC.AAD.....DB...EEB....... A99 B99 C98 D98 E98
+2 0 2 .....COOOZZC.AAD.....D....EEB.....B. A99 B98 C98 D98 E98
+2 0 2 .....COOOZZCAA.D.....DB...EEB....... A98 B99 C98 D98 E98
+2 0 2 ......OOOZZ..AAD.....DBC..EEBC...... A99 B99 C95 D98 E98
+2 0 2 ......OOOZZ..AAD.....DB...EEBC.....C A99 B99 C94 D98 E98
+2 0 2 .....COOOZZC.AAD.....DB..EE.B....... A99 B99 C98 D98 E97
+0 0 0 .....COOOZZC.AA......DB..EEDB....... A99 B99 C98 D97 E97
+0 0 0 .....COOOZZC.AA.......B..EEDB....D.. A99 B99 C98 D96 E97
+0 0 0 .....COOOZZCAA.......DB..EEDB....... A98 B99 C98 D97 E97
+0 0 0 .....COOOZZC..AA.....DB..EEDB....... A98 B99 C98 D97 E97
+0 0 0 .....COOOZZC...AA....DB..EEDB....... A97 B99 C98 D97 E97
+0 0 0 .....COOOZZC....AA...DB..EEDB....... A96 B99 C98 D97 E97

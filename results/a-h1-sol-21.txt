@@ -1,0 +1,40 @@
+Initial Board Configuration: .ZBCCD.ZBEFDAA.EFGHIIJ.GH..J........
+
+['.', 'Z', 'B', 'C', 'C', 'D']
+['.', 'Z', 'B', 'E', 'F', 'D']
+['A', 'A', '.', 'E', 'F', 'G']
+['H', 'I', 'I', 'J', '.', 'G']
+['H', '.', '.', 'J', '.', '.']
+['.', '.', '.', '.', '.', '.']
+
+Car fuel Available: Z:100, B:100, C:100, D:100, E:100, F:100, A:100, G:100, H:100, I:100, J:100, 
+
+Runtime: 455.6512 seconds
+Search Path Length: 26536 states
+Solution Path Length: 16 moves
+Solution Path: F down 3; G down 1; D down 1; C right 1; E up 1; A right 2; J down 1; I right 2; Z down 3; A left 2; B down 3; E down 1; C left 3; D up 1; E up 1; A right 4; 
+
+F down 3             97 .ZBCCD.ZBE.DAA.E.GHIIJ.GH..JF.....F. F97
+G down 1             99 .ZBCCD.ZBE.DAA.E..HIIJ.GH..JFG....F. F97 G99
+D down 1             99 .ZBCC..ZBE.DAA.E.DHIIJ.GH..JFG....F. D99 F97 G99
+C right 1            99 .ZB.CC.ZBE.DAA.E.DHIIJ.GH..JFG....F. C99 D99 F97 G99
+E up 1               99 .ZBECC.ZBE.DAA...DHIIJ.GH..JFG....F. C99 D99 E99 F97 G99
+A right 2            98 .ZBECC.ZBE.D..AA.DHIIJ.GH..JFG....F. C99 D99 E99 F97 A98 G99
+J down 1             99 .ZBECC.ZBE.D..AA.DHII..GH..JFG...JF. C99 D99 E99 F97 A98 G99 J99
+I right 2            98 .ZBECC.ZBE.D..AA.DH..IIGH..JFG...JF. C99 D99 E99 F97 A98 G99 I98 J99
+Z down 3             97 ..BECC..BE.D..AA.DHZ.IIGHZ.JFG...JF. Z97 C99 D99 E99 F97 A98 G99 I98 J99
+A left 2             96 ..BECC..BE.DAA...DHZ.IIGHZ.JFG...JF. Z97 C99 D99 E99 F97 A96 G99 I98 J99
+B down 3             97 ...ECC...E.DAA...DHZBIIGHZBJFG...JF. Z97 B97 C99 D99 E99 F97 A96 G99 I98 J99
+E down 1             98 ....CC...E.DAA.E.DHZBIIGHZBJFG...JF. Z97 B97 C99 D99 E98 F97 A96 G99 I98 J99
+C left 3             96 .CC......E.DAA.E.DHZBIIGHZBJFG...JF. Z97 B97 C96 D99 E98 F97 A96 G99 I98 J99
+D up 1               98 .CC..D...E.DAA.E..HZBIIGHZBJFG...JF. Z97 B97 C96 D98 E98 F97 A96 G99 I98 J99
+E up 1               97 .CCE.D...E.DAA....HZBIIGHZBJFG...JF. Z97 B97 C96 D98 E97 F97 A96 G99 I98 J99
+A right 4            92 .CCE.D...E.D....AAHZBIIGHZBJFG...JF. Z97 B97 C96 D98 E97 F97 A92 G99 I98 J99
+
+! Z97 B97 C96 D98 E97 F97 A92 G99 I98 J99
+['.', 'C', 'C', 'E', '.', 'D']
+['.', '.', '.', 'E', '.', 'D']
+['.', '.', '.', '.', 'A', 'A']
+['H', 'Z', 'B', 'I', 'I', 'G']
+['H', 'Z', 'B', 'J', 'F', 'G']
+['.', '.', '.', 'J', 'F', '.']

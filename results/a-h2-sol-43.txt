@@ -1,0 +1,45 @@
+Initial Board Configuration: OOOZBCPPPZBCAAD...EED...FGHII.FGH... C3 E4
+
+['O', 'O', 'O', 'Z', 'B', 'C']
+['P', 'P', 'P', 'Z', 'B', 'C']
+['A', 'A', 'D', '.', '.', '.']
+['E', 'E', 'D', '.', '.', '.']
+['F', 'G', 'H', 'I', 'I', '.']
+['F', 'G', 'H', '.', '.', '.']
+
+Car fuel Available: C:3, E:4, O:100, Z:100, B:100, P:100, A:100, D:100, F:100, G:100, H:100, I:100, 
+
+Runtime: 0.5777 seconds
+Search Path Length: 1260 states
+Solution Path Length: 21 moves
+Solution Path: I right 1; Z down 4; B down 2; C down 2; O right 3; P right 3; D up 2; A right 2; E right 2; F up 4; G up 4; A left 2; E left 2; H up 2; Z up 2; I left 4; B down 1; C down 1; H down 1; Z down 1; A right 4; 
+
+I right 1            99 OOOZBCPPPZBCAAD...EED...FGH.IIFGH... C3 E4 I99
+Z down 4             96 OOO.BCPPP.BCAAD...EED...FGHZIIFGHZ.. Z96 C3 E4 I99
+B down 2             98 OOO..CPPP..CAAD.B.EED.B.FGHZIIFGHZ.. Z96 B98 C3 E4 I99
+C down 2             1 OOO...PPP...AAD.BCEED.BCFGHZIIFGHZ.. Z96 B98 C1 E4 I99
+O right 3            97 ...OOOPPP...AAD.BCEED.BCFGHZIIFGHZ.. O97 Z96 B98 C1 E4 I99
+P right 3            97 ...OOO...PPPAAD.BCEED.BCFGHZIIFGHZ.. O97 Z96 B98 C1 P97 E4 I99
+D up 2               98 ..DOOO..DPPPAA..BCEE..BCFGHZIIFGHZ.. O97 Z96 B98 C1 P97 D98 E4 I99
+A right 2            98 ..DOOO..DPPP..AABCEE..BCFGHZIIFGHZ.. O97 Z96 B98 C1 P97 A98 D98 E4 I99
+E right 2            2 ..DOOO..DPPP..AABC..EEBCFGHZIIFGHZ.. O97 Z96 B98 C1 P97 A98 D98 E2 I99
+F up 4               96 F.DOOOF.DPPP..AABC..EEBC.GHZII.GHZ.. O97 Z96 B98 C1 P97 A98 D98 E2 F96 I99
+G up 4               96 FGDOOOFGDPPP..AABC..EEBC..HZII..HZ.. O97 Z96 B98 C1 P97 A98 D98 E2 F96 G96 I99
+A left 2             96 FGDOOOFGDPPPAA..BC..EEBC..HZII..HZ.. O97 Z96 B98 C1 P97 A96 D98 E2 F96 G96 I99
+E left 2             0 FGDOOOFGDPPPAA..BCEE..BC..HZII..HZ.. O97 Z96 B98 C1 P97 A96 D98 E0 F96 G96 I99
+H up 2               98 FGDOOOFGDPPPAAH.BCEEH.BC...ZII...Z.. O97 Z96 B98 C1 P97 A96 D98 E0 F96 G96 H98 I99
+Z up 2               94 FGDOOOFGDPPPAAHZBCEEHZBC....II...... O97 Z94 B98 C1 P97 A96 D98 E0 F96 G96 H98 I99
+I left 4             95 FGDOOOFGDPPPAAHZBCEEHZBCII.......... O97 Z94 B98 C1 P97 A96 D98 E0 F96 G96 H98 I95
+B down 1             97 FGDOOOFGDPPPAAHZ.CEEHZBCII..B....... O97 Z94 B97 C1 P97 A96 D98 E0 F96 G96 H98 I95
+C down 1             0 FGDOOOFGDPPPAAHZ..EEHZBCII..BC...... O97 Z94 B97 C0 P97 A96 D98 E0 F96 G96 H98 I95
+H down 1             97 FGDOOOFGDPPPAA.Z..EEHZBCIIH.BC...... O97 Z94 B97 C0 P97 A96 D98 E0 F96 G96 H97 I95
+Z down 1             93 FGDOOOFGDPPPAA....EEHZBCIIHZBC...... O97 Z93 B97 C0 P97 A96 D98 E0 F96 G96 H97 I95
+A right 4            92 FGDOOOFGDPPP....AAEEHZBCIIHZBC...... O97 Z93 B97 C0 P97 A92 D98 E0 F96 G96 H97 I95
+
+! O97 Z93 B97 C0 P97 A92 D98 E0 F96 G96 H97 I95
+['F', 'G', 'D', 'O', 'O', 'O']
+['F', 'G', 'D', 'P', 'P', 'P']
+['.', '.', '.', '.', 'A', 'A']
+['E', 'E', 'H', 'Z', 'B', 'C']
+['I', 'I', 'H', 'Z', 'B', 'C']
+['.', '.', '.', '.', '.', '.']

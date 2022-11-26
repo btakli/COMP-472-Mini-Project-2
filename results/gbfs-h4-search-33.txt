@@ -1,0 +1,11 @@
+1.0 0 1.0 .........OOOAA..Z.P...Z.P.BBCCP.....
+1.0 0 1.0 .........OOO.AA.Z.P...Z.P.BBCCP..... A99
+1.0 0 1.0 .........OOO..AAZ.P...Z.P.BBCCP..... A98
+1.0 0 1.0 .........OOOAA..Z.P...Z.PBB.CCP..... B99
+1.0 0 1.0 ........OOO.AA..Z.P...Z.P.BBCCP..... O99
+1.0 0 1.0 .......OOO..AA..Z.P...Z.P.BBCCP..... O98
+0.0 0 0.0 ....Z..OOOZ.AA....P.....P.BBCCP..... O98 Z98
+0.0 0 0.0 ....Z..OOOZ..AA...P.....P.BBCCP..... O98 A99 Z98
+0.0 0 0.0 ....Z..OOOZ...AA..P.....P.BBCCP..... O98 A98 Z98
+0.0 0 0.0 ....Z..OOOZ....AA.P.....P.BBCCP..... O98 A97 Z98
+0.0 0 0.0 ....Z..OOOZ.....AAP.....P.BBCCP..... O98 A96 Z98

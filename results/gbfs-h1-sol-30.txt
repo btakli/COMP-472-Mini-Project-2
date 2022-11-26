@@ -1,0 +1,46 @@
+Initial Board Configuration: ZBB.C.ZDD.C.AAE...FFE...OOOGGHPPPIIH F5 O3 H4
+
+['Z', 'B', 'B', '.', 'C', '.']
+['Z', 'D', 'D', '.', 'C', '.']
+['A', 'A', 'E', '.', '.', '.']
+['F', 'F', 'E', '.', '.', '.']
+['O', 'O', 'O', 'G', 'G', 'H']
+['P', 'P', 'P', 'I', 'I', 'H']
+
+Car fuel Available: F:5, O:3, H:4, Z:100, B:100, C:100, D:100, A:100, E:100, G:100, P:100, I:100, 
+
+Runtime: 2.9778 seconds
+Search Path Length: 2391 states
+Solution Path Length: 22 moves
+Solution Path: C down 2; B right 2; D right 2; E up 2; A right 1; F right 1; H up 4; G right 1; I right 1; O right 1; P right 1; Z down 4; A left 1; F left 1; E down 2; B left 1; D left 1; C up 2; B left 2; D left 2; E up 2; A right 4; 
+
+C down 2             98 ZBB...ZDD...AAE.C.FFE.C.OOOGGHPPPIIH C98 F5 O3 H4
+B right 2            98 Z..BB.ZDD...AAE.C.FFE.C.OOOGGHPPPIIH B98 C98 F5 O3 H4
+D right 2            98 Z..BB.Z..DD.AAE.C.FFE.C.OOOGGHPPPIIH B98 C98 D98 F5 O3 H4
+E up 2               98 Z.EBB.Z.EDD.AA..C.FF..C.OOOGGHPPPIIH B98 C98 D98 E98 F5 O3 H4
+A right 1            99 Z.EBB.Z.EDD..AA.C.FF..C.OOOGGHPPPIIH B98 C98 D98 A99 E98 F5 O3 H4
+F right 1            4 Z.EBB.Z.EDD..AA.C..FF.C.OOOGGHPPPIIH B98 C98 D98 A99 E98 F4 O3 H4
+H up 4               0 Z.EBBHZ.EDDH.AA.C..FF.C.OOOGG.PPPII. B98 C98 D98 A99 E98 F4 O3 H0
+G right 1            99 Z.EBBHZ.EDDH.AA.C..FF.C.OOO.GGPPPII. B98 C98 D98 A99 E98 F4 O3 G99 H0
+I right 1            99 Z.EBBHZ.EDDH.AA.C..FF.C.OOO.GGPPP.II B98 C98 D98 A99 E98 F4 O3 G99 H0 I99
+O right 1            2 Z.EBBHZ.EDDH.AA.C..FF.C..OOOGGPPP.II B98 C98 D98 A99 E98 F4 O2 G99 H0 I99
+P right 1            99 Z.EBBHZ.EDDH.AA.C..FF.C..OOOGG.PPPII B98 C98 D98 A99 E98 F4 O2 G99 H0 P99 I99
+Z down 4             96 ..EBBH..EDDH.AA.C..FF.C.ZOOOGGZPPPII Z96 B98 C98 D98 A99 E98 F4 O2 G99 H0 P99 I99
+A left 1             98 ..EBBH..EDDHAA..C..FF.C.ZOOOGGZPPPII Z96 B98 C98 D98 A98 E98 F4 O2 G99 H0 P99 I99
+F left 1             3 ..EBBH..EDDHAA..C.FF..C.ZOOOGGZPPPII Z96 B98 C98 D98 A98 E98 F3 O2 G99 H0 P99 I99
+E down 2             96 ...BBH...DDHAAE.C.FFE.C.ZOOOGGZPPPII Z96 B98 C98 D98 A98 E96 F3 O2 G99 H0 P99 I99
+B left 1             97 ..BB.H...DDHAAE.C.FFE.C.ZOOOGGZPPPII Z96 B97 C98 D98 A98 E96 F3 O2 G99 H0 P99 I99
+D left 1             97 ..BB.H..DD.HAAE.C.FFE.C.ZOOOGGZPPPII Z96 B97 C98 D97 A98 E96 F3 O2 G99 H0 P99 I99
+C up 2               96 ..BBCH..DDCHAAE...FFE...ZOOOGGZPPPII Z96 B97 C96 D97 A98 E96 F3 O2 G99 H0 P99 I99
+B left 2             95 BB..CH..DDCHAAE...FFE...ZOOOGGZPPPII Z96 B95 C96 D97 A98 E96 F3 O2 G99 H0 P99 I99
+D left 2             95 BB..CHDD..CHAAE...FFE...ZOOOGGZPPPII Z96 B95 C96 D95 A98 E96 F3 O2 G99 H0 P99 I99
+E up 2               94 BBE.CHDDE.CHAA....FF....ZOOOGGZPPPII Z96 B95 C96 D95 A98 E94 F3 O2 G99 H0 P99 I99
+A right 4            94 BBE.CHDDE.CH....AAFF....ZOOOGGZPPPII Z96 B95 C96 D95 A94 E94 F3 O2 G99 H0 P99 I99
+
+! Z96 B95 C96 D95 A94 E94 F3 O2 G99 H0 P99 I99
+['B', 'B', 'E', '.', 'C', 'H']
+['D', 'D', 'E', '.', 'C', 'H']
+['.', '.', '.', '.', 'A', 'A']
+['F', 'F', '.', '.', '.', '.']
+['Z', 'O', 'O', 'O', 'G', 'G']
+['Z', 'P', 'P', 'P', 'I', 'I']

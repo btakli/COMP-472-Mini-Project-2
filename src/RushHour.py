@@ -9,8 +9,7 @@ from utils.SearchAlgorithms import GBFS, A, UniformCostSearch
 
 def main():
     # get absolute path of input_file
-    input_file = Path(path.abspath(__file__)).parent.parent / \
-        "SampleInputOutput/Sample/sample-input.txt"
+    input_file = Path(path.abspath(__file__)).parent / "input.txt"
     
     analysisoutput = AnalysisOutput("analysis.csv")
 

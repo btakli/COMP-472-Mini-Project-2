@@ -1,0 +1,38 @@
+2 0 2 .O.ZBB.O.Z.C.O.AAC...D.P...D.P.....P
+2 0 2 .O.ZBB.O.Z.C.OAA.C...D.P...D.P.....P A99
+2 0 2 .O.ZBB.O.Z.C.O.AAC.....P...D.P...D.P D99
+2 0 2 ...ZBB.O.Z.C.O.AAC.O.D.P...D.P.....P O99
+2 0 2 ...ZBB...Z.C.O.AAC.O.D.P.O.D.P.....P O98
+2 0 2 ...ZBB...Z.C...AAC.O.D.P.O.D.P.O...P O97
+2 0 2 .O.ZBB.O.Z.C.OAA.C.....P...D.P...D.P A99 D99
+2 0 2 ...ZBB.O.Z.C.OAA.C.O.D.P...D.P.....P O99 A99
+2 0 2 ...ZBB...Z.C.OAA.C.O.D.P.O.D.P.....P O98 A99
+2 0 2 ...ZBB...Z.C..AA.C.O.D.P.O.D.P.O...P O97 A99
+2 0 2 ...ZBB.O.Z.C.O.AAC.O...P...D.P...D.P O99 D99
+2 0 2 ...ZBB...Z.C.O.AAC.O...P.O.D.P...D.P O98 D99
+2 0 2 ...ZBB...Z.C...AAC.O...P.O.D.P.O.D.P O97 D99
+2 0 2 ...ZBB...Z.C.AA..C.O.D.P.O.D.P.O...P O97 A98
+2 0 2 ...ZBB...Z.CAA...C.O.D.P.O.D.P.O...P O97 A97
+2 0 2 ...ZBB.O.Z.C.OAA.C.O...P...D.P...D.P O99 A99 D99
+2 0 2 ...ZBB...Z.C.OAA.C.O...P.O.D.P...D.P O98 A99 D99
+2 0 2 ...ZBB...Z.C..AA.C.O...P.O.D.P.O.D.P O97 A99 D99
+2 0 2 ...ZBB...Z.C.AA..C.O...P.O.D.P.O.D.P O97 A98 D99
+2 0 2 ...ZBB...Z.CAA...C.O...P.O.D.P.O.D.P O97 A97 D99
+4 0 4 ...ZBB...Z.C.AAD.C.O.D.P.O...P.O...P O97 A98 D99
+4 0 4 ....BB...Z.C.AAZ.C.O.D.P.O.D.P.O...P O97 Z99 A98
+4 0 4 ...ZBB...Z.CAA.D.C.O.D.P.O...P.O...P O97 A97 D99
+4 0 4 ....BB...Z.CAA.Z.C.O.D.P.O.D.P.O...P O97 Z99 A97
+4 0 4 ....BB...Z.C.AAZ.C.O...P.O.D.P.O.D.P O97 Z99 A98 D99
+4 0 4 ....BB.....C.AAZ.C.O.Z.P.O.D.P.O.D.P O97 Z98 A98 D99
+4 0 4 ....BB...Z.CAA.Z.C.O...P.O.D.P.O.D.P O97 Z99 A97 D99
+4 0 4 ....BB.....CAA.Z.C.O.Z.P.O.D.P.O.D.P O97 Z98 A97 D99
+4 0 4 ...BB....Z.C.AAZ.C.O.D.P.O.D.P.O...P O97 Z99 B99 A98
+2 0 2 ...BBC...Z.C.AAZ...O.D.P.O.D.P.O...P O97 Z99 B99 C99 A98
+2 0 2 ...BBC...Z.CAA.Z...O.D.P.O.D.P.O...P O97 Z99 B99 C99 A97
+2 0 2 ..BB.C...Z.C.AAZ...O.D.P.O.D.P.O...P O97 Z99 B98 C99 A98
+2 0 2 .BB..C...Z.C.AAZ...O.D.P.O.D.P.O...P O97 Z99 B97 C99 A98
+0 0 0 .BBZ.C...Z.C.AA....O.D.P.O.D.P.O...P O97 Z98 B97 C99 A98
+0 0 0 .BBZ.C...Z.CAA.....O.D.P.O.D.P.O...P O97 Z98 B97 C99 A97
+0 0 0 .BBZ.C...Z.C..AA...O.D.P.O.D.P.O...P O97 Z98 B97 C99 A97
+0 0 0 .BBZ.C...Z.C...AA..O.D.P.O.D.P.O...P O97 Z98 B97 C99 A96
+0 0 0 .BBZ.C...Z.C....AA.O.D.P.O.D.P.O...P O97 Z98 B97 C99 A95

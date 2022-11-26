@@ -1,0 +1,34 @@
+Initial Board Configuration: ..OZBB.COZ.D.COAAD.EEFFG.....G...... O3 A5
+
+['.', '.', 'O', 'Z', 'B', 'B']
+['.', 'C', 'O', 'Z', '.', 'D']
+['.', 'C', 'O', 'A', 'A', 'D']
+['.', 'E', 'E', 'F', 'F', 'G']
+['.', '.', '.', '.', '.', 'G']
+['.', '.', '.', '.', '.', '.']
+
+Car fuel Available: A:5, O:3, Z:100, B:100, C:100, D:100, E:100, F:100, G:100, 
+
+Runtime: 0.0104 seconds
+Search Path Length: 99 states
+Solution Path Length: 10 moves
+Solution Path: C up 1; E left 1; G down 1; F right 1; O down 3; A left 2; Z down 3; B left 1; D up 1; A right 3; 
+
+C up 1               99 .COZBB.COZ.D..OAAD.EEFFG.....G...... O3 C99 A5
+E left 1             99 .COZBB.COZ.D..OAADEE.FFG.....G...... O3 C99 A5 E99
+G down 1             99 .COZBB.COZ.D..OAADEE.FF......G.....G O3 C99 A5 E99 G99
+F right 1            99 .COZBB.COZ.D..OAADEE..FF.....G.....G O3 C99 A5 E99 F99 G99
+O down 3             0 .C.ZBB.C.Z.D...AADEEO.FF..O..G..O..G O0 C99 A5 E99 F99 G99
+A left 2             3 .C.ZBB.C.Z.D.AA..DEEO.FF..O..G..O..G O0 C99 A3 E99 F99 G99
+Z down 3             97 .C..BB.C...D.AA..DEEOZFF..OZ.G..O..G O0 Z97 C99 A3 E99 F99 G99
+B left 1             99 .C.BB..C...D.AA..DEEOZFF..OZ.G..O..G O0 Z97 B99 C99 A3 E99 F99 G99
+D up 1               99 .C.BBD.C...D.AA...EEOZFF..OZ.G..O..G O0 Z97 B99 C99 D99 A3 E99 F99 G99
+A right 3            0 .C.BBD.C...D....AAEEOZFF..OZ.G..O..G O0 Z97 B99 C99 D99 A0 E99 F99 G99
+
+! O0 Z97 B99 C99 D99 A0 E99 F99 G99
+['.', 'C', '.', 'B', 'B', 'D']
+['.', 'C', '.', '.', '.', 'D']
+['.', '.', '.', '.', 'A', 'A']
+['E', 'E', 'O', 'Z', 'F', 'F']
+['.', '.', 'O', 'Z', '.', 'G']
+['.', '.', 'O', '.', '.', 'G']

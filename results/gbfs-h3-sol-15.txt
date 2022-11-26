@@ -1,0 +1,42 @@
+Initial Board Configuration: OZZPPPO....QOAA..QBBCC.QDEFFGGDEHHII
+
+['O', 'Z', 'Z', 'P', 'P', 'P']
+['O', '.', '.', '.', '.', 'Q']
+['O', 'A', 'A', '.', '.', 'Q']
+['B', 'B', 'C', 'C', '.', 'Q']
+['D', 'E', 'F', 'F', 'G', 'G']
+['D', 'E', 'H', 'H', 'I', 'I']
+
+Car fuel Available: O:100, Z:100, P:100, Q:100, A:100, B:100, C:100, D:100, E:100, F:100, G:100, H:100, I:100, 
+
+Runtime: 0.0176 seconds
+Search Path Length: 135 states
+Solution Path Length: 18 moves
+Solution Path: A right 1; C right 1; B right 1; O down 1; Z left 1; P left 1; Q up 1; C right 1; B right 1; E up 3; B left 1; C left 1; F left 1; G left 1; H left 1; I left 1; Q down 3; A right 2; 
+
+A right 1            99 OZZPPPO....QO.AA.QBBCC.QDEFFGGDEHHII A99
+C right 1            99 OZZPPPO....QO.AA.QBB.CCQDEFFGGDEHHII A99 C99
+B right 1            99 OZZPPPO....QO.AA.Q.BBCCQDEFFGGDEHHII A99 B99 C99
+O down 1             99 .ZZPPPO....QO.AA.QOBBCCQDEFFGGDEHHII O99 A99 B99 C99
+Z left 1             99 ZZ.PPPO....QO.AA.QOBBCCQDEFFGGDEHHII O99 Z99 A99 B99 C99
+P left 1             99 ZZPPP.O....QO.AA.QOBBCCQDEFFGGDEHHII O99 Z99 P99 A99 B99 C99
+Q up 1               99 ZZPPPQO....QO.AA.QOBBCC.DEFFGGDEHHII O99 Z99 P99 Q99 A99 B99 C99
+C right 1            98 ZZPPPQO....QO.AA.QOBB.CCDEFFGGDEHHII O99 Z99 P99 Q99 A99 B99 C98
+B right 1            98 ZZPPPQO....QO.AA.QO.BBCCDEFFGGDEHHII O99 Z99 P99 Q99 A99 B98 C98
+E up 3               97 ZZPPPQOE...QOEAA.QO.BBCCD.FFGGD.HHII O99 Z99 P99 Q99 A99 B98 C98 E97
+B left 1             97 ZZPPPQOE...QOEAA.QOBB.CCD.FFGGD.HHII O99 Z99 P99 Q99 A99 B97 C98 E97
+C left 1             97 ZZPPPQOE...QOEAA.QOBBCC.D.FFGGD.HHII O99 Z99 P99 Q99 A99 B97 C97 E97
+F left 1             99 ZZPPPQOE...QOEAA.QOBBCC.DFF.GGD.HHII O99 Z99 P99 Q99 A99 B97 C97 E97 F99
+G left 1             99 ZZPPPQOE...QOEAA.QOBBCC.DFFGG.D.HHII O99 Z99 P99 Q99 A99 B97 C97 E97 F99 G99
+H left 1             99 ZZPPPQOE...QOEAA.QOBBCC.DFFGG.DHH.II O99 Z99 P99 Q99 A99 B97 C97 E97 F99 G99 H99
+I left 1             99 ZZPPPQOE...QOEAA.QOBBCC.DFFGG.DHHII. O99 Z99 P99 Q99 A99 B97 C97 E97 F99 G99 H99 I99
+Q down 3             96 ZZPPP.OE....OEAA..OBBCCQDFFGGQDHHIIQ O99 Z99 P99 Q96 A99 B97 C97 E97 F99 G99 H99 I99
+A right 2            97 ZZPPP.OE....OE..AAOBBCCQDFFGGQDHHIIQ O99 Z99 P99 Q96 A97 B97 C97 E97 F99 G99 H99 I99
+
+! O99 Z99 P99 Q96 A97 B97 C97 E97 F99 G99 H99 I99
+['Z', 'Z', 'P', 'P', 'P', '.']
+['O', 'E', '.', '.', '.', '.']
+['O', 'E', '.', '.', 'A', 'A']
+['O', 'B', 'B', 'C', 'C', 'Q']
+['D', 'F', 'F', 'G', 'G', 'Q']
+['D', 'H', 'H', 'I', 'I', 'Q']

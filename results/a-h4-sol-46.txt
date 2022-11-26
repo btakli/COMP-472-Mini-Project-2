@@ -1,0 +1,30 @@
+Initial Board Configuration: ..ZZ....BB.CAADE.C..DE....F.....F... F1
+
+['.', '.', 'Z', 'Z', '.', '.']
+['.', '.', 'B', 'B', '.', 'C']
+['A', 'A', 'D', 'E', '.', 'C']
+['.', '.', 'D', 'E', '.', '.']
+['.', '.', 'F', '.', '.', '.']
+['.', '.', 'F', '.', '.', '.']
+
+Car fuel Available: F:1, Z:100, B:100, C:100, A:100, D:100, E:100, 
+
+Runtime: 0.7805 seconds
+Search Path Length: 862 states
+Solution Path Length: 6 moves
+Solution Path: C up 1; E down 1; B left 2; Z left 2; D up 2; A right 4; 
+
+C up 1               99 ..ZZ.C..BB.CAADE....DE....F.....F... C99 F1
+E down 1             99 ..ZZ.C..BB.CAAD.....DE....FE....F... C99 E99 F1
+B left 2             98 ..ZZ.CBB...CAAD.....DE....FE....F... B98 C99 E99 F1
+Z left 2             98 ZZ...CBB...CAAD.....DE....FE....F... Z98 B98 C99 E99 F1
+D up 2               98 ZZD..CBBD..CAA.......E....FE....F... Z98 B98 C99 D98 E99 F1
+A right 4            96 ZZD..CBBD..C....AA...E....FE....F... Z98 B98 C99 A96 D98 E99 F1
+
+! Z98 B98 C99 A96 D98 E99 F1
+['Z', 'Z', 'D', '.', '.', 'C']
+['B', 'B', 'D', '.', '.', 'C']
+['.', '.', '.', '.', 'A', 'A']
+['.', '.', '.', 'E', '.', '.']
+['.', '.', 'F', 'E', '.', '.']
+['.', '.', 'F', '.', '.', '.']

@@ -1,0 +1,176 @@
+1 0 1 ....O.....O.AA..O.P...ZZP.BBCCP.....
+1 0 1 ....O.....O..AA.O.P...ZZP.BBCCP..... A99
+1 0 1 ....O.....O...AAO.P...ZZP.BBCCP..... A98
+1 0 1 ....O.....O.AA..O.P...ZZPBB.CCP..... B99
+1 0 1 ....O.....O.AA..O.P..ZZ.P.BBCCP..... Z99
+1 0 1 ....O.....O.AA..O.P.ZZ..P.BBCCP..... Z98
+1 0 1 ....O.....O.AA..O.PZZ...P.BBCCP..... Z97
+1 0 1 ....O.....O..AA.O.P...ZZPBB.CCP..... A99 B99
+1 0 1 ....O.....O.PAA.O.P...ZZP.BBCC...... A99 P99
+1 0 1 ....O.P...O.PAA.O.P...ZZ..BBCC...... A99 P98
+1 0 1 P...O.P...O.PAA.O.....ZZ..BBCC...... A99 P97
+1 0 1 ....O.....O..AA.O.P..ZZ.P.BBCCP..... A99 Z99
+1 0 1 ....O.....O..AA.O.P.ZZ..P.BBCCP..... A99 Z98
+1 0 1 ....O.....O..AA.O.PZZ...P.BBCCP..... A99 Z97
+1 0 1 ....O.....O...AAO.P...ZZPBB.CCP..... A98 B99
+1 0 1 ....O.....O.P.AAO.P...ZZP.BBCC...... A98 P99
+1 0 1 ....O.P...O.P.AAO.P...ZZ..BBCC...... A98 P98
+1 0 1 P...O.P...O.P.AAO.....ZZ..BBCC...... A98 P97
+1 0 1 ....O.....O...AAO.P..ZZ.P.BBCCP..... A98 Z99
+1 0 1 ....O.....O...AAO.P.ZZ..P.BBCCP..... A98 Z98
+1 0 1 ....O.....O...AAO.PZZ...P.BBCCP..... A98 Z97
+1 0 1 ....O.....O.AA..O.P...ZZPBBCC.P..... B99 C99
+1 0 1 ....O.....O.AA..O.P..ZZ.PBB.CCP..... Z99 B99
+1 0 1 ....O.....O.AA..O.P.ZZ..PBB.CCP..... Z98 B99
+1 0 1 ....O.....O.AA..O.PZZ...PBB.CCP..... Z97 B99
+1 0 1 ..........O.AA..O.P.ZZO.P.BBCCP..... O99 Z98
+1 0 1 ..........O.AA..O.PZZ.O.P.BBCCP..... O99 Z97
+1 0 1 ....O.....O..AA.O.P...ZZPBBCC.P..... A99 B99 C99
+1 0 1 ....O.....O.PAA.O.P...ZZPBB.CC...... A99 P99 B99
+1 0 1 ....O.P...O.PAA.O.P...ZZ.BB.CC...... A99 P98 B99
+1 0 1 P...O.P...O.PAA.O.....ZZ.BB.CC...... A99 P97 B99
+1 0 1 ....O.....O..AA.O.P..ZZ.PBB.CCP..... A99 Z99 B99
+1 0 1 ....O.....O..AA.O.P.ZZ..PBB.CCP..... A99 Z98 B99
+1 0 1 ....O.....O..AA.O.PZZ...PBB.CCP..... A99 Z97 B99
+1 0 1 ....O.....O.PAA.O.P..ZZ.P.BBCC...... A99 P99 Z99
+1 0 1 ....O.....O.PAA.O.P.ZZ..P.BBCC...... A99 P99 Z98
+1 0 1 ....O.....O.PAA.O.PZZ...P.BBCC...... A99 P99 Z97
+1 0 1 ....O.P...O.PAA.O.P...ZZBB..CC...... A99 P98 B98
+1 0 1 ....O.P...O.PAA.O.P..ZZ...BBCC...... A99 P98 Z99
+1 0 1 ....O.P...O.PAA.O.P.ZZ....BBCC...... A99 P98 Z98
+1 0 1 ....O.P...O.PAA.O.PZZ.....BBCC...... A99 P98 Z97
+1 0 1 P...O.P...O.PAA.O.....ZZBB..CC...... A99 P97 B98
+1 0 1 P...O.P...O.PAA.O....ZZ...BBCC...... A99 P97 Z99
+1 0 1 P...O.P...O.PAA.O...ZZ....BBCC...... A99 P97 Z98
+1 0 1 P...O.P...O.PAA.O..ZZ.....BBCC...... A99 P97 Z97
+1 0 1 P...O.P...O.PAA.O.ZZ......BBCC...... A99 P97 Z96
+1 0 1 ..........O..AA.O.P.ZZO.P.BBCCP..... O99 A99 Z98
+1 0 1 ..........O..AA.O.PZZ.O.P.BBCCP..... O99 A99 Z97
+1 0 1 ....O.....O...AAO.P...ZZPBBCC.P..... A98 B99 C99
+1 0 1 ....O.....O.P.AAO.P...ZZPBB.CC...... A98 P99 B99
+1 0 1 ....O.P...O.P.AAO.P...ZZ.BB.CC...... A98 P98 B99
+1 0 1 P...O.P...O.P.AAO.....ZZ.BB.CC...... A98 P97 B99
+1 0 1 ....O.....O...AAO.P..ZZ.PBB.CCP..... A98 Z99 B99
+1 0 1 ....O.....O...AAO.P.ZZ..PBB.CCP..... A98 Z98 B99
+1 0 1 ....O.....O...AAO.PZZ...PBB.CCP..... A98 Z97 B99
+1 0 1 ....O.....O.P.AAO.P..ZZ.P.BBCC...... A98 P99 Z99
+1 0 1 ....O.....O.P.AAO.P.ZZ..P.BBCC...... A98 P99 Z98
+1 0 1 ....O.....O.P.AAO.PZZ...P.BBCC...... A98 P99 Z97
+1 0 1 ....O.P...O.P.AAO.P...ZZBB..CC...... A98 P98 B98
+1 0 1 ....O.P...O.P.AAO.P..ZZ...BBCC...... A98 P98 Z99
+1 0 1 ....O.P...O.P.AAO.P.ZZ....BBCC...... A98 P98 Z98
+1 0 1 ....O.P...O.P.AAO.PZZ.....BBCC...... A98 P98 Z97
+1 0 1 P...O.P...O.P.AAO.....ZZBB..CC...... A98 P97 B98
+1 0 1 P...O.P...O.P.AAO....ZZ...BBCC...... A98 P97 Z99
+1 0 1 P...O.P...O.P.AAO...ZZ....BBCC...... A98 P97 Z98
+1 0 1 P...O.P...O.P.AAO..ZZ.....BBCC...... A98 P97 Z97
+1 0 1 P...O.P...O.P.AAO.ZZ......BBCC...... A98 P97 Z96
+1 0 1 ..........O...AAO.P.ZZO.P.BBCCP..... O99 A98 Z98
+1 0 1 ..........O...AAO.PZZ.O.P.BBCCP..... O99 A98 Z97
+1 0 1 ....O.....O.AA..O.P..ZZ.PBBCC.P..... Z99 B99 C99
+1 0 1 ....O.....O.AA..O.P.ZZ..PBBCC.P..... Z98 B99 C99
+1 0 1 ....O.....O.AA..O.PZZ...PBBCC.P..... Z97 B99 C99
+1 0 1 ..........O.AA..O.P.ZZO.PBB.CCP..... O99 Z98 B99
+1 0 1 ..........O.AA..O.PZZ.O.PBB.CCP..... O99 Z97 B99
+1 0 1 ....O.....O.PAA.O.P...ZZPBBCC....... A99 P99 B99 C99
+1 0 1 ....O.P...O.PAA.O.P...ZZ.BBCC....... A99 P98 B99 C99
+1 0 1 P...O.P...O.PAA.O.....ZZ.BBCC....... A99 P97 B99 C99
+1 0 1 ....O.....O..AA.O.P..ZZ.PBBCC.P..... A99 Z99 B99 C99
+1 0 1 ....O.....O..AA.O.P.ZZ..PBBCC.P..... A99 Z98 B99 C99
+1 0 1 ....O.....O..AA.O.PZZ...PBBCC.P..... A99 Z97 B99 C99
+1 0 1 ....O.....O.PAA.O.P..ZZ.PBB.CC...... A99 P99 Z99 B99
+1 0 1 ....O.....O.PAA.O.P.ZZ..PBB.CC...... A99 P99 Z98 B99
+1 0 1 ....O.....O.PAA.O.PZZ...PBB.CC...... A99 P99 Z97 B99
+1 0 1 ....O.P...O.PAA.O.P..ZZ..BB.CC...... A99 P98 Z99 B99
+1 0 1 ....O.P...O.PAA.O.P.ZZ...BB.CC...... A99 P98 Z98 B99
+1 0 1 ....O.P...O.PAA.O.PZZ....BB.CC...... A99 P98 Z97 B99
+1 0 1 P...O.P...O.PAA.O....ZZ..BB.CC...... A99 P97 Z99 B99
+1 0 1 P...O.P...O.PAA.O...ZZ...BB.CC...... A99 P97 Z98 B99
+1 0 1 P...O.P...O.PAA.O..ZZ....BB.CC...... A99 P97 Z97 B99
+1 0 1 P...O.P...O.PAA.O.ZZ.....BB.CC...... A99 P97 Z96 B99
+1 0 1 ..........O..AA.O.P.ZZO.PBB.CCP..... O99 A99 Z98 B99
+1 0 1 ..........O..AA.O.PZZ.O.PBB.CCP..... O99 A99 Z97 B99
+1 0 1 ..........O.PAA.O.P.ZZO.P.BBCC...... O99 A99 P99 Z98
+1 0 1 ..........O.PAA.O.PZZ.O.P.BBCC...... O99 A99 P99 Z97
+1 0 1 ....O.P...O.PAA.O.P...ZZBB.CC....... A99 P98 B98 C99
+1 0 1 ....O.P...O.PAA.O.P...ZZBBCC........ A99 P98 B98 C98
+1 0 1 ....O.P...O.PAA.O.P..ZZ.BB..CC...... A99 P98 Z99 B98
+1 0 1 ....O.P...O.PAA.O.P.ZZ..BB..CC...... A99 P98 Z98 B98
+1 0 1 ....O.P...O.PAA.O.PZZ...BB..CC...... A99 P98 Z97 B98
+1 0 1 ......P...O.PAA.O.P.ZZO...BBCC...... O99 A99 P98 Z98
+1 0 1 ......P...O.PAA.O.PZZ.O...BBCC...... O99 A99 P98 Z97
+1 0 1 P...O.P...O.PAA.O.....ZZBB.CC....... A99 P97 B98 C99
+1 0 1 P...O.P...O.PAA.O.....ZZBBCC........ A99 P97 B98 C98
+1 0 1 P...O.P...O.PAA.O....ZZ.BB..CC...... A99 P97 Z99 B98
+1 0 1 P...O.P...O.PAA.O...ZZ..BB..CC...... A99 P97 Z98 B98
+1 0 1 P...O.P...O.PAA.O..ZZ...BB..CC...... A99 P97 Z97 B98
+1 0 1 P...O.P...O.PAA.O.ZZ....BB..CC...... A99 P97 Z96 B98
+1 0 1 P.....P...O.PAA.O...ZZO...BBCC...... O99 A99 P97 Z98
+1 0 1 P.....P...O.PAA.O..ZZ.O...BBCC...... O99 A99 P97 Z97
+1 0 1 P.....P...O.PAA.O.ZZ..O...BBCC...... O99 A99 P97 Z96
+1 0 1 ....O.....O.P.AAO.P...ZZPBBCC....... A98 P99 B99 C99
+1 0 1 ....O.P...O.P.AAO.P...ZZ.BBCC....... A98 P98 B99 C99
+1 0 1 P...O.P...O.P.AAO.....ZZ.BBCC....... A98 P97 B99 C99
+1 0 1 ....O.....O...AAO.P..ZZ.PBBCC.P..... A98 Z99 B99 C99
+1 0 1 ....O.....O...AAO.P.ZZ..PBBCC.P..... A98 Z98 B99 C99
+1 0 1 ....O.....O...AAO.PZZ...PBBCC.P..... A98 Z97 B99 C99
+1 0 1 ....O.....O.P.AAO.P..ZZ.PBB.CC...... A98 P99 Z99 B99
+1 0 1 ....O.....O.P.AAO.P.ZZ..PBB.CC...... A98 P99 Z98 B99
+1 0 1 ....O.....O.P.AAO.PZZ...PBB.CC...... A98 P99 Z97 B99
+1 0 1 ....O.P...O.P.AAO.P..ZZ..BB.CC...... A98 P98 Z99 B99
+1 0 1 ....O.P...O.P.AAO.P.ZZ...BB.CC...... A98 P98 Z98 B99
+1 0 1 ....O.P...O.P.AAO.PZZ....BB.CC...... A98 P98 Z97 B99
+1 0 1 P...O.P...O.P.AAO....ZZ..BB.CC...... A98 P97 Z99 B99
+1 0 1 P...O.P...O.P.AAO...ZZ...BB.CC...... A98 P97 Z98 B99
+1 0 1 P...O.P...O.P.AAO..ZZ....BB.CC...... A98 P97 Z97 B99
+1 0 1 P...O.P...O.P.AAO.ZZ.....BB.CC...... A98 P97 Z96 B99
+1 0 1 ..........O...AAO.P.ZZO.PBB.CCP..... O99 A98 Z98 B99
+1 0 1 ..........O...AAO.PZZ.O.PBB.CCP..... O99 A98 Z97 B99
+1 0 1 ..........O.P.AAO.P.ZZO.P.BBCC...... O99 A98 P99 Z98
+1 0 1 ..........O.P.AAO.PZZ.O.P.BBCC...... O99 A98 P99 Z97
+1 0 1 ....O.P...O.P.AAO.P...ZZBB.CC....... A98 P98 B98 C99
+1 0 1 ....O.P...O.P.AAO.P...ZZBBCC........ A98 P98 B98 C98
+1 0 1 ....O.P...O.P.AAO.P..ZZ.BB..CC...... A98 P98 Z99 B98
+1 0 1 ....O.P...O.P.AAO.P.ZZ..BB..CC...... A98 P98 Z98 B98
+1 0 1 ....O.P...O.P.AAO.PZZ...BB..CC...... A98 P98 Z97 B98
+1 0 1 ......P...O.P.AAO.P.ZZO...BBCC...... O99 A98 P98 Z98
+1 0 1 ......P...O.P.AAO.PZZ.O...BBCC...... O99 A98 P98 Z97
+1 0 1 P...O.P...O.P.AAO.....ZZBB.CC....... A98 P97 B98 C99
+1 0 1 P...O.P...O.P.AAO.....ZZBBCC........ A98 P97 B98 C98
+1 0 1 P...O.P...O.P.AAO....ZZ.BB..CC...... A98 P97 Z99 B98
+1 0 1 P...O.P...O.P.AAO...ZZ..BB..CC...... A98 P97 Z98 B98
+1 0 1 P...O.P...O.P.AAO..ZZ...BB..CC...... A98 P97 Z97 B98
+1 0 1 P...O.P...O.P.AAO.ZZ....BB..CC...... A98 P97 Z96 B98
+1 0 1 P.....P...O.P.AAO...ZZO...BBCC...... O99 A98 P97 Z98
+1 0 1 P.....P...O.P.AAO..ZZ.O...BBCC...... O99 A98 P97 Z97
+1 0 1 P.....P...O.P.AAO.ZZ..O...BBCC...... O99 A98 P97 Z96
+1 0 1 ..........O.AA..O.P.ZZO.PBBCC.P..... O99 Z98 B99 C99
+1 0 1 ..........O.AA..O.PZZ.O.PBBCC.P..... O99 Z97 B99 C99
+1 0 1 ....O.....O.PAA.O.P..ZZ.PBBCC....... A99 P99 Z99 B99 C99
+1 0 1 ....O.....O.PAA.O.P.ZZ..PBBCC....... A99 P99 Z98 B99 C99
+1 0 1 ....O.....O.PAA.O.PZZ...PBBCC....... A99 P99 Z97 B99 C99
+1 0 1 ....O.P...O.PAA.O.P..ZZ..BBCC....... A99 P98 Z99 B99 C99
+1 0 1 ....O.P...O.PAA.O.P.ZZ...BBCC....... A99 P98 Z98 B99 C99
+1 0 1 ....O.P...O.PAA.O.PZZ....BBCC....... A99 P98 Z97 B99 C99
+1 0 1 P...O.P...O.PAA.O....ZZ..BBCC....... A99 P97 Z99 B99 C99
+1 0 1 P...O.P...O.PAA.O...ZZ...BBCC....... A99 P97 Z98 B99 C99
+1 0 1 P...O.P...O.PAA.O..ZZ....BBCC....... A99 P97 Z97 B99 C99
+1 0 1 P...O.P...O.PAA.O.ZZ.....BBCC....... A99 P97 Z96 B99 C99
+1 0 1 ..........O..AA.O.P.ZZO.PBBCC.P..... O99 A99 Z98 B99 C99
+1 0 1 ..........O..AA.O.PZZ.O.PBBCC.P..... O99 A99 Z97 B99 C99
+1 0 1 ..........O.PAA.O.P.ZZO.PBB.CC...... O99 A99 P99 Z98 B99
+1 0 1 ..........O.PAA.O.PZZ.O.PBB.CC...... O99 A99 P99 Z97 B99
+1 0 1 ......P...O.PAA.O.P.ZZO..BB.CC...... O99 A99 P98 Z98 B99
+1 0 1 ......P...O.PAA.O.PZZ.O..BB.CC...... O99 A99 P98 Z97 B99
+1 0 1 P.....P...O.PAA.O...ZZO..BB.CC...... O99 A99 P97 Z98 B99
+1 0 1 P.....P...O.PAA.O..ZZ.O..BB.CC...... O99 A99 P97 Z97 B99
+1 0 1 P.....P...O.PAA.O.ZZ..O..BB.CC...... O99 A99 P97 Z96 B99
+1 0 1 ....O.P...O.PAA.O.P..ZZ.BB.CC....... A99 P98 Z99 B98 C99
+1 0 1 ....O.P...O.PAA.O.P.ZZ..BB.CC....... A99 P98 Z98 B98 C99
+1 0 1 ....O.P...O.PAA.O.PZZ...BB.CC....... A99 P98 Z97 B98 C99
+1 0 1 ....O.P...O.PAA.O.P..ZZ.BBCC........ A99 P98 Z99 B98 C98
+1 0 1 ....O.P...O.PAA.O.P.ZZ..BBCC........ A99 P98 Z98 B98 C98
+0 0 0 ......P.....PAA...P.ZZO.BBCCO.....O. O97 A99 P98 Z98 B98 C98
+0 0 0 ......P.....P.AA..P.ZZO.BBCCO.....O. O97 A98 P98 Z98 B98 C98
+0 0 0 ......P.....P..AA.P.ZZO.BBCCO.....O. O97 A97 P98 Z98 B98 C98
+0 0 0 ......P.....P...AAP.ZZO.BBCCO.....O. O97 A96 P98 Z98 B98 C98

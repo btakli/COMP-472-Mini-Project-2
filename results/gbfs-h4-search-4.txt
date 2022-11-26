@@ -1,0 +1,64 @@
+3.0 0 3.0 ..O.....OZBBAAOZC....DC....DEE...... B2 E4
+2.0 0 2.0 .........ZBBAA.ZC...ODC...ODEE..O... O97 B2 E4
+1.0 0 1.0 ...Z.....ZBBAA..C...ODC...ODEE..O... O97 Z99 B2 E4
+1.0 0 1.0 ...Z.....ZBB.AA.C...ODC...ODEE..O... O97 Z99 B2 A99 E4
+1.0 0 1.0 ...Z.....ZBB..AAC...ODC...ODEE..O... O97 Z99 B2 A98 E4
+1.0 0 1.0 ...Z.....ZBBAA..C...O.C...ODEE..OD.. O97 Z99 B2 D99 E4
+1.0 0 1.0 ...Z.....ZBB.AA.C...O.C...ODEE..OD.. O97 Z99 B2 A99 D99 E4
+1.0 0 1.0 ...Z.....ZBB..AAC...O.C...ODEE..OD.. O97 Z99 B2 A98 D99 E4
+2.0 0 2.0 ..OZ....OZBBAAO.C....DC....DEE...... Z99 B2 E4
+2.0 0 2.0 .........ZBB.AAZC...ODC...ODEE..O... O97 B2 A99 E4
+2.0 0 2.0 .........ZBBAA.ZC...O.C...ODEE..OD.. O97 B2 D99 E4
+2.0 0 2.0 ...Z.....ZBBAA.DC...ODC...O.EE..O... O97 Z99 B2 D99 E4
+2.0 0 2.0 ...Z.....ZBBAAO.C...ODC...ODEE...... O96 Z99 B2 E4
+2.0 0 2.0 ...Z....OZBBAAO.C...ODC....DEE...... O95 Z99 B2 E4
+2.0 0 2.0 ...Z.....ZBB.AADC...ODC...O.EE..O... O97 Z99 B2 A99 D99 E4
+2.0 0 2.0 ...Z.....ZBBAAO.C...O.C...ODEE...D.. O96 Z99 B2 D99 E4
+2.0 0 2.0 ...Z....OZBBAAO.C...O.C....DEE...D.. O95 Z99 B2 D99 E4
+2.0 0 2.0 ..OZ....OZBBAAO.C.....C....DEE...D.. O94 Z99 B2 D99 E4
+2.0 0 2.0 ..........BBAA.ZC...OZC...ODEE..OD.. O97 Z97 B2 D99 E4
+2.0 0 2.0 .........ZBB.AAZC...O.C...ODEE..OD.. O97 Z98 B2 A99 D99 E4
+2.0 0 2.0 ..........BB.AAZC...OZC...ODEE..OD.. O97 Z97 B2 A99 D99 E4
+2.0 0 2.0 ...Z.....ZBBAA.DC...ODC...OEE...O... O97 Z99 B2 D99 E3
+2.0 0 2.0 ...Z.....ZBB.AADC...ODC...OEE...O... O97 Z99 B2 A99 D99 E3
+2.0 0 2.0 .........BB.AA.ZC...OZC...ODEE..OD.. O97 Z97 B1 D99 E4
+2.0 0 2.0 ........BB..AA.ZC...OZC...ODEE..OD.. O97 Z97 B0 D99 E4
+1.0 0 1.0 ....C...BBC.AA.Z....OZ....ODEE..OD.. O97 Z97 B0 C98 D99 E4
+1.0 0 1.0 ....C...BBC..AAZ....OZ....ODEE..OD.. O97 Z97 B0 A99 C98 D99 E4
+2.0 0 2.0 .........BB..AAZC...OZC...ODEE..OD.. O97 Z97 B1 A99 D99 E4
+2.0 0 2.0 ........BB...AAZC...OZC...ODEE..OD.. O97 Z97 B0 A99 D99 E4
+2.0 0 2.0 ........BBC.AA.ZC...OZ....ODEE..OD.. O97 Z97 B0 C99 D99 E4
+2.0 0 2.0 ....C...BBC.AAOZ....OZ....ODEE...D.. O96 Z97 B0 C98 D99 E4
+2.0 0 2.0 ........BBC..AAZC...OZ....ODEE..OD.. O97 Z97 B0 A99 C97 D99 E4
+3.0 0 3.0 ..O.....OZBBAAOZC.....C....DEE...D.. B2 D99 E4
+3.0 0 3.0 ........OZBBAAOZC...ODC....DEE...... O99 B2 E4
+3.0 0 3.0 .........ZBBAAOZC...ODC...ODEE...... O98 B2 E4
+3.0 0 3.0 ..OZ....OZBBAAODC....DC.....EE...... Z99 B2 D99 E4
+3.0 0 3.0 .........ZBBAAOZC...O.C...ODEE...D.. O96 B2 D99 E4
+3.0 0 3.0 ........OZBBAAOZC...O.C....DEE...D.. O95 B2 D99 E4
+3.0 0 3.0 ...Z.....ZBBAAODC...ODC...O.EE...... O96 Z99 B2 D99 E4
+3.0 0 3.0 ...Z....OZBBAAODC...ODC.....EE...... O95 Z99 B2 D99 E4
+3.0 0 3.0 ..........BBAAOZC...OZC...ODEE...D.. O96 Z97 B2 D99 E4
+3.0 0 3.0 ........O.BBAAOZC...OZC....DEE...D.. O95 Z97 B2 D99 E4
+3.0 0 3.0 ..O.....O.BBAAOZC....ZC....DEE...D.. O94 Z97 B2 D99 E4
+3.0 0 3.0 ...Z.....ZBBAAODC...ODC...OEE....... O96 Z99 B2 D99 E3
+3.0 0 3.0 ...Z....OZBBAAODC...ODC....EE....... O95 Z99 B2 D99 E3
+3.0 0 3.0 ..OZ....OZBBAAODC....DC....EE....... O94 Z99 B2 D99 E3
+3.0 0 3.0 .........BB.AAOZC...OZC...ODEE...D.. O96 Z97 B1 D99 E4
+3.0 0 3.0 ........OBB.AAOZC...OZC....DEE...D.. O95 Z97 B1 D99 E4
+3.0 0 3.0 ..O.....OBB.AAOZC....ZC....DEE...D.. O94 Z97 B1 D99 E4
+3.0 0 3.0 ........BB..AAOZC...OZC...ODEE...D.. O96 Z97 B0 D99 E4
+3.0 0 3.0 ........BBC.AAOZC...OZ....ODEE...D.. O96 Z97 B0 C99 D99 E4
+3.0 0 3.0 ..OZ....OZBBAAODC....DC...EE........ Z99 B2 D99 E2
+2.0 0 2.0 ..OZ....OZBBAAOD.....DC...EEC....... Z99 B2 C99 D99 E2
+2.0 0 2.0 ..OZ....OZBBAAOD.....D....EEC.....C. Z99 B2 C98 D99 E2
+2.0 0 2.0 ..OZ....OZBBAAOD.....DC..EE.C....... Z99 B2 C99 D99 E1
+1.0 0 1.0 ..OZ....OZBBAAO......DC..EEDC....... Z99 B2 C99 D98 E1
+1.0 0 1.0 ..OZ....OZBBAAO.......C..EEDC....D.. Z99 B2 C99 D97 E1
+1.0 0 1.0 ..OZ....OZBBAAO......D...EEDC.....C. Z99 B2 C98 D98 E1
+1.0 0 1.0 ..OZ....OZBBAAO......DC.EE.DC....... Z99 B2 C99 D98 E0
+0.0 0 0.0 ...Z.....ZBBAA......ODC.EEODC...O... O97 Z99 B2 C99 D98 E0
+0.0 0 0.0 ...Z.....ZBB.AA.....ODC.EEODC...O... O97 Z99 B2 A99 C99 D98 E0
+0.0 0 0.0 ...Z.....ZBB..AA....ODC.EEODC...O... O97 Z99 B2 A98 C99 D98 E0
+0.0 0 0.0 ...Z.....ZBB...AA...ODC.EEODC...O... O97 Z99 B2 A97 C99 D98 E0
+0.0 0 0.0 ...Z.....ZBB....AA..ODC.EEODC...O... O97 Z99 B2 A96 C99 D98 E0

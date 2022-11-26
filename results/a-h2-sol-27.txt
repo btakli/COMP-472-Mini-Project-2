@@ -1,0 +1,44 @@
+Initial Board Configuration: ZBBCCOZ.DE.OAADEFO.GHHF..GPPP.....II
+
+['Z', 'B', 'B', 'C', 'C', 'O']
+['Z', '.', 'D', 'E', '.', 'O']
+['A', 'A', 'D', 'E', 'F', 'O']
+['.', 'G', 'H', 'H', 'F', '.']
+['.', 'G', 'P', 'P', 'P', '.']
+['.', '.', '.', '.', 'I', 'I']
+
+Car fuel Available: Z:100, B:100, C:100, O:100, D:100, E:100, A:100, F:100, G:100, H:100, P:100, I:100, 
+
+Runtime: 121.4887 seconds
+Search Path Length: 15207 states
+Solution Path Length: 20 moves
+Solution Path: F up 1; H right 1; P right 1; D down 2; A right 1; I left 1; Z down 3; A left 1; B left 1; D up 3; P left 1; O down 3; C right 1; E up 1; A right 2; G up 1; H left 1; P left 1; F down 2; A right 2; 
+
+F up 1               99 ZBBCCOZ.DEFOAADEFO.GHH...GPPP.....II F99
+H right 1            99 ZBBCCOZ.DEFOAADEFO.G.HH..GPPP.....II F99 H99
+P right 1            99 ZBBCCOZ.DEFOAADEFO.G.HH..G.PPP....II F99 H99 P99
+D down 2             98 ZBBCCOZ..EFOAA.EFO.GDHH..GDPPP....II D98 F99 H99 P99
+A right 1            99 ZBBCCOZ..EFO.AAEFO.GDHH..GDPPP....II D98 A99 F99 H99 P99
+I left 1             99 ZBBCCOZ..EFO.AAEFO.GDHH..GDPPP...II. D98 A99 F99 H99 P99 I99
+Z down 3             97 .BBCCO...EFO.AAEFOZGDHH.ZGDPPP...II. Z97 D98 A99 F99 H99 P99 I99
+A left 1             98 .BBCCO...EFOAA.EFOZGDHH.ZGDPPP...II. Z97 D98 A98 F99 H99 P99 I99
+B left 1             99 BB.CCO...EFOAA.EFOZGDHH.ZGDPPP...II. Z97 B99 D98 A98 F99 H99 P99 I99
+D up 3               95 BBDCCO..DEFOAA.EFOZG.HH.ZG.PPP...II. Z97 B99 D95 A98 F99 H99 P99 I99
+P left 1             98 BBDCCO..DEFOAA.EFOZG.HH.ZGPPP....II. Z97 B99 D95 A98 F99 H99 P98 I99
+O down 3             97 BBDCC...DEF.AA.EF.ZG.HHOZGPPPO...IIO Z97 B99 O97 D95 A98 F99 H99 P98 I99
+C right 1            99 BBD.CC..DEF.AA.EF.ZG.HHOZGPPPO...IIO Z97 B99 C99 O97 D95 A98 F99 H99 P98 I99
+E up 1               99 BBDECC..DEF.AA..F.ZG.HHOZGPPPO...IIO Z97 B99 C99 O97 D95 E99 A98 F99 H99 P98 I99
+A right 2            96 BBDECC..DEF...AAF.ZG.HHOZGPPPO...IIO Z97 B99 C99 O97 D95 E99 A96 F99 H99 P98 I99
+G up 1               99 BBDECC..DEF..GAAF.ZG.HHOZ.PPPO...IIO Z97 B99 C99 O97 D95 E99 A96 F99 G99 H99 P98 I99
+H left 1             98 BBDECC..DEF..GAAF.ZGHH.OZ.PPPO...IIO Z97 B99 C99 O97 D95 E99 A96 F99 G99 H98 P98 I99
+P left 1             97 BBDECC..DEF..GAAF.ZGHH.OZPPP.O...IIO Z97 B99 C99 O97 D95 E99 A96 F99 G99 H98 P97 I99
+F down 2             97 BBDECC..DE...GAA..ZGHHFOZPPPFO...IIO Z97 B99 C99 O97 D95 E99 A96 F97 G99 H98 P97 I99
+A right 2            94 BBDECC..DE...G..AAZGHHFOZPPPFO...IIO Z97 B99 C99 O97 D95 E99 A94 F97 G99 H98 P97 I99
+
+! Z97 B99 C99 O97 D95 E99 A94 F97 G99 H98 P97 I99
+['B', 'B', 'D', 'E', 'C', 'C']
+['.', '.', 'D', 'E', '.', '.']
+['.', 'G', '.', '.', 'A', 'A']
+['Z', 'G', 'H', 'H', 'F', 'O']
+['Z', 'P', 'P', 'P', 'F', 'O']
+['.', '.', '.', 'I', 'I', 'O']

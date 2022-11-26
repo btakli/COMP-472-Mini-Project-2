@@ -1,13 +1,29 @@
-Initial Board Configuration: IJBBCCIJDDL.IJAAL.EEK.L...KFF..GGHH. F0 G6
+Initial Board Configuration: ..OOOP..Z.BPAAZ.BP..........CC......
 
-['B', 'B', 'I', 'J', '.', '.']
-['.', '.', 'I', 'J', 'C', 'C']
-['.', '.', 'I', 'A', 'A', 'M']
-['G', 'D', 'D', 'K', '.', 'M']
-['G', 'H', '.', 'K', 'L', '.']
-['G', 'H', 'F', 'F', 'L', '.']
+['.', '.', 'O', 'O', 'O', 'P']
+['.', '.', 'Z', '.', 'B', 'P']
+['A', 'A', 'Z', '.', 'B', 'P']
+['.', '.', '.', '.', '.', '.']
+['.', '.', '.', '.', 'C', 'C']
+['.', '.', '.', '.', '.', '.']
 
-Car fuel Available: F:0, G:6, I:100, J:100, B:100, C:100, D:100, L:100, A:100, E:100, K:100, H:100, 
+Car fuel Available: O:100, P:100, Z:100, B:100, A:100, C:100, 
 
-No Solution Found for This Board, Sorry!
-Runtime: 0.0807 seconds
+Runtime: 0.1141 seconds
+Search Path Length: 314 states
+Solution Path Length: 5 moves
+Solution Path: C left 4; B down 2; P down 3; Z down 2; A right 4; 
+
+C left 4             96 ..OOOP..Z.BPAAZ.BP......CC.......... C96
+B down 2             98 ..OOOP..Z..PAAZ..P....B.CC..B....... B98 C96
+P down 3             97 ..OOO...Z...AAZ.......BPCC..BP.....P P97 B98 C96
+Z down 2             98 ..OOO.......AA......Z.BPCCZ.BP.....P P97 Z98 B98 C96
+A right 4            96 ..OOO...........AA..Z.BPCCZ.BP.....P P97 Z98 B98 A96 C96
+
+! P97 Z98 B98 A96 C96
+['.', '.', 'O', 'O', 'O', '.']
+['.', '.', '.', '.', '.', '.']
+['.', '.', '.', '.', 'A', 'A']
+['.', '.', 'Z', '.', 'B', 'P']
+['C', 'C', 'Z', '.', 'B', 'P']
+['.', '.', '.', '.', '.', 'P']

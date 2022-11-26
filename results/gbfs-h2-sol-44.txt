@@ -1,0 +1,13 @@
+Initial Board Configuration: ZOOOBBZ.CPPPAAC..DJEFFFDJE..QGRRR.QG
+
+['Z', 'O', 'O', 'O', 'B', 'B']
+['Z', '.', 'C', 'P', 'P', 'P']
+['A', 'A', 'C', '.', '.', 'D']
+['J', 'E', 'F', 'F', 'F', 'D']
+['J', 'E', '.', '.', 'Q', 'G']
+['R', 'R', 'R', '.', 'Q', 'G']
+
+Car fuel Available: Z:100, O:100, B:100, C:100, P:100, A:100, D:100, J:100, E:100, F:100, Q:100, G:100, R:100, 
+
+No Solution Found for This Board, Sorry!
+Runtime: 0.0001 seconds

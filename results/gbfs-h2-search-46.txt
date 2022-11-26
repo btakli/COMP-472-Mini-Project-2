@@ -1,0 +1,35 @@
+3 0 3 ..ZZ....BB.CAADE.C..DE....F.....F... F1
+2 0 2 ..ZZ.C..BB.CAADE....DE....F.....F... C99 F1
+1 0 1 ..ZZ.C..BB.CAAD.....DE....FE....F... C99 E99 F1
+1 0 1 ..ZZ.C..BB.CAAD.....D.....FE....FE.. C99 E98 F1
+1 0 1 ..ZZ.C.BB..CAAD.....DE....FE....F... B99 C99 E99 F1
+1 0 1 ..ZZ.CBB...CAAD.....DE....FE....F... B98 C99 E99 F1
+1 0 1 ..ZZ.C...BBCAAD.....DE....FE....F... B99 C99 E99 F1
+1 0 1 ..ZZ....BB..AAD.....DE.C..FE.C..F... C96 E99 F1
+1 0 1 ..ZZ....BB..AAD.....DE....FE.C..F..C C95 E99 F1
+1 0 1 .ZZ..C..BB.CAAD.....DE....FE....F... Z99 C99 E99 F1
+1 0 1 ZZ...C..BB.CAAD.....DE....FE....F... Z98 C99 E99 F1
+1 0 1 ...ZZC..BB.CAAD.....DE....FE....F... Z99 C99 E99 F1
+1 0 1 ..ZZ.C.BB..CAAD.....D.....FE....FE.. B99 C99 E98 F1
+1 0 1 ..ZZ.CBB...CAAD.....D.....FE....FE.. B98 C99 E98 F1
+1 0 1 ..ZZ.C...BBCAAD.....D.....FE....FE.. B99 C99 E98 F1
+1 0 1 ..ZZ....BB..AAD.....D..C..FE.C..FE.. C96 E98 F1
+1 0 1 ..ZZ....BB..AAD.....D.....FE.C..FE.C C95 E98 F1
+1 0 1 .ZZ..C..BB.CAAD.....D.....FE....FE.. Z99 C99 E98 F1
+1 0 1 ZZ...C..BB.CAAD.....D.....FE....FE.. Z98 C99 E98 F1
+1 0 1 ...ZZC..BB.CAAD.....D.....FE....FE.. Z99 C99 E98 F1
+1 0 1 ..ZZ...BB...AAD.....DE.C..FE.C..F... B99 C96 E99 F1
+1 0 1 ..ZZ...BB...AAD.....DE....FE.C..F..C B99 C95 E99 F1
+1 0 1 .ZZ..C.BB..CAAD.....DE....FE....F... Z99 B99 C99 E99 F1
+1 0 1 ZZ...C.BB..CAAD.....DE....FE....F... Z98 B99 C99 E99 F1
+1 0 1 ...ZZC.BB..CAAD.....DE....FE....F... Z99 B99 C99 E99 F1
+1 0 1 ..ZZ..BB....AAD.....DE.C..FE.C..F... B98 C96 E99 F1
+1 0 1 ..ZZ..BB....AAD.....DE....FE.C..F..C B98 C95 E99 F1
+1 0 1 ..ZZ.CBBD..CAAD......E....FE....F... B98 C99 D99 E99 F1
+1 0 1 .ZZ..CBB...CAAD.....DE....FE....F... Z99 B98 C99 E99 F1
+1 0 1 ZZ...CBB...CAAD.....DE....FE....F... Z98 B98 C99 E99 F1
+0 0 0 ZZD..CBBD..CAA.......E....FE....F... Z98 B98 C99 D98 E99 F1
+0 0 0 ZZD..CBBD..C.AA......E....FE....F... Z98 B98 C99 A99 D98 E99 F1
+0 0 0 ZZD..CBBD..C..AA.....E....FE....F... Z98 B98 C99 A98 D98 E99 F1
+0 0 0 ZZD..CBBD..C...AA....E....FE....F... Z98 B98 C99 A97 D98 E99 F1
+0 0 0 ZZD..CBBD..C....AA...E....FE....F... Z98 B98 C99 A96 D98 E99 F1

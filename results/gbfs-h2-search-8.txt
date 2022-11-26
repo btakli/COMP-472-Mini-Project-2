@@ -1,0 +1,42 @@
+1 0 1 ..OZBB..OZ..AAO.........PPP..C.....C Z0 B0 C3
+1 0 1 ..OZBB..OZ..AAO........CPPP..C...... Z0 B0 C2
+1 0 1 ...ZBB..OZ..AAO.....O...PPP..C.....C O99 Z0 B0 C3
+1 0 1 ..OZBB..OZ..AAO..........PPP.C.....C Z0 B0 P99 C3
+1 0 1 ..OZBB..OZ..AAO...........PPPC.....C Z0 B0 P98 C3
+1 0 1 ...ZBB..OZ..AAO.....O..CPPP..C...... O99 Z0 B0 C2
+1 0 1 ..OZBB..OZ..AAO........C.PPP.C...... Z0 B0 P99 C2
+1 0 1 ..OZBB..OZ..AAO........C..PPPC...... Z0 B0 P98 C2
+1 0 1 ...ZBB..OZ..AAO.....O....PPP.C.....C O99 Z0 B0 P99 C3
+1 0 1 ...ZBB..OZ..AAO.....O.....PPPC.....C O99 Z0 B0 P98 C3
+1 0 1 ...ZBB..OZ..AAO.....O..C.PPP.C...... O99 Z0 B0 P99 C2
+1 0 1 ...ZBB..OZ..AAO.....O..C..PPPC...... O99 Z0 B0 P98 C2
+2 0 2 ..OZBB..OZ..AAO..C.....CPPP......... Z0 B0 C1
+2 0 2 ..OZBB..OZ.CAAO..C......PPP......... Z0 B0 C0
+2 0 2 ...ZBB..OZ..AAO..C..O..CPPP......... O99 Z0 B0 C1
+2 0 2 ...ZBB..OZ.CAAO..C..O...PPP......... O99 Z0 B0 C0
+2 0 2 ..OZBB..OZ..AAO..C.....C.PPP........ Z0 B0 P99 C1
+2 0 2 ..OZBB..OZ.CAAO..C.......PPP........ Z0 B0 P99 C0
+2 0 2 ..OZBB..OZ..AAO..C.....C..PPP....... Z0 B0 P98 C1
+2 0 2 ..OZBB..OZ.CAAO..C........PPP....... Z0 B0 P98 C0
+2 0 2 ...ZBB..OZ..AAO..C..O..C.PPP........ O99 Z0 B0 P99 C1
+2 0 2 ...ZBB..OZ.CAAO..C..O....PPP........ O99 Z0 B0 P99 C0
+2 0 2 ...ZBB..OZ..AAO..C..O..C..PPP....... O99 Z0 B0 P98 C1
+2 0 2 ...ZBB..OZ.CAAO..C..O.....PPP....... O99 Z0 B0 P98 C0
+2 0 2 ..OZBB..OZ..AAO..C.....C...PPP...... Z0 B0 P97 C1
+1 0 1 ...ZBB...Z..AA...C..O..C..OPPP..O... O97 Z0 B0 P97 C1
+1 0 1 ...ZBB...Z...AA..C..O..C..OPPP..O... O97 Z0 B0 A99 P97 C1
+1 0 1 ...ZBB...Z....AA.C..O..C..OPPP..O... O97 Z0 B0 A98 P97 C1
+1 0 1 ...ZBB...Z.....AAC..O..C..OPPP..O... O97 Z0 B0 A97 P97 C1
+1 0 1 ...ZBB...Z.CAA...C..O.....OPPP..O... O97 Z0 B0 P97 C0
+1 0 1 ...ZBB...Z.C.AA..C..O.....OPPP..O... O97 Z0 B0 A99 P97 C0
+1 0 1 ...ZBB...Z.C..AA.C..O.....OPPP..O... O97 Z0 B0 A98 P97 C0
+1 0 1 ...ZBB...Z.C...AAC..O.....OPPP..O... O97 Z0 B0 A97 P97 C0
+1 0 1 ...ZBB...Z....OAAC..O..C..OPPP...... O96 Z0 B0 A97 P97 C1
+1 0 1 ...ZBB..OZ....OAAC..O..C...PPP...... O95 Z0 B0 A97 P97 C1
+1 0 1 ..OZBB..OZ....OAAC.....C...PPP...... O94 Z0 B0 A97 P97 C1
+1 0 1 ...ZBB...Z.C..OAAC..O.....OPPP...... O96 Z0 B0 A97 P97 C0
+1 0 1 ...ZBB..OZ.C..OAAC..O......PPP...... O95 Z0 B0 A97 P97 C0
+1 0 1 ..OZBB..OZ.C..OAAC.........PPP...... O94 Z0 B0 A97 P97 C0
+1 0 1 ...ZBB..OZ....OAAC..O..C..PPP....... O95 Z0 B0 A97 P96 C1
+0 0 0 ...ZBB..OZ....OAA...O..C..PPPC...... O95 Z0 B0 A97 P96 C0
+0 0 0 ...ZBB..OZ....O.AA..O..C..PPPC...... O95 Z0 B0 A96 P96 C0

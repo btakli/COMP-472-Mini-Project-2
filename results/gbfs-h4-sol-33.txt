@@ -1,0 +1,27 @@
+Initial Board Configuration: .........OOOAA..Z.P...Z.P.BBCCP.....
+
+['.', '.', '.', '.', '.', '.']
+['.', '.', '.', 'O', 'O', 'O']
+['A', 'A', '.', '.', 'Z', '.']
+['P', '.', '.', '.', 'Z', '.']
+['P', '.', 'B', 'B', 'C', 'C']
+['P', '.', '.', '.', '.', '.']
+
+Car fuel Available: O:100, A:100, Z:100, P:100, B:100, C:100, 
+
+Runtime: 0.0012 seconds
+Search Path Length: 11 states
+Solution Path Length: 3 moves
+Solution Path: O left 2; Z up 2; A right 4; 
+
+O left 2             98 .......OOO..AA..Z.P...Z.P.BBCCP..... O98
+Z up 2               98 ....Z..OOOZ.AA....P.....P.BBCCP..... O98 Z98
+A right 4            96 ....Z..OOOZ.....AAP.....P.BBCCP..... O98 A96 Z98
+
+! O98 A96 Z98
+['.', '.', '.', '.', 'Z', '.']
+['.', 'O', 'O', 'O', 'Z', '.']
+['.', '.', '.', '.', 'A', 'A']
+['P', '.', '.', '.', '.', '.']
+['P', '.', 'B', 'B', 'C', 'C']
+['P', '.', '.', '.', '.', '.']

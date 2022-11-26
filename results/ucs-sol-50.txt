@@ -1,0 +1,34 @@
+Initial Board Configuration: I.BOOOI.B....AAC...D.C...DPPPE.....E I2 B4 P2
+
+['I', '.', 'B', 'O', 'O', 'O']
+['I', '.', 'B', '.', '.', '.']
+['.', 'A', 'A', 'C', '.', '.']
+['.', 'D', '.', 'C', '.', '.']
+['.', 'D', 'P', 'P', 'P', 'E']
+['.', '.', '.', '.', '.', 'E']
+
+Car fuel Available: I:2, B:4, P:2, O:100, A:100, C:100, D:100, E:100, 
+
+Runtime: 0.6142 seconds
+Search Path Length: 640 states
+Solution Path Length: 10 moves
+Solution Path: A left 1; E up 2; P right 1; B down 3; A right 1; I down 1; O left 3; C up 2; E up 2; A right 3; 
+
+A left 1             99 I.BOOOI.B...AA.C...D.C...DPPPE.....E I2 B4 A99 P2
+E up 2               98 I.BOOOI.B...AA.C.E.D.C.E.DPPP....... I2 B4 A99 P2 E98
+P right 1            1 I.BOOOI.B...AA.C.E.D.C.E.D.PPP...... I2 B4 A99 P1 E98
+B down 3             1 I..OOOI.....AA.C.E.DBC.E.DBPPP...... I2 B1 A99 P1 E98
+A right 1            98 I..OOOI......AAC.E.DBC.E.DBPPP...... I2 B1 A98 P1 E98
+I down 1             1 ...OOOI.....IAAC.E.DBC.E.DBPPP...... I1 B1 A98 P1 E98
+O left 3             97 OOO...I.....IAAC.E.DBC.E.DBPPP...... I1 B1 O97 A98 P1 E98
+C up 2               98 OOOC..I..C..IAA..E.DB..E.DBPPP...... I1 B1 O97 A98 C98 P1 E98
+E up 2               96 OOOC.EI..C.EIAA....DB....DBPPP...... I1 B1 O97 A98 C98 P1 E96
+A right 3            95 OOOC.EI..C.EI...AA.DB....DBPPP...... I1 B1 O97 A95 C98 P1 E96
+
+! I1 B1 O97 A95 C98 P1 E96
+['O', 'O', 'O', 'C', '.', 'E']
+['I', '.', '.', 'C', '.', 'E']
+['I', '.', '.', '.', 'A', 'A']
+['.', 'D', 'B', '.', '.', '.']
+['.', 'D', 'B', 'P', 'P', 'P']
+['.', '.', '.', '.', '.', '.']

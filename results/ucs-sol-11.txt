@@ -1,0 +1,41 @@
+Initial Board Configuration: ..OOOPZZB..PAAB..P.CDDEE.CFF..GGHH..
+
+['.', '.', 'O', 'O', 'O', 'P']
+['Z', 'Z', 'B', '.', '.', 'P']
+['A', 'A', 'B', '.', '.', 'P']
+['.', 'C', 'D', 'D', 'E', 'E']
+['.', 'C', 'F', 'F', '.', '.']
+['G', 'G', 'H', 'H', '.', '.']
+
+Car fuel Available: O:100, P:100, Z:100, B:100, A:100, C:100, D:100, E:100, F:100, G:100, H:100, 
+
+Runtime: 11.0212 seconds
+Search Path Length: 4292 states
+Solution Path Length: 17 moves
+Solution Path: F right 1; H right 2; G right 2; C down 1; D left 2; B down 2; A right 3; Z right 3; B up 2; D right 2; C up 3; D left 1; E left 1; G left 1; H left 1; P down 3; A right 1; 
+
+F right 1            99 ..OOOPZZB..PAAB..P.CDDEE.C.FF.GGHH.. F99
+H right 2            98 ..OOOPZZB..PAAB..P.CDDEE.C.FF.GG..HH F99 H98
+G right 2            98 ..OOOPZZB..PAAB..P.CDDEE.C.FF...GGHH F99 G98 H98
+C down 1             99 ..OOOPZZB..PAAB..P..DDEE.C.FF..CGGHH C99 F99 G98 H98
+D left 2             98 ..OOOPZZB..PAAB..PDD..EE.C.FF..CGGHH C99 D98 F99 G98 H98
+B down 2             98 ..OOOPZZ...PAA...PDDB.EE.CBFF..CGGHH B98 C99 D98 F99 G98 H98
+A right 3            97 ..OOOPZZ...P...AAPDDB.EE.CBFF..CGGHH B98 A97 C99 D98 F99 G98 H98
+Z right 3            97 ..OOOP...ZZP...AAPDDB.EE.CBFF..CGGHH Z97 B98 A97 C99 D98 F99 G98 H98
+B up 2               96 ..OOOP..BZZP..BAAPDD..EE.C.FF..CGGHH Z97 B96 A97 C99 D98 F99 G98 H98
+D right 2            96 ..OOOP..BZZP..BAAP..DDEE.C.FF..CGGHH Z97 B96 A97 C99 D96 F99 G98 H98
+C up 3               96 ..OOOP.CBZZP.CBAAP..DDEE...FF...GGHH Z97 B96 A97 C96 D96 F99 G98 H98
+D left 1             95 ..OOOP.CBZZP.CBAAP.DD.EE...FF...GGHH Z97 B96 A97 C96 D95 F99 G98 H98
+E left 1             99 ..OOOP.CBZZP.CBAAP.DDEE....FF...GGHH Z97 B96 A97 C96 D95 E99 F99 G98 H98
+G left 1             97 ..OOOP.CBZZP.CBAAP.DDEE....FF..GG.HH Z97 B96 A97 C96 D95 E99 F99 G97 H98
+H left 1             97 ..OOOP.CBZZP.CBAAP.DDEE....FF..GGHH. Z97 B96 A97 C96 D95 E99 F99 G97 H97
+P down 3             97 ..OOO..CBZZ..CBAA..DDEEP...FFP.GGHHP P97 Z97 B96 A97 C96 D95 E99 F99 G97 H97
+A right 1            96 ..OOO..CBZZ..CB.AA.DDEEP...FFP.GGHHP P97 Z97 B96 A96 C96 D95 E99 F99 G97 H97
+
+! P97 Z97 B96 A96 C96 D95 E99 F99 G97 H97
+['.', '.', 'O', 'O', 'O', '.']
+['.', 'C', 'B', 'Z', 'Z', '.']
+['.', 'C', 'B', '.', 'A', 'A']
+['.', 'D', 'D', 'E', 'E', 'P']
+['.', '.', '.', 'F', 'F', 'P']
+['.', 'G', 'G', 'H', 'H', 'P']

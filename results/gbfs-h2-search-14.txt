@@ -1,0 +1,51 @@
+1 0 1 OOOZZ...B...AAB....CC...PPPD.....D..
+1 0 1 OOOZZ...B...AAB...CC....PPPD.....D.. C99
+1 0 1 OOOZZ...B...AAB.....CC..PPPD.....D.. C99
+1 0 1 OOOZZ...B...AAB......CC.PPPD.....D.. C98
+1 0 1 OOOZZ...B...AAB.......CCPPPD.....D.. C97
+1 0 1 OOOZZ...B...AAB....CCD..PPPD........ D99
+1 0 1 OOO.ZZ..B...AAB....CC...PPPD.....D.. Z99
+1 0 1 OOOZZ.......AAB...CCB...PPPD.....D.. B99 C99
+1 0 1 OOOZZ...B...AAB...CC.D..PPPD........ C99 D99
+1 0 1 OOO.ZZ..B...AAB...CC....PPPD.....D.. Z99 C99
+1 0 1 OOO.ZZ..B...AAB.....CC..PPPD.....D.. Z99 C99
+1 0 1 OOOZZ.......AAB.....BCC.PPPD.....D.. B99 C98
+1 0 1 OOO.ZZ..B...AAB......CC.PPPD.....D.. Z99 C98
+1 0 1 OOOZZ.......AAB.....B.CCPPPD.....D.. B99 C97
+1 0 1 OOOZZ...B...AAB......DCCPPPD........ C97 D99
+1 0 1 OOO.ZZ..B...AAB.......CCPPPD.....D.. Z99 C97
+1 0 1 OOO.ZZ..B...AAB....CCD..PPPD........ Z99 D99
+1 0 1 OOODZZ..BD..AAB....CC...PPP......... Z99 D96
+1 0 1 .OOOZZ..B...AAB....CC...PPPD.....D.. O99 Z99
+1 0 1 OOOZZ.......AAB...CCBD..PPPD........ B99 C99 D99
+1 0 1 OOO.ZZ......AAB...CCB...PPPD.....D.. Z99 B99 C99
+1 0 1 OOO.ZZ..B...AAB...CC.D..PPPD........ Z99 C99 D99
+1 0 1 OOODZZ..BD..AAB...CC....PPP......... Z99 C99 D96
+1 0 1 .OOOZZ..B...AAB...CC....PPPD.....D.. O99 Z99 C99
+1 0 1 .OOOZZ..B...AAB.....CC..PPPD.....D.. O99 Z99 C99
+1 0 1 OOO.ZZ......AAB.....BCC.PPPD.....D.. Z99 B99 C98
+1 0 1 .OOOZZ..B...AAB......CC.PPPD.....D.. O99 Z99 C98
+1 0 1 OOOZZ.......AAB.....BDCCPPPD........ B99 C97 D99
+1 0 1 OOO.ZZ......AAB.....B.CCPPPD.....D.. Z99 B99 C97
+1 0 1 OOO.ZZ..B...AAB......DCCPPPD........ Z99 C97 D99
+1 0 1 OOODZZ..BD..AAB.......CCPPP......... Z99 C97 D96
+1 0 1 .OOOZZ..B...AAB.......CCPPPD.....D.. O99 Z99 C97
+1 0 1 .OOOZZ..B...AAB....CCD..PPPD........ O99 Z99 D99
+1 0 1 OOODZZ..BD..AAB.....CC..PPP......... Z99 C99 D96
+1 0 1 OOODZZ..BD..AAB......CC.PPP......... Z99 C98 D96
+1 0 1 OOODZZ..BD..AAB....CC....PPP........ Z99 P99 D96
+1 0 1 OOODZZ..BD..AAB....CC.....PPP....... Z99 P98 D96
+1 0 1 OOODZZ..BD..AAB....CC......PPP...... Z99 P97 D96
+1 0 1 OOO.ZZ......AAB...CCBD..PPPD........ Z99 B99 C99 D99
+1 0 1 OOODZZ...D..AAB...CCB...PPP......... Z99 B99 C99 D96
+1 0 1 .OOOZZ......AAB...CCB...PPPD.....D.. O99 Z99 B99 C99
+1 0 1 .OOOZZ..B...AAB...CC.D..PPPD........ O99 Z99 C99 D99
+1 0 1 OOODZZ..BD..AAB...CC.....PPP........ Z99 C99 P99 D96
+1 0 1 OOODZZ..BD..AAB...CC......PPP....... Z99 C99 P98 D96
+1 0 1 OOODZZ..BD..AAB...CC.......PPP...... Z99 C99 P97 D96
+0 0 0 OOODZZ...D..AA....CCB.....BPPP...... Z99 B98 C99 P97 D96
+0 0 0 OOODZZ...D..AA....CC......BPPP..B... Z99 B97 C99 P97 D96
+0 0 0 OOODZZ...D...AA...CCB.....BPPP...... Z99 B98 A99 C99 P97 D96
+0 0 0 OOODZZ...D....AA..CCB.....BPPP...... Z99 B98 A98 C99 P97 D96
+0 0 0 OOODZZ...D.....AA.CCB.....BPPP...... Z99 B98 A97 C99 P97 D96
+0 0 0 OOODZZ...D......AACCB.....BPPP...... Z99 B98 A96 C99 P97 D96

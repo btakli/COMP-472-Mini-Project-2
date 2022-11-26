@@ -1,0 +1,72 @@
+4 0 4 .....ZBB...Z..AACD....CD..EOOO..E... Z0 O1
+3 1 2 ....CZBB..CZ..AA.D.....D..EOOO..E... Z0 C98 O1
+4 2 2 ....CZBB..CZ.AA..D.....D..EOOO..E... Z0 A99 C98 O1
+4 2 2 ....CZBB..CZAA...D.....D..EOOO..E... Z0 A98 C98 O1
+4 2 2 ....CZBB..CZ...AAD.....D..EOOO..E... Z0 A99 C98 O1
+4 2 2 ....CZ.BB.CZ..AA.D.....D..EOOO..E... Z0 B99 C98 O1
+4 2 2 ....CZ..BBCZ..AA.D.....D..EOOO..E... Z0 B98 C98 O1
+4 2 2 ....CZBB..CZ..AA.D..E..D..EOOO...... Z0 C98 E99 O1
+5 1 4 .....ZBB...Z.AA.CD....CD..EOOO..E... Z0 A99 O1
+5 1 4 .....ZBB...ZAA..CD....CD..EOOO..E... Z0 A98 O1
+5 1 4 .....Z.BB..Z..AACD....CD..EOOO..E... Z0 B99 O1
+5 1 4 .....Z..BB.Z..AACD....CD..EOOO..E... Z0 B98 O1
+5 1 4 .....Z...BBZ..AACD....CD..EOOO..E... Z0 B97 O1
+5 1 4 .....ZBB..CZ..AACD.....D..EOOO..E... Z0 C99 O1
+5 1 4 .....ZBB...Z..AACD..E.CD..EOOO...... Z0 E99 O1
+5 3 2 ....CZ.BB.CZ.AA..D.....D..EOOO..E... Z0 B99 A99 C98 O1
+5 3 2 ....CZ..BBCZ.AA..D.....D..EOOO..E... Z0 B98 A99 C98 O1
+5 3 2 ....CZBB..CZ.AA..D..E..D..EOOO...... Z0 A99 C98 E99 O1
+5 3 2 ....CZ.BB.CZAA...D.....D..EOOO..E... Z0 B99 A98 C98 O1
+5 3 2 ....CZ..BBCZAA...D.....D..EOOO..E... Z0 B98 A98 C98 O1
+5 3 2 ....CZBB..CZAA...D..E..D..EOOO...... Z0 A98 C98 E99 O1
+5 3 2 ..E.CZBBE.CZAA...D.....D...OOO...... Z0 A98 C98 E96 O1
+5 3 2 ....CZ.BB.CZ...AAD.....D..EOOO..E... Z0 B99 A99 C98 O1
+5 3 2 ....CZ..BBCZ...AAD.....D..EOOO..E... Z0 B98 A99 C98 O1
+5 3 2 ....CZBB..CZ...AAD..E..D..EOOO...... Z0 A99 C98 E99 O1
+5 3 2 ....CZBB..CZ..EAAD..E..D...OOO...... Z0 A99 C98 E98 O1
+5 3 2 ....CZBBE.CZ..EAAD.....D...OOO...... Z0 A99 C98 E97 O1
+5 3 2 ..E.CZBBE.CZ...AAD.....D...OOO...... Z0 A99 C98 E96 O1
+5 3 2 ....CZ.BB.CZ..AA.D..E..D..EOOO...... Z0 B99 C98 E99 O1
+5 3 2 ....CZ..BBCZ..AA.D..E..D..EOOO...... Z0 B98 C98 E99 O1
+6 2 4 .....Z.BB..Z.AA.CD....CD..EOOO..E... Z0 B99 A99 O1
+6 2 4 .....Z..BB.Z.AA.CD....CD..EOOO..E... Z0 B98 A99 O1
+6 2 4 .....Z...BBZ.AA.CD....CD..EOOO..E... Z0 B97 A99 O1
+6 2 4 .....ZBB..CZ.AA.CD.....D..EOOO..E... Z0 A99 C99 O1
+6 2 4 .....ZBB...Z.AA.CD..E.CD..EOOO...... Z0 A99 E99 O1
+6 2 4 .....Z.BB..ZAA..CD....CD..EOOO..E... Z0 B99 A98 O1
+6 2 4 .....Z..BB.ZAA..CD....CD..EOOO..E... Z0 B98 A98 O1
+6 2 4 .....Z...BBZAA..CD....CD..EOOO..E... Z0 B97 A98 O1
+6 2 4 .....ZBB..CZAA..CD.....D..EOOO..E... Z0 A98 C99 O1
+6 2 4 .....ZBB...ZAA..CD..E.CD..EOOO...... Z0 A98 E99 O1
+6 2 4 ..E..ZBBE..ZAA..CD....CD...OOO...... Z0 A98 E96 O1
+6 2 4 .....Z.BB.CZ..AACD.....D..EOOO..E... Z0 B99 C99 O1
+6 2 4 .....Z.BB..Z..AACD..E.CD..EOOO...... Z0 B99 E99 O1
+6 2 4 .....Z..BBCZ..AACD.....D..EOOO..E... Z0 B98 C99 O1
+6 2 4 .....Z..BB.Z..AACD..E.CD..EOOO...... Z0 B98 E99 O1
+6 2 4 .....Z...BBZ..AACD..E.CD..EOOO...... Z0 B97 E99 O1
+6 2 4 .....ZBB..CZ..AACD..E..D..EOOO...... Z0 C99 E99 O1
+6 4 2 ....CZ.BB.CZ.AA..D..E..D..EOOO...... Z0 B99 A99 C98 E99 O1
+6 4 2 ....CZ..BBCZ.AA..D..E..D..EOOO...... Z0 B98 A99 C98 E99 O1
+6 4 2 ....CZ.BB.CZAA...D..E..D..EOOO...... Z0 B99 A98 C98 E99 O1
+6 4 2 ....CZ..BBCZAA...D..E..D..EOOO...... Z0 B98 A98 C98 E99 O1
+6 4 2 ..E.CZBBE.CZ.AA..D.....D...OOO...... Z0 A97 C98 E96 O1
+6 4 2 ..E.CZBBE.CZ..AA.D.....D...OOO...... Z0 A96 C98 E96 O1
+6 4 2 ..E.CZBBE.CZAA...D.....D..OOO....... Z0 A98 C98 E96 O0
+5 5 0 ..E.CZBBE.CZAA.........D..OOOD...... Z0 A98 C98 D99 E96 O0
+5 5 0 ..E.CZBBE.CZAA............OOOD.....D Z0 A98 C98 D98 E96 O0
+6 4 2 ....CZ.BB.CZ...AAD..E..D..EOOO...... Z0 B99 A99 C98 E99 O1
+6 4 2 ....CZ.BB.CZ..EAAD..E..D...OOO...... Z0 B99 A99 C98 E98 O1
+6 4 2 ....CZ..BBCZ...AAD..E..D..EOOO...... Z0 B98 A99 C98 E99 O1
+6 4 2 ....CZ..BBCZ..EAAD..E..D...OOO...... Z0 B98 A99 C98 E98 O1
+6 4 2 ....CZBB..CZ..EAAD..E..D..OOO....... Z0 A99 C98 E98 O0
+5 5 0 ....CZBB..CZ..EAA...E..D..OOOD...... Z0 A99 C98 D99 E98 O0
+5 5 0 ....CZBB..CZ..EAA...E.....OOOD.....D Z0 A99 C98 D98 E98 O0
+6 4 2 ....CZBBE.CZ..EAAD.....D..OOO....... Z0 A99 C98 E97 O0
+5 5 0 ....CZBBE.CZ..EAA......D..OOOD...... Z0 A99 C98 D99 E97 O0
+5 5 0 ....CZBBE.CZ..EAA.........OOOD.....D Z0 A99 C98 D98 E97 O0
+6 4 2 ..E.CZBBE.CZ...AAD.....D..OOO....... Z0 A99 C98 E96 O0
+5 5 0 ..E.CZBBE.CZ...AA......D..OOOD...... Z0 A99 C98 D99 E96 O0
+5 5 0 ..E.CZBBE.CZ...AA.........OOOD.....D Z0 A99 C98 D98 E96 O0
+6 6 0 ..E.CZBBE.CZ.AA........D..OOOD...... Z0 A97 C98 D99 E96 O0
+6 6 0 ..E.CZBBE.CZ..AA.......D..OOOD...... Z0 A96 C98 D99 E96 O0
+6 6 0 ..E.CZBBE.CZ....AA.....D..OOOD...... Z0 A94 C98 D99 E96 O0

@@ -1,0 +1,43 @@
+Initial Board Configuration: OP.QQQOP.ZZROPAABRCCD.BR..DEFF.GGE..
+
+['O', 'P', '.', 'Q', 'Q', 'Q']
+['O', 'P', '.', 'Z', 'Z', 'R']
+['O', 'P', 'A', 'A', 'B', 'R']
+['C', 'C', 'D', '.', 'B', 'R']
+['.', '.', 'D', 'E', 'F', 'F']
+['.', 'G', 'G', 'E', '.', '.']
+
+Car fuel Available: O:100, P:100, Q:100, Z:100, R:100, A:100, B:100, C:100, D:100, E:100, F:100, G:100, 
+
+Runtime: 22.2101 seconds
+Search Path Length: 6189 states
+Solution Path Length: 19 moves
+Solution Path: E up 1; G right 3; D down 1; E down 1; C right 2; O down 1; P down 3; Q left 3; Z left 2; B up 2; A left 1; R up 1; C right 2; E up 4; C left 1; F left 1; G left 1; R down 3; A right 3; 
+
+E up 1               99 OP.QQQOP.ZZROPAABRCCDEBR..DEFF.GG... E99
+G right 3            97 OP.QQQOP.ZZROPAABRCCDEBR..DEFF....GG E99 G97
+D down 1             99 OP.QQQOP.ZZROPAABRCC.EBR..DEFF..D.GG D99 E99 G97
+E down 1             98 OP.QQQOP.ZZROPAABRCC..BR..DEFF..DEGG D99 E98 G97
+C right 2            98 OP.QQQOP.ZZROPAABR..CCBR..DEFF..DEGG C98 D99 E98 G97
+O down 1             99 .P.QQQOP.ZZROPAABRO.CCBR..DEFF..DEGG O99 C98 D99 E98 G97
+P down 3             97 ...QQQO..ZZRO.AABROPCCBR.PDEFF.PDEGG O99 P97 C98 D99 E98 G97
+Q left 3             97 QQQ...O..ZZRO.AABROPCCBR.PDEFF.PDEGG O99 P97 Q97 C98 D99 E98 G97
+Z left 2             98 QQQ...OZZ..RO.AABROPCCBR.PDEFF.PDEGG O99 P97 Q97 Z98 C98 D99 E98 G97
+B up 2               98 QQQ.B.OZZ.BRO.AA.ROPCC.R.PDEFF.PDEGG O99 P97 Q97 Z98 B98 C98 D99 E98 G97
+A left 1             99 QQQ.B.OZZ.BROAA..ROPCC.R.PDEFF.PDEGG O99 P97 Q97 Z98 A99 B98 C98 D99 E98 G97
+R up 1               99 QQQ.BROZZ.BROAA..ROPCC...PDEFF.PDEGG O99 P97 Q97 Z98 R99 A99 B98 C98 D99 E98 G97
+C right 2            96 QQQ.BROZZ.BROAA..ROP..CC.PDEFF.PDEGG O99 P97 Q97 Z98 R99 A99 B98 C96 D99 E98 G97
+E up 4               94 QQQEBROZZEBROAA..ROP..CC.PD.FF.PD.GG O99 P97 Q97 Z98 R99 A99 B98 C96 D99 E94 G97
+C left 1             95 QQQEBROZZEBROAA..ROP.CC..PD.FF.PD.GG O99 P97 Q97 Z98 R99 A99 B98 C95 D99 E94 G97
+F left 1             99 QQQEBROZZEBROAA..ROP.CC..PDFF..PD.GG O99 P97 Q97 Z98 R99 A99 B98 C95 D99 E94 F99 G97
+G left 1             96 QQQEBROZZEBROAA..ROP.CC..PDFF..PDGG. O99 P97 Q97 Z98 R99 A99 B98 C95 D99 E94 F99 G96
+R down 3             96 QQQEB.OZZEB.OAA...OP.CCR.PDFFR.PDGGR O99 P97 Q97 Z98 R96 A99 B98 C95 D99 E94 F99 G96
+A right 3            96 QQQEB.OZZEB.O...AAOP.CCR.PDFFR.PDGGR O99 P97 Q97 Z98 R96 A96 B98 C95 D99 E94 F99 G96
+
+! O99 P97 Q97 Z98 R96 A96 B98 C95 D99 E94 F99 G96
+['Q', 'Q', 'Q', 'E', 'B', '.']
+['O', 'Z', 'Z', 'E', 'B', '.']
+['O', '.', '.', '.', 'A', 'A']
+['O', 'P', '.', 'C', 'C', 'R']
+['.', 'P', 'D', 'F', 'F', 'R']
+['.', 'P', 'D', 'G', 'G', 'R']

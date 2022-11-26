@@ -1,0 +1,34 @@
+3 0 3 ...O.....OZ.AA.OZB.....B.C...D.CEE.D
+2 0 2 ...O.B...OZBAA.OZ........C...D.CEE.D B98
+1 0 1 ...OZB...OZBAA.O.........C...D.CEE.D Z99 B98
+1 0 1 ...O.B...O.BAA.O......Z..C..ZD.CEE.D Z98 B98
+1 0 1 ...O.B...O.BAA.O.........C..ZD.CEEZD Z97 B98
+1 0 1 ...OZB...OZB.AAO.........C...D.CEE.D Z99 A99 B98
+1 0 1 ...OZB...OZBAA.O...C.....C...D..EE.D Z99 B98 C99
+1 0 1 ...OZB...OZBAA.O.......D.C...D.CEE.. Z99 B98 D99
+1 0 1 ...OZB...OZBAA.O.........C...D.C.EED Z99 B98 E99
+1 0 1 ....ZB...OZBAA.O.....O...C...D.CEE.D O99 Z99 B98
+1 0 1 ....ZB....ZBAA.O.....O...C.O.D.CEE.D O98 Z99 B98
+1 0 1 ...O.B...O.B.AAO......Z..C..ZD.CEE.D Z98 A99 B98
+1 0 1 ...O.B...O.BAA.O...C..Z..C..ZD..EE.D Z98 B98 C99
+1 0 1 ...O.B...O.BAA.O......ZD.C..ZD.CEE.. Z98 B98 D99
+1 0 1 ...O.B...O.BAA.O......Z..C..ZD.C.EED Z98 B98 E99
+1 0 1 .....B...O.BAA.O.....OZ..C..ZD.CEE.D O99 Z98 B98
+1 0 1 .....B.....BAA.O.....OZ..C.OZD.CEE.D O98 Z98 B98
+1 0 1 ...O.B...O.B.AAO.........C..ZD.CEEZD Z97 A99 B98
+1 0 1 ...O.B...O.BAA.O...C.....C..ZD..EEZD Z97 B98 C99
+1 0 1 ...O.B...O.BAA.O.......D.C..ZD.CEEZ. Z97 B98 D99
+1 0 1 .....B...O.BAA.O.....O...C..ZD.CEEZD O99 Z97 B98
+1 0 1 .....B.....BAA.O.....O...C.OZD.CEEZD O98 Z97 B98
+1 0 1 ...OZB...OZB.AAO...C.....C...D..EE.D Z99 A99 B98 C99
+1 0 1 ...OZB...OZB.AAO.......D.C...D.CEE.. Z99 A99 B98 D99
+1 0 1 ...OZB...OZB.AAO.........C...D.C.EED Z99 A99 B98 E99
+1 0 1 ....ZB...OZB.AAO.....O...C...D.CEE.D O99 Z99 A99 B98
+1 0 1 ....ZB....ZB.AAO.....O...C.O.D.CEE.D O98 Z99 A99 B98
+1 0 1 ...OZB...OZBAA.O...C...D.C...D..EE.. Z99 B98 C99 D99
+1 0 1 ...OZB...OZBAA.O...C.....C...D.EE..D Z99 B98 C99 E99
+0 0 0 ....ZB....ZBAA.....C.O...C.O.D.EEO.D O97 Z99 B98 C99 E99
+0 0 0 ....ZB....ZB.AA....C.O...C.O.D.EEO.D O97 Z99 A99 B98 C99 E99
+0 0 0 ....ZB....ZB..AA...C.O...C.O.D.EEO.D O97 Z99 A98 B98 C99 E99
+0 0 0 ....ZB....ZB...AA..C.O...C.O.D.EEO.D O97 Z99 A97 B98 C99 E99
+0 0 0 ....ZB....ZB....AA.C.O...C.O.D.EEO.D O97 Z99 A96 B98 C99 E99
