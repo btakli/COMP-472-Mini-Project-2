@@ -21,7 +21,13 @@ def main():
 
 
 
-    heuristics_list = [1,2,3] # TODO Add 4 later
+    heuristics_list = [1,2,3,4]
+    # default value for lambda_val. Can modify for h3
+    lambda_val = 2
+    # 0.5 is the default value, but you can change it to see how it affects the results. Basically weight of h1 and h2 in the h4 heuristic
+    h4_weight_factor = 0.5 
+
+
 
     print("~~~Running all search algorithms. *NOTE: Only the output for UCS is shown in the console for illustrative purposes.~~~")
     # for each board in the input file
@@ -54,7 +60,7 @@ def main():
         
         # Search Algorithm GBFS using Heuristics
         for heuristic in heuristics_list:
-            gbfs = GBFS(boardslist[i], carslist[i], board_reader.exit, heuristic)
+            gbfs = GBFS(boardslist[i], carslist[i], board_reader.exit, heuristic, lambda_value=lambda_val, weighted_avg_factor=h4_weight_factor)
             win_node = gbfs.search()
             output_generator = OutputGeneration(gbfs, board_reader, i, True)
             output_generator.search_files()
@@ -68,7 +74,7 @@ def main():
 
          # Search Algorithm A/A* using Heuristics
         for heuristic in heuristics_list:
-            a = A(boardslist[i], carslist[i], board_reader.exit, heuristic)
+            a = A(boardslist[i], carslist[i], board_reader.exit, heuristic, lambda_value=lambda_val, weighted_avg_factor=h4_weight_factor)
             win_node = a.search()
             output_generator = OutputGeneration(a, board_reader, i, True)
             output_generator.search_files()

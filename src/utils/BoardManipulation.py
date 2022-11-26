@@ -277,7 +277,7 @@ class SubStateGenerator:
 
 class TreeNode:
     '''A node in the state tree'''
-    def __init__(self, board: list, cars_dict: dict, parent: 'TreeNode', exit: tuple, heuristic = 0, lambda_val = 2, compute_g_n = True):
+    def __init__(self, board: list, cars_dict: dict, parent: 'TreeNode', exit: tuple, heuristic = 0, lambda_val = 2, compute_g_n = True, weighted_avg_factor = 0.5):
         '''Constructor for TreeNode class
         
         board: the board of the node
@@ -286,7 +286,8 @@ class TreeNode:
         exit: the exit of the board
         heuristic: the heuristic type to use for the node. 0 for no heuristic, 1 for h1, 2 for h2
         lambda_val: the lambda value to use for h3
-        compute_cost: whether or not to compute the cost of the node'''
+        compute_cost: whether or not to compute the cost of the node
+        weighted_avg_factor: the weight to use for the weighted avg heuristic (h4), value to multiply h1 by in the average calculation. Set to a value between 0 and 1 (0 for h2, 1 for h1)'''
 
         self.board = [row[:] for row in board]
         self.cars_dict = {key: Car(value.char, value.length, value.orientation, value.position, value.fuel) for key, value in cars_dict.items()}
@@ -302,6 +303,7 @@ class TreeNode:
         self._compute_direction_moved()
 
         self.lambda_val = lambda_val # lambda value for h3
+        self.weighted_avg_factor = weighted_avg_factor # weight for h4 which uses f measure
 
         self.h_n = 0
         self.cost = 0
@@ -340,6 +342,8 @@ class TreeNode:
             self.h_n = self._h2()
         elif heuristic == 3:
             self.h_n = self._h3(self.lambda_val)
+        elif heuristic == 4:
+            self.h_n = self._h4()
         self.f_n = self.g_n + self.h_n
 
 
@@ -367,6 +371,10 @@ class TreeNode:
     def _h3(self, lambda_const: float) -> float:
         '''h3: h1 times constant'''
         return self._h1() * lambda_const
+    
+    def _h4(self) -> int:
+        '''h4: Average of h1 and h2''' 
+        return (self._h1())*(self.weighted_avg_factor) + (self._h2())*(1 - self.weighted_avg_factor)
     
     def _compute_car_moved(self) -> None:
         '''Computes the piece that was moved to get to this node'''
