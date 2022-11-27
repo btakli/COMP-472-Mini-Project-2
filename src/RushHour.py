@@ -24,7 +24,7 @@ def main():
     # default value for lambda_val. Can modify for h3
     lambda_val = 2
     # 0.5 is the default value, but you can change it to see how it affects the results. Basically weight of h1 and h2 in the h4 heuristic
-    h4_weight_factor = 0.5 
+    h4_weight_factor = 0.6 
 
 
 
