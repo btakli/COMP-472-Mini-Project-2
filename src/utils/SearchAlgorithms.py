@@ -58,7 +58,7 @@ class SearchAlgorithm: # Base class for all search algorithms
 
     def get_exec_time(self):
         '''Returns the execution time of the search algorithm as a formatted string in seconds'''
-        return f"{self.search_time:.4f} seconds"
+        return f"{self.search_time:.4f}"
 
     def get_solution_path(self):
         '''Returns the solution path of the search algorithm'''
